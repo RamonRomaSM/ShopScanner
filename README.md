@@ -2,7 +2,7 @@
 
 
 ## Que se va a usar
-+
-Scrapy
-WPF
-MySql 
+
++Scrapy
++WPF
++MySql 
