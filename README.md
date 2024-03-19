@@ -33,9 +33,15 @@ Tecnologías utilizadas:
 + WPF
 
 Funcionalidades:
++ Menu principal:
+    adsad
+    
 + Productos
 + Mi cesta
 + Perfil
++ Ajustes
+
+
 
 ## Que se va a usar
 
