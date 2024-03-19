@@ -18,7 +18,7 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
   + Usuarios (Uid, nombre, contraseña)
 
   Mongo DB:
-  
+  + Listas de la compra (Primer nodo: Uid, Nodos hijo: Pid) 
 
   
 ## Que se va a usar
