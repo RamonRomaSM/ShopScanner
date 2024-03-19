@@ -6,10 +6,10 @@
 Para obtener los datos de la base de datos.
 
 
-Tecnologias utilizadas:
+Tecnologías utilizadas:
 + Selenium
 
-## Base de datos
+## Bases de datos
 https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20it's%20possible%20to%20use,needs%20within%20the%20same%20application.
 
   Tablas MySql:
@@ -28,7 +28,15 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
       "Productos": {"Pid":1 ,"Pid":2, "Pid":3}
       }
 
-  
+## Cliente de la aplicacion
+Tecnologías utilizadas:
++ WPF
+
+Funcionalidades:
++ Productos
++ Mi cesta
++ Perfil
+
 ## Que se va a usar
 
 + Scrapy
