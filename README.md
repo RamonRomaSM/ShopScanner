@@ -10,12 +10,14 @@
   + Selenium
 
 ## Base de datos
-  Tablas:
+
+  Tablas MySql:
 
   + Productos (Pid, nombre, precio, imagen, supermercado, oderta?)
   + Usuarios (Uid, nombre, contraseña)
-  + Listas de la compra ()
-  + MySql
+
+
+  
 ## Que se va a usar
 
 + Scrapy
