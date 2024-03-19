@@ -57,12 +57,8 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
    + Vaciar cesta
   
 + ### Perfil
-+ ### Ajustes
+  
+  Apareceran tus listas de la compra y en cada una tendras la opcion de        sacar el pdf
 
 
 
-## Que se va a usar
-
-+ Scrapy
-+ WPF
-+ MySql 
