@@ -35,6 +35,9 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
 ### Funcionalidades:
 
 + ### Productos:
+
++ Barra de busqueda
+  
   #### Items
   
   + Añadir
@@ -42,7 +45,6 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
 
   #### Barra lateral
 
-  + Barra de busqueda
   + Filtrar por precio (ascendente/descendente)
   + Filtrar por tienda
   + Filtrar por ofertas
@@ -58,7 +60,10 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
   
 + ### Perfil
   
-  Apareceran tus listas de la compra y en cada una tendras la opcion de        sacar el pdf
+  Apareceran tus listas de la compra y en cada una tendras las opciones de:
 
+  + Sacar el pdf
+  + Eliminar lista
+    
 
 
