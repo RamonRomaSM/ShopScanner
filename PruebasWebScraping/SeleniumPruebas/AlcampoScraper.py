@@ -38,7 +38,9 @@ def startScraping () :
         peticionAct = str(peticion) + str(id)
 
         browser2.get(peticionAct)
-        time.sleep(0.5)# TODO: aqui sacar el json y parsearlo
+
+        productJson=browser2.find_element(By.XPATH,'/html/body/pre')
+        parseJsonIntoProducto(productJson.text)
 
         browser2.close()
 
