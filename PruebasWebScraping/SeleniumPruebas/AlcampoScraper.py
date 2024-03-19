@@ -2,7 +2,14 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+
+def parseJsonIntoProducto (json):
+    #TODO: saca los datos, crea el producto y lo guarda
+    print('parseado')
+
 def startScraping () :
+    #TODO: antes de empezar a scrapear, borrar todo lo que hay en la bdd
+
     browser = webdriver.Chrome()
     browser.get('https://www.compraonline.alcampo.es/categories')
 
@@ -18,8 +25,6 @@ def startScraping () :
         if str(id) != "None":
             ids.append(id)
 
-    print(ids)
-    print(str(len(ids)))
 
     browser.close()
 
@@ -31,14 +36,13 @@ def startScraping () :
     for id in ids:
         browser2 = webdriver.Chrome()
         peticionAct = str(peticion) + str(id)
-        print('aa')
-        print(peticionAct)
+
         browser2.get(peticionAct)
-        time.sleep(0.5)# TODO: aqui sacar el json y pasarlo al constructor de producto
-                        # TODO: metodo guardar dentro del objeto producto
+        time.sleep(0.5)# TODO: aqui sacar el json y parsearlo
+
         browser2.close()
 
-
+    print('[ALCAMPO SCRAPER] Base de datos actualizada')
 
 
 
