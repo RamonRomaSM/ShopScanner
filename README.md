@@ -74,5 +74,5 @@ Un programa en java que:
 + verifica y realiza las peticiones
 
 Asi el cliente NO tieneconexion directa con mi BDD (mas seguro)     
-
+https://stackoverflow.com/questions/14824491/can-i-communicate-between-java-and-c-sharp-using-just-sockets
 
