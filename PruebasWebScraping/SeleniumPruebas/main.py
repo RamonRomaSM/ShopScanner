@@ -1,4 +1,5 @@
 import time
+from typing import Optional
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -8,11 +9,6 @@ import json
 
 browser = webdriver.Chrome()
 browser.get('https://www.compraonline.alcampo.es/categories')
-
-last_height = browser.execute_script("return document.body.scrollHeight")
-
-
-browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 
 time.sleep(1)
 
@@ -26,14 +22,25 @@ for element in elements:
     if str(id) != "None":
         ids.append(id)
 
+print(ids)
+print(str(len(ids)))
 
 browser.close()
 
-# TODO:     en items tengo todos los ids ahora toca hacer la peticion
 #peticion:
 #www.compraonline.alcampo.es/api/v5/products/decorate?productIds=cddc46c1-7884-4a66-a7f6-ae2533188415,aaa39a2d-7f5b-4627-a92e-6b0950331b72
-print(ids)
-print(str(len(ids)))
+
+peticion = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+
+for id in ids:
+    browser2 = webdriver.Chrome()
+    peticionAct = str(peticion) + str(id)
+    print('aa')
+    print(peticionAct)
+    browser2.get(peticionAct)
+    time.sleep(0.5)#TODO aqui sacar la info y meterlo en la bdd, no poner el timesleep (es muy lento)
+
+    browser2.close()
 
 
 
