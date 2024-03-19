@@ -67,11 +67,11 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
 
  ## Servidor intermediario
 
-    Un programa en java que:
+Un programa en java que:
+
++ escucha por ejemplo el puerto 8080 
++ establece cnexion cifrada 
++ verifica y realiza las peticiones
     
-    + escucha por ejemplo el puerto 8080 
-    + establece cnexion cifrada 
-    + verifica y realiza las peticiones
-        
  
 
