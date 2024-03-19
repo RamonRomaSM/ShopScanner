@@ -33,11 +33,17 @@ Tecnologías utilizadas:
 + WPF
 
 Funcionalidades:
-+ Menu principal:
 
-  adsad
-    
-+ Productos
++ Productos:
+
+  + Barra de busqueda
+  + Filtrar por precio (ascendente/descendente)
+  + Filtrar por tienda
+  + Filtrar por ofertas
+  + Rango de precios
+  
+
+  
 + Mi cesta
 + Perfil
 + Ajustes
