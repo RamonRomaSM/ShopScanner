@@ -3,9 +3,9 @@
 
 
 ## Web Scraping
-  Para pbtener los datos de la base de datos
+  Para pbtener los datos de la base de datos\n
   Tecnologias utilizadas:
-  +Selenium
+  + Selenium
 ## Que se va a usar
 
 + Scrapy
