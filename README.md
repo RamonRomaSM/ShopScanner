@@ -14,7 +14,7 @@ https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20i
 
   Tablas MySql:
 
-  + Productos (Pid, nombre, precio, imagen, supermercado, oderta?)
+  + Productos (Pid, nombre, precio, imagen, supermercado, URL, oderta?)
   + Usuarios (Uid, nombre, contraseña)
 
   Mongo DB:
@@ -34,7 +34,13 @@ Tecnologías utilizadas:
 
 Funcionalidades:
 
-+ Productos:
++ ### Productos:
+  #### Items
+  
+  + Añadir
+  + Visitar Pagina
+
+  #### Barra lateral
 
   + Barra de busqueda
   + Filtrar por precio (ascendente/descendente)
@@ -44,9 +50,14 @@ Funcionalidades:
   
 
   
-+ Mi cesta
-+ Perfil
-+ Ajustes
++ ### Mi cesta
+
+   + Guardar lista como
+   + Eliminar producto
+   + Vaciar cesta
+  
++ ### Perfil
++ ### Ajustes
 
 
 
