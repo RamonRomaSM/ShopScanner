@@ -72,6 +72,7 @@ Un programa en java que:
 + escucha por ejemplo el puerto 8080 
 + establece cnexion cifrada 
 + verifica y realiza las peticiones
-    
- 
+
+Asi el cliente NO tieneconexion directa con mi BDD (mas seguro)     
+
 
