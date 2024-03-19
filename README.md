@@ -34,7 +34,8 @@ Tecnologías utilizadas:
 
 Funcionalidades:
 + Menu principal:
-    adsad
+
+  adsad
     
 + Productos
 + Mi cesta
