@@ -38,8 +38,8 @@ for id in ids:
     print('aa')
     print(peticionAct)
     browser2.get(peticionAct)
-    time.sleep(0.5)#TODO aqui sacar la info y meterlo en la bdd, no poner el timesleep (es muy lento)
-
+    time.sleep(0.5)# TODO: aqui sacar el json y pasarlo al constructor de producto
+                    # TODO: metodo guardar dentro del objeto producto
     browser2.close()
 
 
