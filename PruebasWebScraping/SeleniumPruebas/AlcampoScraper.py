@@ -35,9 +35,9 @@ def startScraping () :
 
 
 """
+# TODO : hacer metodo hacerPeticion()
 num=20
 act=0
-
 peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
 
 while act < len(ids):  
@@ -64,9 +64,6 @@ while act < len(ids):
         #aqui hacer peticion
         #reinicio la peticion
         peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
-         
-    
-    
 """
 
     for id in ids:
