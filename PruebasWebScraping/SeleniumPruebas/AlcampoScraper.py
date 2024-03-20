@@ -35,14 +35,36 @@ def startScraping () :
 
 
 """
+num=20
 act=0
+
 peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+
 while act < len(ids):  
-    peticionAct = peticionAct + str(ids[act])
-    ifx != (len(ids)-1):
-        peticionAct = peticionAct + ','
+    if (act+num) < len(ids):
+        
+        for x in range(act , (act + num)):
+            peticionAct = peticionAct + ids[act]
+            if x != (num-1):
+                  peticionAct = peticionAct + ','
+            act=act+1
+            
+        #aqui hacer peticion
+        #reinicio la peticion
+        peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
     
-    #ahora hacer peticion
+    else:
+        
+        for x in range(act , len(ids)):
+            peticionAct = peticionAct + ids[act]
+            if x != (len(ids)-1):
+                  peticionAct = peticionAct + ','
+            act=act+1
+            
+        #aqui hacer peticion
+        #reinicio la peticion
+        peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+         
     
     
 """
