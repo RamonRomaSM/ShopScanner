@@ -48,6 +48,7 @@ while act < len(ids):
             if x != (num-1):
                   peticionAct = peticionAct + ','
             act=act+1
+            print(act)
             
         #aqui hacer peticion
         #reinicio la peticion
@@ -60,6 +61,7 @@ while act < len(ids):
             if x != (len(ids)-1):
                   peticionAct = peticionAct + ','
             act=act+1
+            print(act)
             
         #aqui hacer peticion
         #reinicio la peticion
