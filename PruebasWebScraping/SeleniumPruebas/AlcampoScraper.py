@@ -3,6 +3,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
+
+
+
+def hacerPeticion(peticion):
+    print(str(peticion))
+
 def parseJsonIntoProducto (json):
     #TODO: saca los datos, crea el producto y lo guarda
     print('parseado')
@@ -34,56 +40,48 @@ def startScraping () :
     peticion = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
 
 
-"""
-# TODO : hacer metodo hacerPeticion(), que primero recibe el json y luego llama a parseJsonIntoProducto()
-num=20     # numero de productos por peticion
-act=0      # ultimo producto para consultar
 
-peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+    # TODO : hacer metodo hacerPeticion(), que primero recibe el json y luego llama a parseJsonIntoProducto()
+    num=20     # numero de productos por peticion
+    act=0      # ultimo producto para consultar
 
-while act < len(ids):  
-    if (act+num) < len(ids):
-        
-        for x in range(act , (act + num)):
+    peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+
+    while act < len(ids):
+        if (act+num) < len(ids):
+
+            for x in range(0 , num):
+                peticionAct = peticionAct + ids[act]
+                if x != (num-1):
+                      peticionAct = peticionAct + ','
+                act=act+1
+                print(act)
+
+
+            hacerPeticion(peticionAct) # Hago la peticion
+
+            peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='   #reinicio la peticion
+
+        else:
+
+
+
             peticionAct = peticionAct + ids[act]
-            if x != (num-1):
-                  peticionAct = peticionAct + ','
-            act=act+1
+            act = act+1
+            if x == (len(ids) - 1):
+                peticionAct = peticionAct + ','
             print(act)
-            
-        
-        hacerPeticion(peticionAct) # Hago la peticion
-       
-        peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='   #reinicio la peticion
-    
-    else:
-        
-        for x in range(act , len(ids)):
-            peticionAct = peticionAct + ids[act]
-            if x != (len(ids)-1):
-                  peticionAct = peticionAct + ','
-            act=act+1
-            print(act)
-            
-        #aqui hacer peticion
-        #reinicio la peticion
-        peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
-print('[ALCAMPO_SCRAPER] Base de datos actualizada')
+            if(act == len(ids)):
+                hacerPeticion(peticionAct) # Hago la peticion
 
-"""
 
-    for id in ids:
-        browser2 = webdriver.Chrome()
-        peticionAct = str(peticion) + str(id)
 
-        browser2.get(peticionAct)
 
-        productJson=browser2.find_element(By.XPATH,'/html/body/pre')
-        parseJsonIntoProducto(productJson.text)
+    print('[ALCAMPO_SCRAPER] Base de datos actualizada')
 
-        browser2.close()
 
-    print('[ALCAMPO SCRAPER] Base de datos actualizada')
+
+
 
 
 """ 
@@ -99,4 +97,20 @@ y = json.loads(x)
 prod=y["products"][1]
 print(prod)
 
+"""
+
+
+"""
+ for id in ids:
+        browser2 = webdriver.Chrome()
+        peticionAct = str(peticion) + str(id)
+
+        browser2.get(peticionAct)
+
+        productJson=browser2.find_element(By.XPATH,'/html/body/pre')
+        parseJsonIntoProducto(productJson.text)
+
+        browser2.close()
+
+    print('[ALCAMPO SCRAPER] Base de datos actualizada')
 """
