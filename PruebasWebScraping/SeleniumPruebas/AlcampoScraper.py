@@ -48,7 +48,8 @@ def startScraping () :
 
 
 """ 
-TODO: a ver cuanas ids puedo meter de una
+TODO: a ver cuanas ids puedo meter de una.
+
 import json
 
 # some JSON:
