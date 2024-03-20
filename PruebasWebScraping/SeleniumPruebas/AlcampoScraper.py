@@ -30,8 +30,22 @@ def startScraping () :
 
     #peticion:
     #www.compraonline.alcampo.es/api/v5/products/decorate?productIds=cddc46c1-7884-4a66-a7f6-ae2533188415,aaa39a2d-7f5b-4627-a92e-6b0950331b72
-
+    #ids mide 300 una vez lleno (pero podria cambiar)
     peticion = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+
+
+"""
+act=0
+peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+while act < len(ids):  
+    peticionAct = peticionAct + str(ids[act])
+    ifx != (len(ids)-1):
+        peticionAct = peticionAct + ','
+    
+    #ahora hacer peticion
+    
+    
+"""
 
     for id in ids:
         browser2 = webdriver.Chrome()
