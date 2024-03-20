@@ -35,7 +35,7 @@ def startScraping () :
 
 
 """
-# TODO : hacer metodo hacerPeticion()
+# TODO : hacer metodo hacerPeticion(), que primero recibe el json y luego llama a parseJsonIntoProducto()
 num=20
 act=0
 peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
