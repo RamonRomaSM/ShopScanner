@@ -66,6 +66,8 @@ while act < len(ids):
         #aqui hacer peticion
         #reinicio la peticion
         peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
+print('[ALCAMPO_SCRAPER] Base de datos actualizada')
+
 """
 
     for id in ids:
