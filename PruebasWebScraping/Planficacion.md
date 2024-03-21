@@ -26,7 +26,8 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
     https://www.youtube.com/watch?app=desktop&v=_4qej7q6x30
     https://stackoverflow.com/questions/7581732/wpf-datagrid-lazy-loading-inifinite-scroll
     Barra lateral:
-      + filtrar por precio
+
+    + filtrar por precio
 
 + Poder acceder a mi cuenta  **(1)**
   + Mi nombre  
