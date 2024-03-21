@@ -21,15 +21,17 @@ Acuerdate de que lo primero que pide la app es que te logees/registres como en e
 Productos y perfil estan en una barra de navegacion en la parte superior, estas por dentro tienen barras laterales en a izquierda.
 
 Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
-
++ Barra de busqueda **(1)**
 + Infinite scroll de los productos: **(1)**  
     https://www.youtube.com/watch?app=desktop&v=_4qej7q6x30
     https://stackoverflow.com/questions/7581732/wpf-datagrid-lazy-loading-inifinite-scroll
 
-  Barra lateral:
++ Barra lateral: **(2)**  
 
-    + filtrar por precio
-
+    + Filtrar por precio
+    + Filtrar por tienda
+    + Filtrar por ofertas
+      
 + Poder acceder a mi cuenta  **(1)**
   + Mi nombre  
   + Mi correo ( si me diera tiempo )  **(3)**
