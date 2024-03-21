@@ -25,7 +25,8 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 + Infinite scroll de los productos: **(1)**  
     https://www.youtube.com/watch?app=desktop&v=_4qej7q6x30
     https://stackoverflow.com/questions/7581732/wpf-datagrid-lazy-loading-inifinite-scroll
-    Barra lateral:
+
+  Barra lateral:
 
     + filtrar por precio
 
