@@ -6,8 +6,7 @@
   + noche del viernes:  tener la del mercadona generando entidades
 ## BDD
 + MySql
-  + Al menos 1 dia para configurarla
-  + Al menos 1 dia para conectarla con python
+  + Al menos 1 dia para configurarla y conectarla a python
 + MongoDB
   + En unas horas se configura
 + Intermediario en java
