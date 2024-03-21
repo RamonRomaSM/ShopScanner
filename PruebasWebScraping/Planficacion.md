@@ -10,7 +10,7 @@
 + MongoDB
   + En unas horas se configura
 + Intermediario en java
-  + En un dia se pueden plantear las peticiones que puede recibir y la respuesta (acuerdate del multithread, y del protocolo de     conexion segura)
+  + En un dia se pueden plantear las peticiones que puede recibir y la respuesta (acuerdate del multithread, y del protocolo de     conexion segura) (plantear primero un rototipo de java con c# para ver si lo descarto)
     
 ## Interfaz
 Primero que nada plantear un prototipo para probar la conexion con java desde c#.
