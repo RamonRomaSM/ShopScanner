@@ -7,11 +7,17 @@ from selenium.webdriver.common.by import By
 
 
 def hacerPeticion(peticion):
-    print(str(peticion))
+    browser2 = webdriver.Chrome()
+    browser2.get(peticion)
+
+    productJson = browser2.find_element(By.XPATH, '/html/body/pre')
+    parseJsonIntoProducto(productJson.text)
+
+    browser2.close()
 
 def parseJsonIntoProducto (json):
     #TODO: saca los datos, crea el producto y lo guarda
-    print('parseado')
+    print(str(json) )
 
 def startScraping () :
     #TODO: antes de empezar a scrapear, borrar todo lo que hay en la bdd
@@ -42,7 +48,7 @@ def startScraping () :
 
 
     # TODO : hacer metodo hacerPeticion(), que primero recibe el json y luego llama a parseJsonIntoProducto()
-    num=20     # numero de productos por peticion
+    num=31     # numero de productos por peticion
     act=0      # ultimo producto para consultar
 
     peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='
@@ -52,12 +58,11 @@ def startScraping () :
 
             for x in range(0 , num):
                 peticionAct = peticionAct + ids[act]
-                if x != (num-1):
-                      peticionAct = peticionAct + ','
+
+                peticionAct = peticionAct + ','
                 act=act+1
-                print(act)
 
-
+            print(str("[PETICION ACT] "+peticionAct))
             hacerPeticion(peticionAct) # Hago la peticion
 
             peticionAct = 'https://www.compraonline.alcampo.es/api/v5/products/decorate?productIds='   #reinicio la peticion
@@ -68,10 +73,11 @@ def startScraping () :
 
             peticionAct = peticionAct + ids[act]
             act = act+1
-            if x == (len(ids) - 1):
+            if x != (len(ids) - 1):
                 peticionAct = peticionAct + ','
-            print(act)
+
             if(act == len(ids)):
+                print(str("[PETICION ACT] " + peticionAct))
                 hacerPeticion(peticionAct) # Hago la peticion
 
 
