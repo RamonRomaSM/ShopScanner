@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import json
-import Producto
+from Producto import Producto
 
 
 
@@ -18,35 +18,38 @@ def hacerPeticion(peticion):
 def parseJsonIntoProducto (jsonAct):
 
     y = json.loads(jsonAct)
+    print(jsonAct)
 
-
-    for x in range(0 , len(y["products"])):
+    for x in range(0, len(y["products"])):
         nombre = y["products"][x]["name"]
-        precio = y["products"][x]["price"]
-        imagen = y["products"][x]["image"]
+        precio = y["products"][x]["price"]["current"]["amount"]
+        imagen = y["products"][x]["image"]["src"]
         supermercado = "alcampo"
-        URL = "https://www.compraonline.alcampo.es/products/" + y["products"][x]["name"] + "/" + y["products"][x]["retailerProductId"]   #https://www.compraonline.alcampo.es/products/ 'name' / 'retailerProductId'
-        oferta = 'no'
+        nomUrl= str(y["products"][x]["name"]).replace(' ','-')
+        URL = "https://www.compraonline.alcampo.es/products/" + nomUrl + "/" + y["products"][x][
+            "retailerProductId"]  # https://www.compraonline.alcampo.es/products/ 'name' / 'retailerProductId'
+        oferta = ''
 
-        #para el tema de las ofertas, si hay una etiqueta de oferta en el json, ademas contendra la descripcion de esta, y el id
+        # para el tema de las ofertas, si hay una etiqueta de oferta en el json, ademas contendra la descripcion de esta, y el id
         # si no no habra etiqueta oferta
-        oferta='no'
+
         try:
-            oferta = y["products"][x]["offers"][0]["description"] #"offers":[{"id":"30e0c5fb-6b10-42bd-9d17-9e4defc88427","retailerPromotionId":"597072_1","description":"Club Alcampo 25% dto acumulado en tu tarjeta","type":"LOYALTY","presentationMode":"DEFAULT"}],"offer":{"id":"30e0c5fb-6b10-42bd-9d17-9e4defc88427","description":"Club Alcampo 25% dto acumulado en tu tarjeta","type":"LOYALTY","retailerPromotionId":"597072_1","presentationMode":"DEFAULT"},"size":{"value":"260g"},"featured":"false"}],"missedPromotions":[]}
+            oferta = y["products"][x]["offers"][0][
+                "description"]  # "offers":[{"id":"30e0c5fb-6b10-42bd-9d17-9e4defc88427","retailerPromotionId":"597072_1","description":"Club Alcampo 25% dto acumulado en tu tarjeta","type":"LOYALTY","presentationMode":"DEFAULT"}],"offer":{"id":"30e0c5fb-6b10-42bd-9d17-9e4defc88427","description":"Club Alcampo 25% dto acumulado en tu tarjeta","type":"LOYALTY","retailerPromotionId":"597072_1","presentationMode":"DEFAULT"},"size":{"value":"260g"},"featured":"false"}],"missedPromotions":[]}
         except:
-             print()
-        prod = Producto (nombre,precio,imagen,supermercado,URL,oferta)
-        prod.guardar
+            oferta = 'no'
 
+        params = {'nombre': nombre, 'precio': precio, 'imagen': imagen, 'supermercado': supermercado, 'URL': URL, 'oferta': oferta}
 
-
-
+        #prod = Producto(nombre,precio,imagen,supermercado,URL,oferta)
+        prod = Producto(nombre,precio,imagen,supermercado,URL,oferta)
+        prod.guardarEnBdd()
 
 
 
 
 def startScraping () :
-    #TODO: antes de empezar a scrapear, borrar todo lo que hay en la bdd
+    #TODO: borrar la bdd con el metodo de la clase AccesoBdd
 
     browser = webdriver.Chrome()
     browser.get('https://www.compraonline.alcampo.es/categories')
