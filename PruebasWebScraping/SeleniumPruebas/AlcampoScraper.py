@@ -16,14 +16,13 @@ def hacerPeticion(peticion):
     browser2.close()
 
 def parseJsonIntoProducto (jsonAct):
-    #TODO: saca los datos, crea el producto y lo guarda
-
 
     y = json.loads(jsonAct)
 
-    # the result is a Python dictionary:
-    prod = y["products"][1]
-    print(prod)
+
+    for x in range(0 , len(y["products"])):
+        prod = y["products"][x]["name"]
+        print(prod)
 
 
 
