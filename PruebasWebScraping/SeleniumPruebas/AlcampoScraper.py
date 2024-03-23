@@ -2,6 +2,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import json
+
+import AccesoBdd
 from Producto import Producto
 
 
@@ -49,7 +51,7 @@ def parseJsonIntoProducto (jsonAct):
 
 
 def startScraping () :
-    #TODO: borrar la bdd con el metodo de la clase AccesoBdd
+    AccesoBdd.borrarBdd()
 
     browser = webdriver.Chrome()
     browser.get('https://www.compraonline.alcampo.es/categories')

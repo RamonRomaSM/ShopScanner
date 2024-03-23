@@ -1,3 +1,6 @@
+import AccesoBdd
+
+
 class Producto:
     nombre = ''
     precio = 0
@@ -18,7 +21,5 @@ class Producto:
 
 
     def guardarEnBdd(self):
-        print('guardado:    '+self.nombre + '  :  ' +self.precio + '  :  ' +self.URL + '  :  ' +self.imagen + '  :  ' +self.oferta + '  :  ' + self.supermercado)
+        AccesoBdd.guardarProducto(self)
 
-    def borrarBDD():
-        print('BDD borrada')
