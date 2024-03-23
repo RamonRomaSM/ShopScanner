@@ -1,7 +1,7 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+import json
 
 
 
@@ -15,9 +15,22 @@ def hacerPeticion(peticion):
 
     browser2.close()
 
-def parseJsonIntoProducto (json):
+def parseJsonIntoProducto (jsonAct):
     #TODO: saca los datos, crea el producto y lo guarda
-    print(str(json) )
+
+
+    y = json.loads(jsonAct)
+
+    # the result is a Python dictionary:
+    prod = y["products"][1]
+    print(prod)
+
+
+
+
+
+
+
 
 def startScraping () :
     #TODO: antes de empezar a scrapear, borrar todo lo que hay en la bdd
@@ -47,7 +60,6 @@ def startScraping () :
 
 
 
-    # TODO : hacer metodo hacerPeticion(), que primero recibe el json y luego llama a parseJsonIntoProducto()
     num=31     # numero de productos por peticion
     act=0      # ultimo producto para consultar
 
