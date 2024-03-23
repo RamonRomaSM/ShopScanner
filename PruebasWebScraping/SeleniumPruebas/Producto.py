@@ -3,7 +3,7 @@ class Producto:
     precio = 0
     imagen = ''
     supermercado = ''
-    URL = ''
+    URL = ''    #https://www.compraonline.alcampo.es/products/ 'name' / 'retailerProductId' en la del alcampo
     oferta = False
 
     def __int__(self,nombre,precio,imagen,supermercado,URL,oferta):
@@ -16,3 +16,4 @@ class Producto:
 
     def guardarEnBdd(self):
         print('guardado')
+

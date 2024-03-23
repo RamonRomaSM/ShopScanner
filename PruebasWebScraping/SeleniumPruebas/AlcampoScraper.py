@@ -21,6 +21,10 @@ def parseJsonIntoProducto (jsonAct):
 
 
     for x in range(0 , len(y["products"])):
+        nombre = y["products"][x]["name"]
+        precio = y["products"][x]["price"]
+        imagen = y["products"][x]["image"]
+        prod = y["products"][x]["name"]
         prod = y["products"][x]["name"]
         print(prod)
 
@@ -48,6 +52,7 @@ def startScraping () :
         id=element.get_attribute("data-visibility-id")
         if str(id) != "None":
             ids.append(id)
+
 
 
     browser.close()
