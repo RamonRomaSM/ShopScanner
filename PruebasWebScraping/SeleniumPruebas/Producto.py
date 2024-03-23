@@ -3,8 +3,8 @@ class Producto:
     precio = 0
     imagen = ''
     supermercado = ''
-    URL = ''    #https://www.compraonline.alcampo.es/products/ 'name' / 'retailerProductId' en la del alcampo
-    oferta = False
+    URL = ''
+    oferta = '' #si no esta en oferta qui pondra 'no'
 
     def __int__(self,nombre,precio,imagen,supermercado,URL,oferta):
         self.nombre = nombre
@@ -15,5 +15,7 @@ class Producto:
         self.supermercado = supermercado
 
     def guardarEnBdd(self):
-        print('guardado')
+        print('guardado:    '+self.nombre + '/' +self.precio + '/' +self.URL + '/' +self.imagen + '/' +self.oferta + '/' + self.supermercado)
 
+    def borrarBDD(self):
+        print('BDD borrada')

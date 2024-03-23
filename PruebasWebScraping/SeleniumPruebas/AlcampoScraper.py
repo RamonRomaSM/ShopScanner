@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import json
-
+import Producto
 
 
 
@@ -24,9 +24,19 @@ def parseJsonIntoProducto (jsonAct):
         nombre = y["products"][x]["name"]
         precio = y["products"][x]["price"]
         imagen = y["products"][x]["image"]
-        prod = y["products"][x]["name"]
-        prod = y["products"][x]["name"]
-        print(prod)
+        supermercado = "alcampo"
+        URL = "https://www.compraonline.alcampo.es/products/" + y["products"][x]["name"] + "/" + y["products"][x]["retailerProductId"]   #https://www.compraonline.alcampo.es/products/ 'name' / 'retailerProductId'
+        oferta = 'no'
+
+        #para el tema de las ofertas, si hay una etiqueta de oferta en el json, ademas contendra la descripcion de esta, y el id
+        # si no no habra etiqueta oferta
+        oferta='no'
+        try:
+            oferta = y["products"][x]["offers"][0]["description"] #"offers":[{"id":"30e0c5fb-6b10-42bd-9d17-9e4defc88427","retailerPromotionId":"597072_1","description":"Club Alcampo 25% dto acumulado en tu tarjeta","type":"LOYALTY","presentationMode":"DEFAULT"}],"offer":{"id":"30e0c5fb-6b10-42bd-9d17-9e4defc88427","description":"Club Alcampo 25% dto acumulado en tu tarjeta","type":"LOYALTY","retailerPromotionId":"597072_1","presentationMode":"DEFAULT"},"size":{"value":"260g"},"featured":"false"}],"missedPromotions":[]}
+        except:
+             print()
+        prod = Producto (nombre,precio,imagen,supermercado,URL,oferta)
+        prod.guardar
 
 
 
