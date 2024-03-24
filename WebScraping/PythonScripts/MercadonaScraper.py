@@ -1,0 +1,6 @@
+
+
+
+
+def startScraping():
+    print("escrapeo")
