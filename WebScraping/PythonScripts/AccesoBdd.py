@@ -1,4 +1,4 @@
-import mysql
+import _mysql_connector
 
 def borrarBdd():
     print("[SISTEMA] Base de datos borrada")
