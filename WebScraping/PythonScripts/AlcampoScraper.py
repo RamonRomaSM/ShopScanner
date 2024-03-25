@@ -7,15 +7,15 @@ import AccesoBdd
 from Producto import Producto
 
 
-
+browser2 = webdriver.Chrome()
 def hacerPeticion(peticion):
-    browser2 = webdriver.Chrome()
+
     browser2.get(peticion)
 
     productJson = browser2.find_element(By.XPATH, '/html/body/pre')
     parseJsonIntoProducto(productJson.text)
 
-    browser2.close()
+
 
 def parseJsonIntoProducto (jsonAct):
 
@@ -113,7 +113,7 @@ def startScraping () :
 
 
 
+    browser2.close()
 
-    print('[ALCAMPO_SCRAPER] Base de datos actualizada')
 
 
