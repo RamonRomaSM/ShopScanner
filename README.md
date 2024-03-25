@@ -79,5 +79,7 @@ https://es.wikipedia.org/wiki/Arquitectura_multicapa
 
 Esta capa recibe las peticiones, pide datos y manda datos
 
+Esta capa recive la url de las imagenes y le manda al cliente los bytes de la imagen
+
 
 
