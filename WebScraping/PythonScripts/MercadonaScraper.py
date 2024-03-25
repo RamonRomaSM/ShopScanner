@@ -9,30 +9,33 @@ from Producto import Producto
 
 browser2 = webdriver.Chrome()
 def hacerPeticion(peticion):
-
-    browser2.get(peticion)
-    productJson = browser2.find_element(By.XPATH, '/html/body/pre')
-    print(str("[PETICION ACT] " + peticion))
-    parseJsonIntoProducto(productJson.text)
-
+    try:
+        browser2.get(peticion)
+        productJson = browser2.find_element(By.XPATH, '/html/body/pre')
+        print(str("[PETICION ACT] " + peticion))
+        parseJsonIntoProducto(productJson.text)
+    except:
+        x=0
 def parseJsonIntoProducto (jsonAct):
-    y = json.loads(jsonAct)
-    for x in range(0, len(y["categories"][0]["products"])):
-        nombre = y["categories"][0]["products"][x]["display_name"]
-        precio = y["categories"][0]["products"][x]["price_instructions"]["unit_price"]
-        imagen = y["categories"][0]["products"][x]["thumbnail"]
-        supermercado = "mercadona"
-        URL = y["categories"][0]["products"][x]["share_url"]
-        oferta = y["categories"][0]["products"][x]["price_instructions"]["previous_unit_price"]
-        if oferta == "null":
-            oferta = "no"
+    try:
+        y = json.loads(jsonAct)
+        for x in range(0, len(y["categories"][0]["products"])):
+            nombre = y["categories"][0]["products"][x]["display_name"]
+            precio = y["categories"][0]["products"][x]["price_instructions"]["unit_price"]
+            imagen = y["categories"][0]["products"][x]["thumbnail"]
+            supermercado = "mercadona"
+            URL = y["categories"][0]["products"][x]["share_url"]
+            oferta = y["categories"][0]["products"][x]["price_instructions"]["previous_unit_price"]
+            if oferta == "null":
+                oferta = "no"
 
 
-        params = {'nombre': nombre, 'precio': precio, 'imagen': imagen, 'supermercado': supermercado, 'URL': URL,
-                  'oferta': oferta}
-        prod = Producto(nombre, precio, imagen, supermercado, URL, oferta)
-        prod.guardarEnBdd()
-
+            params = {'nombre': nombre, 'precio': precio, 'imagen': imagen, 'supermercado': supermercado, 'URL': URL,
+                      'oferta': oferta}
+            prod = Producto(nombre, precio, imagen, supermercado, URL, oferta)
+            prod.guardarEnBdd()
+    except:
+        x=0
 
 def startScraping():
     print("escrapeo")

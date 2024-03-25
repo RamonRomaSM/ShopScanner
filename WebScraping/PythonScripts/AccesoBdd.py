@@ -1,3 +1,5 @@
+import mysql
+
 def borrarBdd():
     print("[SISTEMA] Base de datos borrada")
 

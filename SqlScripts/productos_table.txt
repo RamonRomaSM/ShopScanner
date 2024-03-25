@@ -1,0 +1,9 @@
+CREATE TABLE `tfg`.`productos` (
+  `idproductos` VARCHAR(45) NOT NULL,
+  `nombre` VARCHAR(45) NULL,
+  `precio` DECIMAL NULL,
+  `supermercado` VARCHAR(45) NULL,
+  `oferta` VARCHAR(45) NULL,
+  `url` VARCHAR(45) NULL,
+  `imagen` VARCHAR(45) NULL,
+  PRIMARY KEY (`idproductos`));
