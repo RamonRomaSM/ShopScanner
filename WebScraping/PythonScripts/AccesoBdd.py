@@ -7,13 +7,11 @@ mydb = mysql.connector.connect(
 )
 
 def borrarBdd():
-    #TRUNCATE TABLE tfg.productos;
+
     mycursor = mydb.cursor()
 
-    mycursor.execute("SHOW DATABASES")
+    mycursor.execute("TRUNCATE TABLE tfg.productos")
 
-    for x in mycursor:
-        print(x)
     print("[SISTEMA] Base de datos borrada")
 
 def guardarProducto(Producto):
