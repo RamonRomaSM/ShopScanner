@@ -31,6 +31,12 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 ## Barra de navegacion superior
 
 + Productos
+    + Barra de busqueda arriba
+      + Boton del desplegable de filtros a la derecha del boton de buscar
+        + Filtrar por: supermercado    /    ordenar por precio    /    rango de precios
+    + Infinite Scroll en el centro
+        + Cada vez que se aplica un filtro vuelve arriba y se reinicia
+    
 
 + Perfil
 
