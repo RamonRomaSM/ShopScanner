@@ -40,13 +40,17 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
     + Infinite Scroll en el centro
         + Cada vez que se aplica un filtro vuelve arriba y se reinicia
         + los items:
+            + Foto / nombre / precio / oferta ( si es de mercadona aparece con el precio antiguo tachado, si es de alcampo dice el catalogo o lo que sea)
+            + Si le haces click al item te lleva al componente que muestra al item:
+                + Nombre / supermercado / precio / rebaja / pagina / añadir al carrito
 
 + Perfil
     + Datos mios (nombre correo)
     + ListView con mis listas
         + Por fuera se ve el nombre , el precio total, el numero de items
         + Cuando clicas: te abre el pdf?, la despliega hacia abajo?
-
++ Carrito
+  
 + Ayuda
 
 
