@@ -42,7 +42,7 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
         + los items:
             + Foto / nombre / precio / oferta ( si es de mercadona aparece con el precio antiguo tachado, si es de alcampo dice el catalogo o lo que sea)
             + Si le haces click al item te lleva al componente que muestra al item:
-                + Nombre / supermercado / precio / rebaja / pagina / añadir al carrito
+                + Foto / Nombre / supermercado / precio / rebaja / pagina / añadir al carrito
 
 + Perfil
     + Datos mios (nombre correo)
