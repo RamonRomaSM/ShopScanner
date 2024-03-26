@@ -1,3 +1,4 @@
+# Descripcion de la intefaz
 
 Acuerdate de que lo primero que pide la app es que te logees/registres como en el supercole.
 
@@ -26,3 +27,18 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
     + Mandarmela por correo (si me da tiempo a implementar lo del correo)
 
     + Borrarlas **(1)**
+   
+## Barra de navegacion superior
+
++ Productos
+
++ Perfil
+
++ Ayuda
+
+
+
+
+
+
+
