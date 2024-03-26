@@ -1,5 +1,8 @@
 # Descripcion de la intefaz
 
+el objetibo es ir añadiendo cosas a la cesta, cuando ya lo tengas, 
+te metes en la cesta y generas la lista de la compra
+
 Acuerdate de que lo primero que pide la app es que te logees/registres como en el supercole.
 
 Como no se lo que tardare ahi van las funcionalidaddes/requisitos:
