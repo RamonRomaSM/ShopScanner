@@ -28,17 +28,21 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 
     + Borrarlas **(1)**
    
-## Barra de navegacion superior
+## Barra de navegacion Izquierda
 
 + Productos
     + Barra de busqueda arriba
       + Boton del desplegable de filtros a la derecha del boton de buscar
-        + Filtrar por: supermercado    /    ordenar por precio    /    rango de precios
+        + Filtrar por: supermercado    /    ordenar por precio    /    rango de precios    /    mostrar ofertas
     + Infinite Scroll en el centro
         + Cada vez que se aplica un filtro vuelve arriba y se reinicia
-    
+        + los items:
 
 + Perfil
+    + Datos mios (nombre correo)
+    + ListView con mis listas
+        + Por fuera se ve el nombre , el precio total, el numero de items
+        + Cuando clicas: te abre el pdf?, la despliega hacia abajo?
 
 + Ayuda
 
