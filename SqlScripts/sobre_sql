@@ -1,0 +1,17 @@
+SELECT * FROM tfg.productos LIMIT 0,5
+
+el 0 se refiere a la fila por la que empieza 
+el 5 el numero de filas que recoje a partir del dado
+
+
+si tenemos paginas de 20 productos:
+  Pagina 1:  SELECT * FROM tfg.productos LIMIT 0,20
+  Pagina 2:  SELECT * FROM tfg.productos LIMIT 20,20
+  Pagina 2:  SELECT * FROM tfg.productos LIMIT 40,20
+
+
+SELECT * FROM tfg.productos LIMIT 855,1 (esta es la ultima fila de la db)
+
+si quieres seleccionar mas filas de las que hay, te devuelve las que haya: 
+  SELECT * FROM tfg.productos LIMIT 855,5
+  queremos 5 filas a partir de la 855, la fila 855 es la unica que existe asi que solo nos manda esa
