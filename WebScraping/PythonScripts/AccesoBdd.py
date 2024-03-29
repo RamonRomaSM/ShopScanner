@@ -12,7 +12,7 @@ def borrarBdd():
 
     mycursor.execute("TRUNCATE TABLE tfg.productos")
 
-    print("[SISTEMA] Base de datos borrada")
+    print("[SISTEMA] Base de datos vaciada")
 
 def guardarProducto(Producto):
     mycursor = mydb.cursor()
