@@ -12,6 +12,8 @@ Para obtener los datos de la base de datos.
 ## Bases de datos
 https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20it's%20possible%20to%20use,needs%20within%20the%20same%20application.
 
+Es mas intuitivo y facil guardar las listas de la compra en formato json / a la hora de pedir los productos lo encontre mas intuitivo co SQL
+
   + ### Tablas MySql:
 
     + Productos (Pid, nombre, precio, imagen, supermercado, URL, oderta?)
