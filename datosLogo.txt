@@ -1,1 +1,2 @@
-#2B50A8		color principal (del fondo del logo)
+#2B50A8		color secundario ()
+#033549		color principal (del fondo del logo, de los items etc)
