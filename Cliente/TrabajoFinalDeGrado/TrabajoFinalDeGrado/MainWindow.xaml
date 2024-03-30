@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrabajoFinalDeGrado"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="720" Width="1280" ResizeMode="NoResize" Background="#32383F">
+    <Grid Margin="188,111,0,0">
+        <ContentControl Content="" HorizontalAlignment="Left" Margin="700,500,0,0" VerticalAlignment="Top"/>
+
 
     </Grid>
 </Window>
