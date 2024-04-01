@@ -22,7 +22,18 @@ namespace TrabajoFinalDeGrado
     {
         public MainWindow()
         {
+           
             InitializeComponent();
         }
+        private void moverWindow(object sender, MouseButtonEventArgs e)
+
+        {
+
+            this.DragMove();
+
+        }
     }
+   
+
+
 }
