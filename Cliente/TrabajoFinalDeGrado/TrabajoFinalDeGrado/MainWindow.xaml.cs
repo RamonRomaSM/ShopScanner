@@ -32,6 +32,12 @@ namespace TrabajoFinalDeGrado
             this.DragMove();
 
         }
+
+        private void salir(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            
+        }
     }
    
 
