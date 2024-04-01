@@ -20,7 +20,7 @@
         
         
         
-        <Image Grid.Row="0" HorizontalAlignment="Left" Source=".\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\imagenes\logo.png" Height="59" VerticalAlignment="Top" Width="241" Stretch="Fill" Margin="0,20,0,0"/>
+        <Image Grid.Row="0" HorizontalAlignment="Left" Source="..\TrabajoFinalDeGrado\imagenes\logo.png" Height="59" VerticalAlignment="Top" Width="241" Stretch="Fill" Margin="0,20,0,0"/>
         <ContentControl Grid.Row="1" Grid.Column="1" Margin="20,20,0,0"  Content="ContentControl" />
        
         <!--PRODUCTOS-->
