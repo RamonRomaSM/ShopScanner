@@ -55,7 +55,8 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 
 
 # Planificacion
-+    Barra superior con una x y boton de minimizar y maximizar, color negro, para diferenciarlo del resto, que respete      las esquinas redondedas
++    Hoy: Barra superior con una x y boton de minimizar y maximizar, color negro, para diferenciarlo del resto, que
+     respete las esquinas redondedas
 +    antes del 6 tener el inicio de sesion (al menos el user control) (al principio te pide logearte / registrarte)
      de paso darle funcionalidad al boton de cerrar sesion (nomas que te devuelve al userControl del login)
      
