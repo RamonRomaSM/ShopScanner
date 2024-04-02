@@ -10,26 +10,14 @@ Para obtener los datos de la base de datos.
 + Selenium
 
 ## Bases de datos
-https://www.quora.com/Can-we-use-two-databases-in-one-project#:~:text=Yes%2C%20it's%20possible%20to%20use,needs%20within%20the%20same%20application.
 
-Es mas intuitivo y facil guardar las listas de la compra en formato json (en sql habria que tener una tabla nueva que te relacione usuario-Lista y otra para lista-Productos) / a la hora de pedir los productos lo encontre mas intuitivo co SQL (SELECT * FROM tfg.productos LIMIT 0,20) / Me dio curiosidad mezclar 2 bases de datos en un proyecto
 
   + ### Tablas MySql:
 
     + Productos (Pid, nombre, precio, imagen, supermercado, URL, oderta?)
     + Usuarios (Uid, nombre, contraseña)
 
-  + ### Mongo DB:
-    + Listas de la compra
-
-      Ejemplo:
-    
-          {
-          "Uid": 7,
-          "nombreLista": "Mi compra semanal",
-          "Productos": {"Pid":1 ,"Pid":2, "Pid":3}
-          }
-
+ 
 ## Cliente de la aplicacion
 ### Tecnologías utilizadas:
 + WPF
