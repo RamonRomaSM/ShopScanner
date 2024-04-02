@@ -24,15 +24,27 @@
                 <ColumnDefinition Width="1030"/>
             </Grid.ColumnDefinitions>
 
-
-
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--BARRA SUPERIOR-->    
             <Grid>
+                <Border Background="#1F2024"
+                        CornerRadius="20,0,0,0" />
+            </Grid>
+            <Grid Grid.Column="1"><!--En este van los botones-->
+                <Border Background="#1F2024"
+                         CornerRadius="0,20,0,0" />
+            </Grid>
+            <!--BARRA LATERAL-->
+            <Grid Grid.Row="1">
                 <Border Background="#272B2F"
-                        CornerRadius="20,0,0,20" />
+                        CornerRadius="0,0,0,20" />
 
                 <!--PRODUCTOS-->
                 <StackPanel  >
-                    <Image Grid.Row="0"  HorizontalAlignment="Left" Source="/imagenes/logo.png" Height="59" VerticalAlignment="Top" Width="241" Stretch="Fill" Margin="0,30,0,30"/>
+                    <Image Grid.Row="0"  HorizontalAlignment="Left" Source="/imagenes/logo.png" Height="59" VerticalAlignment="Top" Width="241" Stretch="Fill" Margin="0,10,0,30"/>
                     <Button Content="Productos" Height="50" FontSize="18" Foreground="White"  Cursor="Hand" Margin="0,10,0,10">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
@@ -156,7 +168,7 @@
 
 
 
-            <Grid Grid.Column="1" Margin="0,30,0,0">
+            <Grid Grid.Column="1" Grid.Row="1" Margin="0,10,0,0">
                 <ContentControl Grid.Column="1" Content="ContentControl" />
 
             </Grid>

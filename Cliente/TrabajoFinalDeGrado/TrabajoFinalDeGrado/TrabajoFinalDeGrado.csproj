@@ -9,10 +9,19 @@
 
   <ItemGroup>
     <None Remove="imagenes\logo.png" />
+    <None Remove="imagenes\output-onlinepngtools %281%29.png" />
+    <None Remove="imagenes\output-onlinepngtools %282%29.png" />
+    <None Remove="imagenes\output-onlinepngtools %283%29.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imagenes\output-onlinepngtools (3).png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="imagenes\logo.png" />
+    <Resource Include="imagenes\output-onlinepngtools (1).png" />
+    <Resource Include="imagenes\output-onlinepngtools (2).png" />
   </ItemGroup>
 
 </Project>
