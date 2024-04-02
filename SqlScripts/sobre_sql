@@ -15,3 +15,6 @@ SELECT * FROM tfg.productos LIMIT 855,1 (esta es la ultima fila de la db)
 si quieres seleccionar mas filas de las que hay, te devuelve las que haya: 
   SELECT * FROM tfg.productos LIMIT 855,5
   queremos 5 filas a partir de la 855, la fila 855 es la unica que existe asi que solo nos manda esa
+
+
+** probar a conbinarlo con esto: SELECT * FROM yourTableName where yourColumnName like '%yourPattern%';  para buscar en funcion de un patron 
