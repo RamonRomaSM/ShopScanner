@@ -38,6 +38,24 @@ namespace TrabajoFinalDeGrado
             this.Close();
             
         }
+        private void maximizar(object sender, RoutedEventArgs e)
+        {
+
+            if (WindowState != WindowState.Maximized)
+            {
+                WindowState = WindowState.Maximized;
+                
+            }
+            else {
+                WindowState = WindowState.Normal;
+               
+            }
+        }
+        private void minimizar(object sender, RoutedEventArgs e)
+        {
+            WindowState=WindowState.Minimized;
+
+        }
     }
    
 
