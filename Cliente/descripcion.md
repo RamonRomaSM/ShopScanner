@@ -55,6 +55,7 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 
 
 # Planificacion
++    Tambien probar a compilar lo de python ( https://www.youtube.com/watch?v=bqNvkAfTvIc )
 +    Hoy: Barra superior con una x y boton de minimizar y maximizar, color negro, para diferenciarlo del resto, que
      respete las esquinas redondedas
 +    antes del 6 tener el inicio de sesion (al menos el user control) (al principio te pide logearte / registrarte)
