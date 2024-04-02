@@ -40,7 +40,7 @@ namespace TrabajoFinalDeGrado
         }
         private void maximizar(object sender, RoutedEventArgs e)
         {
-
+            
             if (WindowState != WindowState.Maximized)
             {
                 WindowState = WindowState.Maximized;
