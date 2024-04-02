@@ -54,6 +54,12 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 + Ayuda
 
 
+# Planificacion
+
++    antes del 6 tener el inicio de sesion (al menos el user control) (al principio te pide logearte / registrarte)
++    entre el 6-8 hacer el infinite scroll (poner la barra de busqueda (recuerda que si el input text esta focuseado,       al apretar enter se realiza la accion de buscar))
++    
+
 
 
 
