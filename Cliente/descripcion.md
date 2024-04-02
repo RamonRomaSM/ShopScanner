@@ -59,7 +59,8 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 +    antes del 6 tener el inicio de sesion (al menos el user control) (al principio te pide logearte / registrarte)
      de paso darle funcionalidad al boton de cerrar sesion (nomas que te devuelve al userControl del login)
      
-+    entre el 6-8 hacer el infinite scroll (poner la barra de busqueda (recuerda que si el input text esta focuseado,       al apretar enter se realiza la accion de buscar))
++    entre el 6-8 hacer el infinite scroll (poner la barra de busqueda (si contiene el string te lo muestro  SELECT         *FROM yourTableName where yourColumnName like '%yourPattern%'; )(recuerda que si el input text esta
+     focuseado, al apretar enter se realiza la accion de buscar))
     
 
 
