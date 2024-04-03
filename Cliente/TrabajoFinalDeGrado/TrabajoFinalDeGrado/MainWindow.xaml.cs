@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrabajoFinalDeGrado.autenth;
 
 namespace TrabajoFinalDeGrado
 {
@@ -24,6 +25,7 @@ namespace TrabajoFinalDeGrado
         {
            
             InitializeComponent();
+            mainContenedor.Content = new loginFragmentxaml();
         }
         private void moverWindow(object sender, MouseButtonEventArgs e)
 

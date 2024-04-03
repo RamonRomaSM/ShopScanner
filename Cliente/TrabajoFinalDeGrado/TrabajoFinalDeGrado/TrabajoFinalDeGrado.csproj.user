@@ -7,12 +7,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Login\UserControl1.xaml.cs">
+    <Compile Update="autenth\loginFragment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="mainFragment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Login\UserControl1.xaml">
+    <Page Update="autenth\loginFragment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="mainFragment.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
