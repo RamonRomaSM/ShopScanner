@@ -18,3 +18,5 @@ si quieres seleccionar mas filas de las que hay, te devuelve las que haya:
 
 
 ** probar a conbinarlo con esto: SELECT * FROM yourTableName where yourColumnName like '%yourPattern%';  para buscar en funcion de un patron 
+
+https://stackoverflow.com/questions/40552894/mysql-pagination-of-filtered-rows  // mirar la respuesta de David (la de debajo de la fijada)
