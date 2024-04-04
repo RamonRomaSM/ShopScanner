@@ -21,11 +21,15 @@ namespace TrabajoFinalDeGrado
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+        // acuerdate que cuando haces el login, el server te manda los datos de tu cuenta (tus listas de la compra) y estas se guardan en una variable
+        // (usuarioAct), cuando cierras sesion, hay quedestruir esta variable (volverla null)
+       
         public MainWindow()
         {
            
             InitializeComponent();
-            mainContenedor.Content = new mainFragment();
+            mainContenedor.Content = new mainFragment(); 
         }
         private void moverWindow(object sender, MouseButtonEventArgs e)
 
