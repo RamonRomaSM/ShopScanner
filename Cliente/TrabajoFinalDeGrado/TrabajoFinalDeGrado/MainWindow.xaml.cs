@@ -25,7 +25,7 @@ namespace TrabajoFinalDeGrado
         {
            
             InitializeComponent();
-            mainContenedor.Content = new loginFragmentxaml();
+            mainContenedor.Content = new mainFragment();
         }
         private void moverWindow(object sender, MouseButtonEventArgs e)
 
