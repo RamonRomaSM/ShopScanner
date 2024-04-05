@@ -11,9 +11,10 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Background="Transparent">
+   
     <Grid>
-        <Border Background="#212529"
-        CornerRadius="8" />
+        <Border Background="#212529" BorderThickness="1" CornerRadius="8"/>
+       
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
@@ -21,10 +22,10 @@
             </Grid.RowDefinitions>
 
             <!--BARRA SUPERIOR-->
-            <Grid Grid.Row="0"  MouseDown="moverWindow">
+            <Grid Grid.Row="0"  MouseDown="moverWindow" >
                 <!--En este van los botones-->
                 <Border Background="#1F2024"
-   CornerRadius="8,8,0,0" />
+                    CornerRadius="8,8,0,0" />
                 <!--CRUZ-->
                 <Button  HorizontalAlignment="Right" Margin="0,0,20,0" Cursor="Hand" Height="20" Click="salir" Name="cruz">
                     <Button.Style>
@@ -100,10 +101,10 @@
             </Grid>
 
             <Grid Grid.Row="1" >
-                <Border CornerRadius="0,0,5,5" Background="White" Opacity="0.2">
-                    <Image Source="\imagenes\fondoApp.png" />    
-                </Border>
-                
+               
+                <Image Source="\imagenes\fondoApp.png" Opacity="0.2"/>
+               
+
 
                 <ContentControl Name="mainContenedor" Content=""/>
             </Grid>
