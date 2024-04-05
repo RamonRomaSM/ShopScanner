@@ -20,14 +20,21 @@ namespace TrabajoFinalDeGrado
     /// </summary>
     public partial class mainFragment : UserControl
     {
-        public mainFragment()
+        private MainWindow padre;
+        public mainFragment(MainWindow padre)
         {
             InitializeComponent();
+            this.padre = padre;
         }
         private void salir2(object sender, RoutedEventArgs e)
         {
             var window = Window.GetWindow(this);
             window.Close();
         }
+        private void cerrar_sesion(object sender, RoutedEventArgs e)
+        {
+            padre.deslogear();
+        }
+
     }
 }

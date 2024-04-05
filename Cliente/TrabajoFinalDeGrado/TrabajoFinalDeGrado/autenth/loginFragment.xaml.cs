@@ -20,9 +20,16 @@ namespace TrabajoFinalDeGrado.autenth
     /// </summary>
     public partial class loginFragmentxaml : UserControl
     {
-        public loginFragmentxaml()
+        MainWindow padre;
+        public loginFragmentxaml(MainWindow padre)
         {
             InitializeComponent();
+            this.padre = padre;
+        }
+
+        private void aceptar(object sender, RoutedEventArgs e)
+        {
+            padre.logear();
         }
     }
 }
