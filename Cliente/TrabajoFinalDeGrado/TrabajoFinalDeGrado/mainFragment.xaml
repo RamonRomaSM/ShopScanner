@@ -151,7 +151,7 @@
 
         <Grid Grid.Column="1">
             
-            <ContentControl Content="" Name="contenido"/>
+            <ContentControl Content="" />
             
 
         </Grid>
