@@ -7,7 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="autenth\loginForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="autenth\loginFragment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="autenth\registerForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="mainFragment.xaml.cs">
@@ -15,7 +21,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="autenth\loginForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="autenth\loginFragment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="autenth\registerForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="mainFragment.xaml">

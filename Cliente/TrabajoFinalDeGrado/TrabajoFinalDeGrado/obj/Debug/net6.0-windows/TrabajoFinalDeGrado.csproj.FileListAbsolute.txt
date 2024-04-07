@@ -48,3 +48,7 @@ C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGr
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado.pdb
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado.genruntimeconfig.cache
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\ref\TrabajoFinalDeGrado.dll
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\loginForm.g.cs
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\registerForm.g.cs
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\loginForm.baml
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\registerForm.baml

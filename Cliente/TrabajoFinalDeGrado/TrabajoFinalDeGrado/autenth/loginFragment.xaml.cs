@@ -20,6 +20,7 @@ namespace TrabajoFinalDeGrado.autenth
     /// </summary>
     public partial class loginFragmentxaml : UserControl
     {
+        bool quien = true;
         MainWindow padre;
         public loginFragmentxaml(MainWindow padre)
         {
@@ -31,5 +32,66 @@ namespace TrabajoFinalDeGrado.autenth
         {
             padre.logear();
         }
+        private void logearse(object sender, RoutedEventArgs e)
+        {
+            loginBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
+            registarrseBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            quien = true;
+
+        }
+        private void registrarse(object sender, RoutedEventArgs e)
+        {
+            loginBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;           
+            registarrseBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
+            quien = false;
+
+        }
+
+
+
+
+        private void loginBtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            loginBtn.BorderBrush = (SolidColorBrush)new BrushConverter().ConvertFrom("#646D77");
+        }
+
+        private void loginBtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (quien)
+            {
+                loginBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
+                registarrseBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            }
+            else {
+                loginBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;
+                registarrseBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
+            }
+        }
+
+        private void registarrseBtn_MouseEnter(object sender, MouseEventArgs e)
+        {
+            registarrseBtn.BorderBrush = (SolidColorBrush)new BrushConverter().ConvertFrom("#646D77");
+        }
+
+        private void registarrseBtn_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (quien)
+            {
+                loginBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
+                registarrseBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;
+            }
+            else
+            {
+                loginBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;
+                registarrseBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
+            }
+        }
+       
+
+
+
+
+
     }
+    
 }

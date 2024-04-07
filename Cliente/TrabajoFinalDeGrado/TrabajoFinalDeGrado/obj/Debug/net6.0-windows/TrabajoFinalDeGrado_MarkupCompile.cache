@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\App.xaml
-3412550282
+5713254821
 
-5-1623214813
+7-2111897343
 1941675070116
-autenth\loginFragment.xaml;mainFragment.xaml;MainWindow.xaml;
+autenth\loginForm.xaml;autenth\loginFragment.xaml;autenth\registerForm.xaml;mainFragment.xaml;MainWindow.xaml;
 
 False
 
