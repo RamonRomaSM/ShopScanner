@@ -65,7 +65,7 @@ namespace TrabajoFinalDeGrado
         }
 
         public void logear(){
-            
+            this.mainContenedor.Content = new mainFragment(this);
         }
         public void deslogear()
         {

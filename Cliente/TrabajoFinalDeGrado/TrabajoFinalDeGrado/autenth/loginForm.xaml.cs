@@ -20,9 +20,16 @@ namespace TrabajoFinalDeGrado.autenth
     /// </summary>
     public partial class loginForm : UserControl
     {
-        public loginForm()
+        MainWindow padre;
+        public loginForm(MainWindow padre)
         {
+            this.padre = padre;
             InitializeComponent();
+        }
+
+        private void aceptar(object sender, RoutedEventArgs e)
+        {
+            padre.logear();
         }
     }
 }

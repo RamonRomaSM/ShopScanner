@@ -20,7 +20,7 @@ namespace TrabajoFinalDeGrado.autenth
     /// </summary>
     public partial class registerForm : UserControl
     {
-        public registerForm()
+        public registerForm(MainWindow padre)
         {
             InitializeComponent();
         }

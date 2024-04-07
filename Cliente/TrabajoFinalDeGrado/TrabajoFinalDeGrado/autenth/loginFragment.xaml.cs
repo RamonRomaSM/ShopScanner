@@ -26,25 +26,23 @@ namespace TrabajoFinalDeGrado.autenth
         {
             InitializeComponent();
             this.padre = padre;
+            formContainer.Content = new loginForm(padre);
         }
 
-        private void aceptar(object sender, RoutedEventArgs e)
-        {
-            padre.logear();
-        }
+        
         private void logearse(object sender, RoutedEventArgs e)
         {
             loginBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
             registarrseBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;
             quien = true;
-
+            formContainer.Content = new loginForm(padre);
         }
         private void registrarse(object sender, RoutedEventArgs e)
         {
             loginBtn.BorderBrush = System.Windows.Media.Brushes.Transparent;           
             registarrseBtn.BorderBrush = System.Windows.Media.Brushes.DodgerBlue;
             quien = false;
-
+            formContainer.Content = new registerForm(padre);
         }
 
 
