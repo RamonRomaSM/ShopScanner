@@ -20,9 +20,46 @@ namespace TrabajoFinalDeGrado.autenth
     /// </summary>
     public partial class registerForm : UserControl
     {
+        MainWindow padre;
         public registerForm(MainWindow padre)
         {
+            this.padre = padre;
             InitializeComponent();
+        }
+
+        private void registrar(object sender, RoutedEventArgs e)
+        {   if (nombre.Text == "") 
+            {
+                feedbacklbl.Foreground = new SolidColorBrush(Colors.Red);
+                feedbacklbl.Text = "Nombre invalido";
+            }
+            if (passw1.Password == passw2.Password)
+            {
+                if (passw1.Password == "") 
+                {
+                    feedbacklbl.Foreground = new SolidColorBrush(Colors.Red);
+                    feedbacklbl.Text = "Contraseña invalida";
+                }
+                else if (padre.registrarse(passw1.Password, nombre.Text))
+                {
+                    feedbacklbl.Foreground = new SolidColorBrush(Colors.Green);
+                    feedbacklbl.Text = "Usuario creado correctamente";
+                    passw1.Password = "";
+                    passw2.Password = "";
+                    nombre.Text = "";
+
+                }
+                else 
+                {
+                    feedbacklbl.Foreground = new SolidColorBrush(Colors.Red);
+                    feedbacklbl.Text = "Nombre en uso";
+                }
+            }
+            else 
+            {
+                feedbacklbl.Foreground = new SolidColorBrush(Colors.Red);
+                feedbacklbl.Text = "Las contraseñas no coinciden";
+            }
         }
     }
 }

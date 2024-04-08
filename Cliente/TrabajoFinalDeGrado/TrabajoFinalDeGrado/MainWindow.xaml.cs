@@ -45,25 +45,15 @@ namespace TrabajoFinalDeGrado
             this.Close();
 
         }
-        private void maximizar(object sender, RoutedEventArgs e)
-        {
-
-            if (WindowState != WindowState.Maximized)
-            {
-                WindowState = WindowState.Maximized;
-
-            }
-            else {
-                WindowState = WindowState.Normal;
-
-            }
-        }
+        
         private void minimizar(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
              
         }
 
+
+        // METODOS ACC A BDD (que despues de las validaciones, usa los metodos del objeto que accede a la bdd)
         public void logear(){
             this.mainContenedor.Content = new mainFragment(this);
         }
@@ -71,7 +61,11 @@ namespace TrabajoFinalDeGrado
         {
             this.mainContenedor.Content = new loginFragmentxaml(this);
         }
+        public Boolean registrarse(string name, string passw) {
+
+            return true;
         
+        }
     }
    
 
