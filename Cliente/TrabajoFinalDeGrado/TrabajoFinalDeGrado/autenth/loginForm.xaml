@@ -42,9 +42,8 @@
                     <Style TargetType="PasswordBox">
                         <Setter Property="Background" Value="Transparent"/>
                         <Style.Triggers>
-                           
-                        </Style.Triggers>
 
+                        </Style.Triggers>
                     </Style>
                 </PasswordBox.Style>
             </PasswordBox>
