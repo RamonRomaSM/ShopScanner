@@ -69,8 +69,8 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TrabajoFinalDeGrado;component/funcionalidades/productosfolder/productoscontrol.x" +
-                    "aml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TrabajoFinalDeGrado;V1.0.0.0;component/funcionalidades/productosfolder/productos" +
+                    "control.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\funcionalidades\productosFolder\ProductosControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
