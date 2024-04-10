@@ -21,7 +21,12 @@
                      Foreground="White"
                      BorderThickness="0,0,0,2"
                      FontSize="18">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/imagenes/userIcon.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
 
+                </TextBox.Background>
                 <TextBox.Style>
                     <Style TargetType="TextBox">
                         <Setter Property="Background" Value="Transparent"/>
@@ -38,6 +43,12 @@
                           BorderThickness="0,0,0,2"
                           FontSize="18"
                           Foreground="White">
+                <PasswordBox.Background>
+                    <ImageBrush ImageSource="/imagenes/passwIcon.png"
+                    Stretch="None"
+                    AlignmentX="Left"/>
+
+                </PasswordBox.Background>
                 <PasswordBox.Style>
                     <Style TargetType="PasswordBox">
                         <Setter Property="Background" Value="Transparent"/>
@@ -46,6 +57,7 @@
                         </Style.Triggers>
                     </Style>
                 </PasswordBox.Style>
+                
             </PasswordBox>
 
 

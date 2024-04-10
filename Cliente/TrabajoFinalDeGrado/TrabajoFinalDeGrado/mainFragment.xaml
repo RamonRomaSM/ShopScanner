@@ -21,7 +21,7 @@
         <!--BARRA LATERAL-->
         <Grid>
             <Border Background="#272B2F"
-                        CornerRadius="0,0,0,8"/>
+                       />
 
             <!--PRODUCTOS-->
             <StackPanel  >

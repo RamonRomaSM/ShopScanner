@@ -21,14 +21,19 @@
                BorderThickness="0,0,0,2"
                FontSize="18"
                Name="nombre">
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/imagenes/userIcon.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
 
+                </TextBox.Background>
                 <TextBox.Style>
                     <Style TargetType="TextBox">
                         <Setter Property="Background" Value="Transparent"/>
 
                     </Style>
                 </TextBox.Style>
-
+                
 
             </TextBox>
             <PasswordBox  Height="30" Width="200" HorizontalAlignment="Center" Margin="0,0,0,30"
@@ -39,6 +44,12 @@
                FontSize="18"
                Foreground="White"
                Name="passw1">
+                <PasswordBox.Background>
+                    <ImageBrush ImageSource="/imagenes/passwIcon.png"
+                                 Stretch="None"
+                                 AlignmentX="Left"/>
+
+                </PasswordBox.Background>
                 <PasswordBox.Style>
                     <Style TargetType="PasswordBox">
                         <Setter Property="Background" Value="Transparent"/>
@@ -57,6 +68,12 @@
                FontSize="18"
                Foreground="White"
                Name="passw2">
+                <PasswordBox.Background>
+                    <ImageBrush ImageSource="/imagenes/passwIcon.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
+
+                </PasswordBox.Background>
                 <PasswordBox.Style>
                     <Style TargetType="PasswordBox">
                         <Setter Property="Background" Value="Transparent"/>

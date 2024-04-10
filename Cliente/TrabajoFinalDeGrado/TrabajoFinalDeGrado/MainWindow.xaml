@@ -47,7 +47,7 @@
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
-                    <Image Source="/imagenes/output-onlinepngtools (3).png" />
+                    <Image Source="/imagenes/output-onlinepngtools (3).png"/>
 
                 </Button>
                
@@ -77,10 +77,9 @@
                 </Button>
             </Grid>
 
-            <Grid Grid.Row="1" >
+            <Grid Grid.Row="1">
 
-                <Image Source="\imagenes\fondoApp.png" Opacity="0.2"/>
-                
+                <Image Source="\imagenes\fondoApp.png" Opacity="0.2"  Stretch="Fill"/>
                 <ContentControl Name="mainContenedor" Content=""/>
             </Grid>
 
