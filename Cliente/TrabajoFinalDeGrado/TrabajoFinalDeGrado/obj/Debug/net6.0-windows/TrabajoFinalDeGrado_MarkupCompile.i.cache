@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\
 TrabajoFinalDeGrado
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\App.xaml
-5713254821
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\App.xaml
+61134016044
 
-9-413134222
-194258113564
-autenth\loginForm.xaml;autenth\loginFragment.xaml;autenth\registerForm.xaml;mainFragment.xaml;MainWindow.xaml;
+11-16477579
+1941675070116
+autenth\loginForm.xaml;autenth\loginFragment.xaml;autenth\registerForm.xaml;funcionalidades\productosFolder\ProductosControl.xaml;mainFragment.xaml;MainWindow.xaml;
 
-True
+False
 

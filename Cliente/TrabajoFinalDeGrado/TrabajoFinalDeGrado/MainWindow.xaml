@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TrabajoFinalDeGrado"
         mc:Ignorable="d"
         Title="ShopScanner" MinHeight="720" MinWidth="1280" 
-      
+        ResizeMode="CanMinimize"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"

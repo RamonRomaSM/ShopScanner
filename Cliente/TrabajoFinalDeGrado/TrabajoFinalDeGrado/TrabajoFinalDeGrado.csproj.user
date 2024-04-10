@@ -16,6 +16,9 @@
     <Compile Update="autenth\registerForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="funcionalidades\productosFolder\ProductosControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="mainFragment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="autenth\registerForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="funcionalidades\productosFolder\ProductosControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="mainFragment.xaml">

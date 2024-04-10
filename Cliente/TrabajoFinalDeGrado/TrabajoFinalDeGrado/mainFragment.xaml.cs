@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrabajoFinalDeGrado.funcionalidades.productosFolder;
 
 namespace TrabajoFinalDeGrado
 {
@@ -20,11 +21,17 @@ namespace TrabajoFinalDeGrado
     /// </summary>
     public partial class mainFragment : UserControl
     {
+        //este fragment al crearse ha de inicializar todos los Controls con los dastos del usuario
         private MainWindow padre;
+        private ProductosControl productosControl;
         public mainFragment(MainWindow padre)
         {
             InitializeComponent();
             this.padre = padre;
+            this.productosControl = new ProductosControl();
+
+
+            contenedorFragments.Content = productosControl;
         }
         private void salir2(object sender, RoutedEventArgs e)
         {

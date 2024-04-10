@@ -151,7 +151,7 @@
         <!--HAY QUE SETTEARLO CON EL PRODUCTOSCONTROLL AL INICIAR-->
         <Grid Grid.Column="1">
             
-            <ContentControl Content="" />
+            <ContentControl Content="" Name="contenedorFragments"/>
             
 
         </Grid>
