@@ -58,3 +58,5 @@ C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGr
 C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\ref\TrabajoFinalDeGrado.dll
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ProductosControl.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ProductosControl.baml
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ProductosControl.g.cs
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ProductosControl.baml
