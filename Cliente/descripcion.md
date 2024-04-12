@@ -55,21 +55,20 @@ Como no se lo que tardare ahi van las funcionalidaddes/requisitos por prioridad:
 
 
 # Planificacion
-+    Tambien probar a compilar lo de python ( https://www.youtube.com/watch?v=bqNvkAfTvIc )
-+    Hoy: meter el contentControll y la barraLateral en un fragment, mantener la barra de arriba en el mainwindow
-          crear fragment para inicio de sesion
-+    antes del 6 tener el inicio de sesion (al menos el user control) (al principio te pide logearte / registrarte)
-     de paso darle funcionalidad al boton de cerrar sesion (nomas que te devuelve al userControl del login)
-     
-+    entre el 6-8 hacer el infinite scroll (poner la barra de busqueda (si contiene el string te lo muestro  SELECT         *FROM yourTableName where yourColumnName like '%yourPattern%'; )(recuerda que si el input text esta
-     focuseado, al apretar enter se realiza la accion de buscar))
+El viernes que viene tener la ui terminada:
+ + Infinite scroll
+ + Fragments
+ + Detalles visuales
 
-## Inicio de sesion
-    que sea un rectangulo de bordes redondos puesto en medio (como el que ya hice),lo mismo para el registro
-    azul electrico (o no tan chillon) para los botones (debria ponerselo tambien al logo?)
-    (deberia ir pensando en lo de si mandar correo para verificar, deberia ser el servidor quien recibiera la peticion de crear usuario, y 1 verificar que es unico, 2 mandar el correo, 3 recibir la respuesta y crear el usuario)
-    
+Intentar tener las modificaciones del python script:
++ Que recoja los datos de la conexion de un fichero (la primera vez que se ejecuta pedirlos?)
 
+### Futuro si eso
 
-
-
++ Meter mas scrapers
++ Subir a la nube (pero si uso algo tipo mongodb tendre que usar ademas una nube basada en json (firebase) la otra de sql)
++ Chatbot? (meh, ns en que podria ayudarte)
++ App del movil (Seria en principio una app sencilla para recibir tus listas de la compra e ir marcando irl lo que llevas comprado) (si hago esto, usar firebase me va a ahorrar MUCHOS DOLORES DE CABEZA)
++ Mandarte el pdf por correo (evidentemente si ya tienes la app esto es un poco meh, asi que o una u otra (o quizas las 2))
++ Hay alguna forma de redirigirte a las paginas de compra con la cesta que tienes? (claro que saber el sobrecoste del pedido a domicilio sera una movida (no se donde vive el usuario))
++ 
