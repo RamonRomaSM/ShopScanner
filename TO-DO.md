@@ -11,15 +11,15 @@
 + Barra de busqueda (y logica de filtros)
 + Ver tus listas de la compra en el perfil
 
-  ## API
-  https://spring.io/guides/tutorials/rest
+## API
+https://spring.io/guides/tutorials/rest
 
-  sesiones de spring
+sesiones de spring
 
-  https://docs.spring.io/spring-session/reference/guides/java-rest.html
+https://docs.spring.io/spring-session/reference/guides/java-rest.html
 
-  seguridad en la api:
+seguridad en la api:
 
-  https://www.baeldung.com/spring-boot-api-key-secret (como asegurar la conexion   cliente-server)
+https://www.baeldung.com/spring-boot-api-key-secret (como asegurar la conexion   cliente-server)
 
-  ver lo de OW
+ver lo de OW
