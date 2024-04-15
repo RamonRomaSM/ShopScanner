@@ -15,8 +15,12 @@ Para obtener los datos de la base de datos.
   + ### Tablas MySql:
 
     + Productos (Pid, nombre, precio, imagen, supermercado, URL, oderta?)
-    + Usuarios (Uid, nombre, contraseña)
+      Usuarios (Uid, nombre, contraseña)
+  + ### MongoDB
+  	+ Listas de la compra
+     
 
+      
  
 ## Cliente de la aplicacion
 ### Tecnologías utilizadas:
@@ -25,7 +29,7 @@ Para obtener los datos de la base de datos.
 
  ## API Java
 ### Tecnologias utlizadas
-+Spring boot
++ Spring boot
 
 
 ## Logica de las listas de la compra
