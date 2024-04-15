@@ -1,9 +1,9 @@
 # falta: 
-		## UI:
+## UI:
 			+ las tarjetas
 			+ animaciones
 			+ Barra de busqueda (y desplegable de filtros)
-		## Logica UI:
+## Logica UI:
 			+ Carrito:
 				  + Cargar items en el carrito desde una lista de la compra
 				  + añadir items al carro
