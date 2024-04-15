@@ -1,8 +1,0 @@
-https://color.adobe.com/es/create/color-wheel	//para generar paleats
-#32383F	color principal (del fondo del logo, de los items etc)
-
-#646D77
-#414952
-#EFF3F4
-
-#23C0E7
