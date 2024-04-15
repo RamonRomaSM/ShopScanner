@@ -29,7 +29,7 @@ Para obtener los datos de la base de datos.
 
  ## API Java
 ### Tecnologias utlizadas
-+ Spring boot
++ Spring boot (inicar tambien las medidas de seguridad)
 
 
 ## Logica de las listas de la compra
