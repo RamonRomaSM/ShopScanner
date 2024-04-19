@@ -38,7 +38,7 @@ Mas contenido:
 
 https://www.jetbrains.com/help/idea/your-first-spring-application.html#what-next
 
-### Seguridad:
+## Seguridad:
 Creacion de claves:
 
 Un par de keys
