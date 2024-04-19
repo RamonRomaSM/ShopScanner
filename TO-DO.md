@@ -1,8 +1,13 @@
-# falta: 
+# Falta:
+
+'*' = Hacer hoy 
+
 ## UI:
++ fragents *
++ Mantener seleccionado *
 + las tarjetas
-+ animaciones
-+ Barra de busqueda (y desplegable de filtros)
++ animaciones 
++ Barra de busqueda (y desplegable de filtros) *
 ## Logica UI:
 + Carrito:
 + Cargar items en el carrito desde una lista de la compra
@@ -29,3 +34,16 @@ lombook para pasar a jsons
 Mas contenido:
 
 https://www.jetbrains.com/help/idea/your-first-spring-application.html#what-next
+
+### Seguridad:
+Creacion de claves:
+
+Un par de keys
+Mandas la cpub al server, y este te contesta ok (y lo guarda en una bdd)
+
+Establecer conexion:
+
+Mandar los datos encript y esperar ok+clave de sesion (Igual podria, cada vez que te conectas, que se te renueve el par de claves)
+
+
+
