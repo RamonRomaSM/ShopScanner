@@ -3,7 +3,7 @@
 '*' = Hacer hoy 
 
 ## UI:
-+ fragents *
++ fragents (Mi carrito, mi perfil) *
 + Mantener seleccionado *
 + las tarjetas
 + animaciones 
@@ -17,6 +17,9 @@
 + Ver tus listas de la compra en el perfil
 
 ## API
+
+spring tiene forma de mandar correos
+
 https://spring.io/guides/tutorials/rest
 
 sesiones de spring?
@@ -43,7 +46,9 @@ Mandas la cpub al server, y este te contesta ok (y lo guarda en una bdd)
 
 Establecer conexion:
 
-Mandar los datos encript y esperar ok+clave de sesion (Igual podria, cada vez que te conectas, que se te renueve el par de claves)
+Mandar los datos encript y esperar ok + clave de sesion (para encriptar los mensajes actuales) + token de sesion (el token va al final de las peticiones, ara asegurarse de que eres tu el que hace las peticiones)
+
+(Igual podria, cada vez que te conectas, que se te renueve el par de claves)
 
 
 
