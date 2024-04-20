@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\App.xaml
-61134016044
+8-1415020479
 
-9-1715240700
+11-1419267121
 1941675070116
-autenth\loginForm.xaml;autenth\loginFragment.xaml;autenth\registerForm.xaml;funcionalidades\productosFolder\ProductosControl.xaml;mainFragment.xaml;MainWindow.xaml;
+autenth\loginForm.xaml;autenth\loginFragment.xaml;autenth\registerForm.xaml;funcionalidades\carritoFolder\CarritoControl.xaml;funcionalidades\perfilFolder\PerfilControl.xaml;funcionalidades\productosFolder\ProductosControl.xaml;mainFragment.xaml;MainWindow.xaml;
 
 False
 
