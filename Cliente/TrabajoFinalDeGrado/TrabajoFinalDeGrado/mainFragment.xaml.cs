@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrabajoFinalDeGrado.funcionalidades.carritoFolder;
+using TrabajoFinalDeGrado.funcionalidades.perfilFolder;
 using TrabajoFinalDeGrado.funcionalidades.productosFolder;
 
 namespace TrabajoFinalDeGrado
@@ -24,12 +26,17 @@ namespace TrabajoFinalDeGrado
         //este fragment al crearse ha de inicializar todos los Controls con los dastos del usuario
         private MainWindow padre;
         private ProductosControl productosControl;
+        private CarritoControl  carritoControl;
+        private PerfilControl perfilControl;
+
+
         public mainFragment(MainWindow padre)
         {
             InitializeComponent();
             this.padre = padre;
             this.productosControl = new ProductosControl();
-
+            this.perfilControl = new PerfilControl();
+            this.carritoControl = new CarritoControl();
 
             contenedorFragments.Content = productosControl;
         }
@@ -42,6 +49,17 @@ namespace TrabajoFinalDeGrado
         {
             padre.deslogear();
         }
-
+        private void productos(object sender, RoutedEventArgs e) 
+        {
+            contenedorFragments.Content = productosControl;
+        }
+        private void carrito(object sender, RoutedEventArgs e) 
+        {
+            contenedorFragments.Content = carritoControl;
+        }
+        private void perfil(object sender, RoutedEventArgs e) 
+        {
+            contenedorFragments.Content = perfilControl;
+        }
     }
 }
