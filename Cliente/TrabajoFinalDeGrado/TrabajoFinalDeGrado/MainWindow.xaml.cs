@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrabajoFinalDeGrado.autenth;
+using TrabajoFinalDeGrado.DAOS;
 
 namespace TrabajoFinalDeGrado
 {
@@ -23,9 +24,6 @@ namespace TrabajoFinalDeGrado
     public partial class MainWindow : Window
     {
 
-        // acuerdate que cuando haces el login, el server te manda los datos de tu cuenta (tus listas de la compra) y estas se guardan en una variable
-        // (usuarioAct), cuando cierras sesion, hay quedestruir esta variable (volverla null)
-       
         public MainWindow()
         {
 
@@ -33,29 +31,28 @@ namespace TrabajoFinalDeGrado
             mainContenedor.Content = new loginFragmentxaml(this);
         }
         private void moverWindow(object sender, MouseButtonEventArgs e)
-
         {
-
             this.DragMove();
-
         }
 
         private void salir(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Guardar estado del carrito");//pero si no se ha logeado, cerrar sin mas (no hay objeto sesionAct)
             this.Close();
-
         }
         
         private void minimizar(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
-             
         }
 
 
         // METODOS ACC A BDD (que despues de las validaciones, usa los metodos del objeto que accede a la bdd)
-        public void logear(){
-            this.mainContenedor.Content = new mainFragment(this);
+        public void logear(Usuario u){
+            if (u != null)
+            {
+                this.mainContenedor.Content = new mainFragment(this, u);
+            }
         }
         public void deslogear()
         {
@@ -64,8 +61,10 @@ namespace TrabajoFinalDeGrado
         public Boolean registrarse(string name, string passw) {
 
             return true;
-        
         }
+        
+
+
     }
    
 

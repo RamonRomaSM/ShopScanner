@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrabajoFinalDeGrado.DAOS;
 
 namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
 {
@@ -20,9 +23,36 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
     /// </summary>
     public partial class PerfilControl : UserControl
     {
-        public PerfilControl()
+        private Usuario sesionAct;
+        private ObservableCollection<Lista> listas;
+        public PerfilControl(Usuario u)
         {
+           
             InitializeComponent();
+            this.sesionAct = u;
+            this.listas = new ObservableCollection<Lista>();
+            
+            ArrayList d = sesionAct.getListas();
+            foreach (Lista l in d) {
+                listas.Add(l);
+            }
+            ListViewProducts.ItemsSource =listas;
+        }
+        private void OnScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+
+        }
+        private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
+        {
+            if (!e.Handled)
+            {
+                e.Handled = true;
+                var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
+                eventArg.RoutedEvent = UIElement.MouseWheelEvent;
+                eventArg.Source = sender;
+                var parent = ((Control)sender).Parent as UIElement;
+                parent.RaiseEvent(eventArg);
+            }
         }
     }
 }

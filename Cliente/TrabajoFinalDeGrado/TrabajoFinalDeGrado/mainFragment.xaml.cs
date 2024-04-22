@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrabajoFinalDeGrado.DAOS;
 using TrabajoFinalDeGrado.funcionalidades.carritoFolder;
 using TrabajoFinalDeGrado.funcionalidades.perfilFolder;
 using TrabajoFinalDeGrado.funcionalidades.productosFolder;
@@ -28,20 +29,23 @@ namespace TrabajoFinalDeGrado
         private ProductosControl productosControl;
         private CarritoControl  carritoControl;
         private PerfilControl perfilControl;
+        private Usuario sesionAct;
 
-
-        public mainFragment(MainWindow padre)
+        public mainFragment(MainWindow padre,Usuario u)
         {
             InitializeComponent();
+
+            this.sesionAct = u;
             this.padre = padre;
-            this.productosControl = new ProductosControl();
-            this.perfilControl = new PerfilControl();
-            this.carritoControl = new CarritoControl();
+            this.productosControl = new ProductosControl(sesionAct);
+            this.perfilControl = new PerfilControl(sesionAct);
+            this.carritoControl = new CarritoControl(sesionAct);
 
             contenedorFragments.Content = productosControl;
         }
         private void salir2(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Guardar estado del carrito");
             var window = Window.GetWindow(this);
             window.Close();
         }

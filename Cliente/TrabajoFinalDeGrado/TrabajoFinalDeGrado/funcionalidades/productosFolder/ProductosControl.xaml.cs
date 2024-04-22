@@ -22,42 +22,31 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
     /// </summary>
     public partial class ProductosControl : UserControl
     {
-        ObservableCollection<Producto> Products;
-        int i = 0;
-        public ProductosControl()
+        private Usuario sesionAct;
+        private ObservableCollection<Producto> Products;
+        private int i = 0;
+        
+        public ProductosControl(Usuario u)
         {
+           
             InitializeComponent();
-            Products = new ObservableCollection<Producto>();
-            Producto a = new Producto();
-            Producto b = new Producto();
-            Producto c = new Producto();
-            Producto d = new Producto();
-
-
-            a.nombre = "a";
-            b.nombre = "b";
-            c.nombre = "c";
-            d.nombre = "d";
-
-            Products.Add(a);
-            Products.Add(b);
-            Products.Add(c);
-            Products.Add(d);
-            Products.Add(c);
-            Products.Add(d);
-
+            this.sesionAct = u;
+            this.Products = new ObservableCollection<Producto>();
             ListViewProducts.ItemsSource = Products;
+            OnScrollChanged(null, null);
         }
+
+
+        //Pide nuevos items
         private void OnScrollChanged(object sender, ScrollChangedEventArgs e)
-        { //pide nuevos items
+        { 
+            
             var scrollViewer = MyScroller;
             if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
             {
 
                 Producto a = new Producto();
                 Producto b = new Producto();
-
-
 
                 a.nombre = "a" + i;
                 b.nombre = "b" + i;
@@ -71,8 +60,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
                 Products.Add(b);
 
             }
-
-
         }
 
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
@@ -87,5 +74,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
                 parent.RaiseEvent(eventArg);
             }
         }
+
+       
     }
 }

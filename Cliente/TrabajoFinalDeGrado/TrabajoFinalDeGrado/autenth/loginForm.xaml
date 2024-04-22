@@ -20,7 +20,7 @@
                      VerticalContentAlignment="Center"
                      Foreground="White"
                      BorderThickness="0,0,0,2"
-                     FontSize="18">
+                     FontSize="18" Name="nombre">
                 <TextBox.Background>
                     <ImageBrush ImageSource="/imagenes/userIcon.png"
                                 Stretch="None"
@@ -42,7 +42,7 @@
                           VerticalContentAlignment="Center"
                           BorderThickness="0,0,0,2"
                           FontSize="18"
-                          Foreground="White">
+                          Foreground="White" Name="pasw">
                 <PasswordBox.Background>
                     <ImageBrush ImageSource="/imagenes/passwIcon.png"
                     Stretch="None"

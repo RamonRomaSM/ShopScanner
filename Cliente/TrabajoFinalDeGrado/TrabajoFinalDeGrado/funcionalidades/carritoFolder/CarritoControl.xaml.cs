@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TrabajoFinalDeGrado.DAOS;
 
 namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
 {
@@ -20,8 +21,10 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
     /// </summary>
     public partial class CarritoControl : UserControl
     {
-        public CarritoControl()
+        private Usuario sesionAct;
+        public CarritoControl(Usuario u)
         {
+            this.sesionAct = u;
             InitializeComponent();
         }
     }

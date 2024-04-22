@@ -14,7 +14,7 @@
                         <Border HorizontalAlignment="Center"
                                 CornerRadius="8"
                                 BorderThickness="1" BorderBrush="DarkOrange"
-                                Width="300"
+                                Width="266"
                                 Height="350"
                                 Padding="5"
                                 Background="#22202f"
