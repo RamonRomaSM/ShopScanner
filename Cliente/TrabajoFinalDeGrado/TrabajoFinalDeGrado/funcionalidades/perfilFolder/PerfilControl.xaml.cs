@@ -27,32 +27,17 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         private ObservableCollection<Lista> listas;
         public PerfilControl(Usuario u)
         {
-           
+
             InitializeComponent();
             this.sesionAct = u;
             this.listas = new ObservableCollection<Lista>();
-            
+
             ArrayList d = sesionAct.getListas();
-            foreach (Lista l in d) {
+            foreach (Lista l in d)
+            {
                 listas.Add(l);
             }
-            ListViewProducts.ItemsSource =listas;
-        }
-        private void OnScrollChanged(object sender, ScrollChangedEventArgs e)
-        {
-
-        }
-        private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
-        {
-            if (!e.Handled)
-            {
-                e.Handled = true;
-                var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
-                eventArg.RoutedEvent = UIElement.MouseWheelEvent;
-                eventArg.Source = sender;
-                var parent = ((Control)sender).Parent as UIElement;
-                parent.RaiseEvent(eventArg);
-            }
+            ListViewProducts.ItemsSource = listas;
         }
     }
 }

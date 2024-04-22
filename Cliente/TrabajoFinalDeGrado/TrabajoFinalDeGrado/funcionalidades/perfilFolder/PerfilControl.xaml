@@ -8,8 +8,15 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <StackPanel>
-            <Label
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0"
+                VerticalAlignment="Top"
                 Height="80"
                 FontSize="25"
                 Content="Nombre"
@@ -17,7 +24,8 @@
                 Background="Transparent"
                 Foreground="White"
                 />
-            <Label
+            <Label Grid.Row="1"
+                VerticalAlignment="Top"
                 Height="55"
                 Content="Mis listas de la compra:"
                 FontSize="18"
@@ -25,14 +33,18 @@
                 Background="Transparent"
                 />
 
-            <ScrollViewer Name="MyScroller" Background="Transparent" HorizontalContentAlignment="Center" CanContentScroll="True">
-                <ListView  Margin="50,0,50,0" x:Name="ListViewProducts" ItemsSource="{Binding listas}" SelectedItem="{Binding SelectedProduct}" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0" Background="Transparent"  PreviewMouseWheel="ListViewProducts_PreviewMouseWheel" >
+           
+                <ListView  Margin="50,0,0,0" Grid.Row="2"
+                           x:Name="ListViewProducts" ItemsSource="{Binding listas}" SelectedItem="{Binding SelectedProduct}" 
+                           ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                           ScrollViewer.VerticalScrollBarVisibility="Visible" BorderThickness="0" Background="Transparent"  
+                           >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border HorizontalAlignment="Center"
                              CornerRadius="8"
                              BorderThickness="1" BorderBrush="DarkOrange"
-                             Width="700"
+                             Width="900"
                              Height="150"
                              Padding="5"
                              Background="#22202f"
@@ -53,8 +65,8 @@
 
 
                 </ListView>
-            </ScrollViewer>
-        </StackPanel>
+            
+        </Grid>
 
     </Grid>
 </UserControl>
