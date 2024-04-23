@@ -13,7 +13,7 @@
   + Listas: de normal el nombre, precio total y una flechita o indicador para desplegar
 
     + Desplegada:	nombre producto, precio(precio * n), boton de + y -; ademas clasificar por supermercado
-  + En Cesta ostrarlo como si fuera una lista
+  + En cesta mostrarlo como si fuera una lista
 
 
 ## UI:
