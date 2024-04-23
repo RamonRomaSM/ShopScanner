@@ -1,13 +1,11 @@
 # Falta:
 
-'*' = Hacer hoy 
-
 ## UI:
-+ fragents (Mi carrito, mi perfil) *
-+ Mantener seleccionado *
++ fragents (Mi carrito, mi perfil) 
 + las tarjetas
 + animaciones 
-+ Barra de busqueda (y desplegable de filtros) *
++ Barra de busqueda (y desplegable de filtros) <-- cuando tenga acceso a la bdd (asi puedo ir testeando el filtro, ordenar por precio en a bdd) 
+  
 ## Logica UI:
 + Carrito:
 + Cargar items en el carrito desde una lista de la compra
@@ -15,6 +13,9 @@
 + guardar carrito (o sobreescribir)
 + Barra de busqueda (y logica de filtros)
 + Ver tus listas de la compra en el perfil
+
+## Script python
++ Cargar desde un fichero la psw y el usuario de la bdd
 
 ## API
 
