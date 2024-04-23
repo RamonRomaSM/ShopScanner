@@ -1,5 +1,20 @@
 # Falta:
 
+
+##Para el jueves:	
+  + tener los framents planteados
+  + tener una version compilada del cliente
+  + tener el script de python con lo del fichero
+  + tarjeta con productos mock
+  + tarjeta las listas mock (que se pueda desplegar, al lado de los productos + , - y eliminar (papelera))
+
+##Diseño Tarjetas:
+  + Productos: foto, nombre, precio, añadir al carrito, añadir a lista
+  + Listas: de normal el nombre, precio total y una flechita o indicador para desplegar
+            + Desplegada:	nombre producto, precio(precio * n), boton de + y -; ademas clasificar por supermercado		
+
+
+
 ## UI:
 + fragents (Mi carrito, mi perfil) 
 + las tarjetas (En las tarjetas  de productos, boton de añador al carrito y boton de añadir a lista ya esixtente (desplegable para seleciconar la lista?))
