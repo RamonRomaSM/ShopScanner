@@ -11,7 +11,8 @@
 ## Diseño Tarjetas:
   + Productos: foto, nombre, precio, añadir al carrito, añadir a lista
   + Listas: de normal el nombre, precio total y una flechita o indicador para desplegar
-            + Desplegada:	nombre producto, precio(precio * n), boton de + y -; ademas clasificar por supermercado		
+
+    + Desplegada:	nombre producto, precio(precio * n), boton de + y -; ademas clasificar por supermercado		
 
 
 
