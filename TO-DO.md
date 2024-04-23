@@ -2,7 +2,7 @@
 
 ## UI:
 + fragents (Mi carrito, mi perfil) 
-+ las tarjetas
++ las tarjetas (En las tarjetas  de productos, boton de añador al carrito y boton de añadir a lista ya esixtente (desplegable para seleciconar la lista?))
 + animaciones 
 + Barra de busqueda (y desplegable de filtros) <-- cuando tenga acceso a la bdd (asi puedo ir testeando el filtro, ordenar por precio en a bdd) 
   
