@@ -1,0 +1,5 @@
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Release\net6.0-windows\publish\test1\TrabajoFinalDeGrado.exe
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Release\net6.0-windows\publish\test1\TrabajoFinalDeGrado.dll
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Release\net6.0-windows\publish\test1\TrabajoFinalDeGrado.deps.json
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Release\net6.0-windows\publish\test1\TrabajoFinalDeGrado.runtimeconfig.json
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Release\net6.0-windows\publish\test1\TrabajoFinalDeGrado.pdb
