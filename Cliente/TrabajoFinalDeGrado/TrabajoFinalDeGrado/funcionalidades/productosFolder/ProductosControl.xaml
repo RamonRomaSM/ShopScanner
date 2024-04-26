@@ -8,7 +8,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <ScrollViewer Name="MyScroller" Background="Transparent" ScrollChanged="OnScrollChanged" HorizontalContentAlignment="Center"  Margin="40,0,0,0">
-            <ListView x:Name="ListViewProducts" ItemsSource="{Binding Products}" SelectedItem="{Binding SelectedProduct}" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" BorderThickness="0" Background="Transparent"  PreviewMouseWheel="ListViewProducts_PreviewMouseWheel">
+            <ListView x:Name="ListViewProducts" ItemsSource="{Binding Products}" 
+                     ScrollViewer.CanContentScroll="False" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                      ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      BorderThickness="0" Background="Transparent"  
+                      PreviewMouseWheel="ListViewProducts_PreviewMouseWheel">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border HorizontalAlignment="Center"
@@ -21,6 +26,8 @@
                                 Margin="20">
                             <StackPanel Orientation="Vertical">
                                <!--CONTENIDO-->
+                                <TextBlock Text="{Binding nombre}"/> <!--Aqui van los nombres de las variables del producto que bindeo (la imagenes van en int[] (al menos en el ejemplo))-->
+
                             </StackPanel>
                         </Border>
                     </DataTemplate>

@@ -35,7 +35,7 @@
 
            
                 <ListView  Margin="50,0,0,0" Grid.Row="2"
-                           x:Name="ListViewProducts" ItemsSource="{Binding listas}" SelectedItem="{Binding SelectedProduct}" 
+                           x:Name="ListViewListas" ItemsSource="{Binding listas}" SelectedItem="{Binding SelectedProduct}" 
                            ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                            ScrollViewer.VerticalScrollBarVisibility="Visible" BorderThickness="0" Background="Transparent"  
                            >
@@ -51,7 +51,8 @@
                              Margin="10">   
                                 <StackPanel Orientation="Vertical">
                                     <!--CONTENIDO-->
-                                </StackPanel>
+                                <TextBlock Text="{Binding nombre}" Foreground="White"/>
+                            </StackPanel>
                             </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>

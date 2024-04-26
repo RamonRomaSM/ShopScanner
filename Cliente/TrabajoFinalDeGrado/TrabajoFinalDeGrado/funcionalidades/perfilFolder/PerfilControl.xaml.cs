@@ -32,12 +32,9 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             this.sesionAct = u;
             this.listas = new ObservableCollection<Lista>();
 
-            ArrayList d = sesionAct.getListas();
-            foreach (Lista l in d)
-            {
-                listas.Add(l);
-            }
-            ListViewProducts.ItemsSource = listas;
+            this.listas = sesionAct.getListas();
+            
+            ListViewListas.ItemsSource = listas;
         }
     }
 }

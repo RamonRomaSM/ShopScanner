@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,9 +43,9 @@ namespace TrabajoFinalDeGrado.autenth
             Lista a= new Lista("lista1","Ramon",null);
             Lista b = new Lista("lista2", "Ramon", null);
             Lista c = new Lista("lista3", "Ramon", null);
-            Lista d = new Lista("lista4", "Ramon", null);
+            Lista d = new Lista("lista4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "Ramon", null);
             Lista e = new Lista("lista5", "Ramon", null);
-            ArrayList listas = new ArrayList();
+            ObservableCollection<Lista> listas = new ObservableCollection<Lista>();
 
             listas.Add(a);
             listas.Add(b);
