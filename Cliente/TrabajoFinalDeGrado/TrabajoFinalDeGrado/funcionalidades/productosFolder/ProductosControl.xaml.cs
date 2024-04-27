@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,9 +49,14 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
                 Producto a = new Producto();
                 Producto b = new Producto();
 
-                a.nombre = "a" + i;
-                b.nombre = "b" + i;
+                a.nombre = "12 Mini croissants de mantequilla";
+                b.nombre = "ALCAMPO CULTIVAMOS LO BUENO Champiñón laminado  Bandeja de 250 g.";
 
+                a.imagen = "https://prod-mercadona.imgix.net/images/55dfb0de5a832d479c76f2e25c653d4b.jpg?fit=crop&h=300&w=300";
+                b.imagen = "https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/1c889628-8a63-4af8-85bd-a0783a89fe5b/300x300.jpg";
+
+                a.url = "https://tienda.mercadona.es/product/84629/12-mini-croissants-mantequilla-bolsa";
+                b.url = "https://www.compraonline.alcampo.es/products/ALCAMPO-CULTIVAMOS-LO-BUENO-Champiñón-laminado--Bandeja-de-250-g./57687";
                 i++;
                 Products.Add(a);
                 Products.Add(b);
@@ -75,6 +81,14 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             }
         }
 
-       
+        private void abrir_url(object sender, MouseButtonEventArgs e)
+        {
+           TextBlock a = (TextBlock)sender;
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = a.Text,
+                UseShellExecute = true
+            });
+        }
     }
 }

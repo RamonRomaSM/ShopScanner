@@ -51,8 +51,12 @@
                              Margin="10">   
                                 <StackPanel Orientation="Vertical">
                                     <!--CONTENIDO-->
-                                <TextBlock Text="{Binding nombre}" Foreground="White"/>
-                            </StackPanel>
+                                    <TextBlock Text="{Binding nombre}" Foreground="White"/>
+                            
+                                
+                                
+                                
+                                </StackPanel>
                             </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>
