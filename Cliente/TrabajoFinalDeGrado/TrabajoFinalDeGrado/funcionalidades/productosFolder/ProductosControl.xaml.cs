@@ -83,7 +83,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
         private void abrir_url(object sender, MouseButtonEventArgs e)
         {
-           TextBlock a = (TextBlock)sender;
+            TextBlock a = (TextBlock)sender;
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
                 FileName = a.Text,
