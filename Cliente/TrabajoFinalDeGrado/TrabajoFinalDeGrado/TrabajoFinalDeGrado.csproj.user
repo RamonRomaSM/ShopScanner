@@ -24,6 +24,9 @@
     <Compile Update="funcionalidades\perfilFolder\PerfilControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="funcionalidades\productosFolder\ListasPopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="funcionalidades\productosFolder\ProductosControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +48,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="funcionalidades\perfilFolder\PerfilControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="funcionalidades\productosFolder\ListasPopUp.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="funcionalidades\productosFolder\ProductosControl.xaml">

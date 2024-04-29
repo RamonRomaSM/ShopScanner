@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -57,6 +58,16 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
                 a.url = "https://tienda.mercadona.es/product/84629/12-mini-croissants-mantequilla-bolsa";
                 b.url = "https://www.compraonline.alcampo.es/products/ALCAMPO-CULTIVAMOS-LO-BUENO-Champiñón-laminado--Bandeja-de-250-g./57687";
+
+                a.precio = 10;
+                b.precio = 20;
+
+                a.supermercado = "Mercadona";
+                b.supermercado = "Alcampo";
+
+                a.idproductos = "prod a";
+                a.idproductos = "prod b";
+
                 i++;
                 Products.Add(a);
                 Products.Add(b);
@@ -83,12 +94,31 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
         private void abrir_url(object sender, MouseButtonEventArgs e)
         {
+
             TextBlock a = (TextBlock)sender;
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
                 FileName = a.Text,
                 UseShellExecute = true
             });
+        }
+
+        private void addCarritobtn_Click(object sender, RoutedEventArgs e)
+        {
+            Producto p = ((Button)sender).Tag as Producto;
+           
+            ObservableCollection<Producto> b =  sesionAct.getCarrito();
+            b.Add(p);
+            sesionAct.setCarrito(b);
+            MessageBox.Show(sesionAct.getCarrito().Count()+"");
+        }
+
+        private void addListaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO: que me saque un ventana emergente (con los colores de la app) con un stackpannel de las listas
+            // https://www.youtube.com/watch?v=KSNjJ9Glky4
+            ListasPopUp popup = new ListasPopUp();
+            popup.Show();
         }
     }
 }

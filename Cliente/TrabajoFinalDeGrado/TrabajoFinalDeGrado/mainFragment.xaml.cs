@@ -45,7 +45,6 @@ namespace TrabajoFinalDeGrado
         }
         private void salir2(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Guardar estado del carrito");
             var window = Window.GetWindow(this);
             window.Close();
         }

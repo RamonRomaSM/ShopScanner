@@ -53,9 +53,7 @@ namespace TrabajoFinalDeGrado.autenth
             listas.Add(d);
             listas.Add(e);
 
-
-            ArrayList carrito = new ArrayList();
-            Usuario u = new Usuario("Ramon",listas,carrito);
+            Usuario u = new Usuario("Ramon",listas);
             return u;
         }
 

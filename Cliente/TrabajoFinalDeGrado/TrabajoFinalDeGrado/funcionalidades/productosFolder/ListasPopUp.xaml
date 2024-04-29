@@ -1,0 +1,32 @@
+﻿<Window x:Class="TrabajoFinalDeGrado.funcionalidades.productosFolder.ListasPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrabajoFinalDeGrado.funcionalidades.productosFolder"
+        mc:Ignorable="d"
+        Title="ListasPopUp" Height="350" Width="300"
+        WindowStartupLocation="CenterScreen"
+        LostFocus="Window_LostFocus"
+        LostKeyboardFocus="Window_LostFocus"
+        LostMouseCapture="Window_LostFocus"
+        WindowStyle="None" AllowsTransparency="True"
+        ResizeMode="NoResize" Background="Transparent">
+    <Grid Background="Transparent">
+        <Border BorderThickness="10"
+                BorderBrush="Green" CornerRadius="5" Background="White">
+            <ListView>
+                <TextBlock Text="a" Height="80" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+                <TextBlock Text="adsad" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+
+                <TextBlock Text="b" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+
+                <TextBlock Text="d" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+                <TextBlock Text="s" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+                <TextBlock Text="j" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+                <TextBlock Text="u" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+                
+            </ListView>
+        </Border>
+    </Grid>
+</Window>

@@ -37,16 +37,13 @@ namespace TrabajoFinalDeGrado
 
         private void salir(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Guardar estado del carrito");//pero si no se ha logeado, cerrar sin mas (no hay objeto sesionAct)
-            this.Close();
+           this.Close();
         }
         
         private void minimizar(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
-
-
         // METODOS ACC A BDD (que despues de las validaciones, usa los metodos del objeto que accede a la bdd)
         public void logear(Usuario u){
             if (u != null)
