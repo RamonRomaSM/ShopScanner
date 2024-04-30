@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -27,15 +28,21 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             Application.Current.MainWindow.PointToScreen(mousePositionInApp);
         }
 
-        private void Window_LostFocus(object sender, RoutedEventArgs e)
+       
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try { this.Close(); } catch { }
+            MessageBox.Show ("aa");
+            this.Close();
         }
 
-        private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+
+        private void Window_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            MessageBox.Show("aa");
+            if (!this.IsKeyboardFocused) { this.Close(); }
         }
+
+        
     }
         
 }

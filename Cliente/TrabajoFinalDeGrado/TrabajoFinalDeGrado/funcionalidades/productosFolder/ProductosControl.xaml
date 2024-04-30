@@ -9,11 +9,11 @@
     <Grid>
         <ScrollViewer Name="MyScroller" Background="Transparent" ScrollChanged="OnScrollChanged" HorizontalContentAlignment="Center"  Margin="40,0,0,0">
             <ListView x:Name="ListViewProducts" ItemsSource="{Binding Products}" 
-                     ScrollViewer.CanContentScroll="False" 
-                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
-                      ScrollViewer.VerticalScrollBarVisibility="Disabled"
-                      BorderThickness="0" Background="Transparent"  
-                      PreviewMouseWheel="ListViewProducts_PreviewMouseWheel">
+                        ScrollViewer.CanContentScroll="False" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                        BorderThickness="0" Background="Transparent"  
+                        PreviewMouseWheel="ListViewProducts_PreviewMouseWheel">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border HorizontalAlignment="Center"

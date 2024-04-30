@@ -6,26 +6,22 @@
         xmlns:local="clr-namespace:TrabajoFinalDeGrado.funcionalidades.productosFolder"
         mc:Ignorable="d"
         Title="ListasPopUp" Height="350" Width="300"
-        WindowStartupLocation="CenterScreen"
-        LostFocus="Window_LostFocus"
-        LostKeyboardFocus="Window_LostFocus"
-        LostMouseCapture="Window_LostFocus"
+        WindowStartupLocation="CenterScreen"     
         WindowStyle="None" AllowsTransparency="True"
-        ResizeMode="NoResize" Background="Transparent">
+        ResizeMode="NoResize" Background="Transparent"
+        IsKeyboardFocusedChanged="Window_IsKeyboardFocusedChanged">
     <Grid Background="Transparent">
         <Border BorderThickness="10"
                 BorderBrush="Green" CornerRadius="5" Background="White">
             <ListView>
-                <TextBlock Text="a" Height="80" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
-                <TextBlock Text="adsad" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
+                <Button Content="a" Height="80" Click="Button_Click"/>
+                <Button Content="a" Height="80" Click="Button_Click"/>
+                <Button Content="a" Height="80" Click="Button_Click"/>
+                <Button Content="a" Height="80" Click="Button_Click"/>
+                <Button Content="a" Height="80" Click="Button_Click"/>
+                <Button Content="a" Height="80" Click="Button_Click"/>
+                <Button Content="a" Height="80" Click="Button_Click"/>
 
-                <TextBlock Text="b" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
-
-                <TextBlock Text="d" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
-                <TextBlock Text="s" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
-                <TextBlock Text="j" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
-                <TextBlock Text="u" Height="200" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
-                
             </ListView>
         </Border>
     </Grid>

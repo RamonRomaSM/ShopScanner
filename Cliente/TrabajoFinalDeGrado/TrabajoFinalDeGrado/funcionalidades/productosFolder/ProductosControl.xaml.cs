@@ -119,6 +119,8 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             // https://www.youtube.com/watch?v=KSNjJ9Glky4
             ListasPopUp popup = new ListasPopUp();
             popup.Show();
+            
+
         }
     }
 }
