@@ -13,7 +13,7 @@ namespace TrabajoFinalDeGrado.DAOS
     {
         //esta clase refleja la sesion actual, cada cambio que se haga en las listas/carrito etc
         //debe hacerse desde el fragment correspondiente 
-        private string nombre {  get; }
+        public string nombre {  get; }
         private ObservableCollection<Lista> listas { get; set; }
         private ObservableCollection<Producto> carrito{ get; set; } //al guardar el carrito en el usuario, podemos hacerlo persistente,
                                                                     //si voy a hacerlo persistente, poner boton de vaciar carrito 

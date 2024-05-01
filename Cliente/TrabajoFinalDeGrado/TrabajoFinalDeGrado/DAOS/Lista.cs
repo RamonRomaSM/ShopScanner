@@ -10,7 +10,7 @@ namespace TrabajoFinalDeGrado.DAOS
     public class Lista
     {
         private ArrayList productos;
-        private string nombre;
+        public string nombre { get; set; }
         private string autor;
 
         public Lista(string nombre,string autor, ArrayList productos) 

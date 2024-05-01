@@ -18,12 +18,13 @@
                     <DataTemplate>
                         <Border HorizontalAlignment="Center"
                                 CornerRadius="8"
-                                BorderThickness="1" BorderBrush="DarkOrange"
+                                BorderThickness="0" 
                                 Width="290"
                                 Height="500"
                                 Padding="5"
-                                Background="#22202f"
-                                Margin="10">
+                                Background="#272B2F"
+                                Margin="10"
+                                Opacity="0.9">
                             <StackPanel Orientation="Vertical">
                                <!--CONTENIDO-->
                                 <Image Source="{Binding imagen}" Height="230" Width="280" Margin="0,10,0,0"/>

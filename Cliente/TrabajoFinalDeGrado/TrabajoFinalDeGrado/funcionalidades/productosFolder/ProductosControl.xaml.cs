@@ -117,10 +117,21 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         {
             //TODO: que me saque un ventana emergente (con los colores de la app) con un stackpannel de las listas
             // https://www.youtube.com/watch?v=KSNjJ9Glky4
-            ListasPopUp popup = new ListasPopUp();
-            popup.Show();
+            ListasPopUp popup = new ListasPopUp(sesionAct.getListas());
+           
             
+            //para que se coloque en el cursor
+            System.Windows.Point position = Mouse.GetPosition(this);
+            System.Windows.Point screenPosition = this.PointToScreen(position);
+            double x = screenPosition.X;
+            double y = screenPosition.Y;
+
+            popup.Show();
+            popup.Left = x; popup.Top = y-popup.Height;// - height para que se coloque en la esquina de abajo
+
 
         }
+
+        
     }
 }

@@ -40,7 +40,7 @@ namespace TrabajoFinalDeGrado
             this.productosControl = new ProductosControl(sesionAct);
             this.perfilControl = new PerfilControl(sesionAct);
             this.carritoControl = new CarritoControl(sesionAct);
-
+            
             contenedorFragments.Content = productosControl;
         }
         private void salir2(object sender, RoutedEventArgs e)
