@@ -58,7 +58,7 @@ namespace TrabajoFinalDeGrado
         }
         private void carrito(object sender, RoutedEventArgs e) 
         {
-            contenedorFragments.Content = carritoControl;
+            contenedorFragments.Content =  new CarritoControl(sesionAct);
         }
         private void perfil(object sender, RoutedEventArgs e) 
         {

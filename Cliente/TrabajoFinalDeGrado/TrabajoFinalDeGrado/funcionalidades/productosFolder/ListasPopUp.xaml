@@ -23,7 +23,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                            
-                            <Button Content="{Binding nombre}" Height="60" Click="Button_Click" Width="249" FontSize="16" Padding="10,0,10,0" Foreground="White">
+                            <Button Content="{Binding nombre}" Height="60" Click="Button_Click" Width="249" FontSize="16" Padding="10,0,10,0" Foreground="White" Tag="{Binding}">
                                 <Button.Style>
                                     <Style TargetType="{x:Type Button}">
                                         <Setter Property="Background" Value="Transparent"/>

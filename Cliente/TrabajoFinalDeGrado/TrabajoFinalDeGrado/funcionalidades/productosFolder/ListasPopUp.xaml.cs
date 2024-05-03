@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,12 +24,13 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
     public partial class ListasPopUp : Window
     {
         ObservableCollection<Lista> Listas;
-        public ListasPopUp(ObservableCollection<Lista> listas)
+        Producto act;
+        public ListasPopUp(ObservableCollection<Lista> listas, Producto act)
         {
 
             this.Listas = listas;
+            this.act = act;
             InitializeComponent();
-            
             this.contenedorListas.ItemsSource = Listas;
            
         }
@@ -37,8 +39,11 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           
             Button a = (Button)sender;
-            MessageBox.Show("Añadido a "+a.Content);
+            Lista l = ((Button)sender).Tag as Lista;  
+            l.productos = reOrdenaCarrito(l.productos, act);
+            MessageBox.Show("Añadido a " + l.nombre);//To do, que el mensaje sea mas bonito y menos invasivo
             this.Close();
         }
 
@@ -50,9 +55,21 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         {
             if (!this.IsKeyboardFocused && !IsMouseOver) { this.Close(); }
         }
+        private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
+        {
 
-       
-       
+            ObservableCollection<Producto> resp = new ObservableCollection<Producto>();
+            if (!resp.Contains(p))
+            {
+                p.cantidad = 1;
+                resp.Add(p);
+            }
+            else { p.cantidad++; }
+
+            return resp;
+        }
+
+
     }
         
 }

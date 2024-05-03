@@ -49,9 +49,11 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
                 Producto a = new Producto();
                 Producto b = new Producto();
+                Producto c = new Producto();
 
                 a.nombre = "12 Mini croissants de mantequilla";
                 b.nombre = "ALCAMPO CULTIVAMOS LO BUENO Champiñón laminado  Bandeja de 250 g.";
+                c.nombre = " c";
 
                 a.imagen = "https://prod-mercadona.imgix.net/images/55dfb0de5a832d479c76f2e25c653d4b.jpg?fit=crop&h=300&w=300";
                 b.imagen = "https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/1c889628-8a63-4af8-85bd-a0783a89fe5b/300x300.jpg";
@@ -61,24 +63,39 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
                 a.precio = 10;
                 b.precio = 20;
+                c.precio = 30;
 
                 a.supermercado = "Mercadona";
                 b.supermercado = "Alcampo";
+                c.supermercado = "Alcampo";
 
                 a.idproductos = "prod a";
-                a.idproductos = "prod b";
+                b.idproductos = "prod b";
+                c.idproductos = "prod c";
 
                 i++;
                 Products.Add(a);
                 Products.Add(b);
+                Products.Add(c);
                 Products.Add(a);
                 Products.Add(b);
-                Products.Add(a);
-                Products.Add(b);
+                Products.Add(c);
 
             }
         }
+        private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
+        {
 
+            ObservableCollection<Producto> resp = l;
+            if (!resp.Contains(p))
+            {
+                p.cantidad = 1;
+                resp.Add(p);
+            }
+            else { p.cantidad++; }
+
+            return resp;
+        }
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
         {
             if (!e.Handled)
@@ -108,16 +125,18 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             Producto p = ((Button)sender).Tag as Producto;
            
             ObservableCollection<Producto> b =  sesionAct.getCarrito();
-            b.Add(p);
-            sesionAct.setCarrito(b);
+            sesionAct.setCarrito(reOrdenaCarrito(b, p));
             MessageBox.Show(sesionAct.getCarrito().Count()+"");
         }
+      
+
 
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {
             //TODO: que me saque un ventana emergente (con los colores de la app) con un stackpannel de las listas
             // https://www.youtube.com/watch?v=KSNjJ9Glky4
-            ListasPopUp popup = new ListasPopUp(sesionAct.getListas());
+            Producto p = ((Button)sender).Tag as Producto;
+            ListasPopUp popup = new ListasPopUp(sesionAct.getListas(),p);
            
             
             //para que se coloque en el cursor
@@ -128,10 +147,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
             popup.Show();
             popup.Left = x; popup.Top = y-popup.Height;// - height para que se coloque en la esquina de abajo
-
-
         }
-
-        
     }
 }

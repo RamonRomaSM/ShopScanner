@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoFinalDeGrado.DAOS
 {
-    class Producto
+    public class Producto
     {
         public string idproductos { get; set; }
         public string nombre { get; set; }
@@ -17,9 +17,15 @@ namespace TrabajoFinalDeGrado.DAOS
         public string url { get; set; }
         public string imagen { get; set; }
 
+        public int cantidad { get; set; }//Para que el carrito se re ordene
+
         public Producto() { 
         
-        
+            cantidad = 0;
         }
+      
+        
+
+      
     }
 }
