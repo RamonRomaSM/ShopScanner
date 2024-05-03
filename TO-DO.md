@@ -70,10 +70,14 @@ Mandar los datos encript y esperar ok + clave de sesion (para encriptar los mens
 -------------------------------------------------
 
 nombre + total precio + total productos +  descripcion?
-						boton de ver (icono de engranaje de ajustes fondo gris claro)(saca ventana con los prods y detalles (hay se puede añadir / quitar productos)) 
-						boton de descargar pdf (icono de flechita hacia abajo fondo azul)
-						boton de mandar por correo (opc) (icono de carta fondo gris claro?)
-						boton de eliminar (papelera con fondo rojo)
+
+boton de ver (icono de engranaje de ajustes fondo gris claro)(saca ventana con los prods y detalles (hay se puede añadir / quitar productos)) 
+
+boton de descargar pdf (icono de flechita hacia abajo fondo azul)
+
+boton de mandar por correo (opc) (icono de carta fondo gris claro?)
+
+boton de eliminar (papelera con fondo rojo)
 						
 
 
