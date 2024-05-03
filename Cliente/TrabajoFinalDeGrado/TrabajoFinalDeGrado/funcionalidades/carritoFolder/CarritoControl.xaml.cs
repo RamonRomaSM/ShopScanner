@@ -100,10 +100,9 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
             {
                 Carrito.RemoveAt(0);
                 Carrito.Add(item);
-
             }
-
         }
+
         private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
         {
 

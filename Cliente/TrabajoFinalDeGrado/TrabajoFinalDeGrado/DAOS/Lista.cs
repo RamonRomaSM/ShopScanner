@@ -12,16 +12,29 @@ namespace TrabajoFinalDeGrado.DAOS
     {
         public ObservableCollection<Producto> productos { get; set; }
         public string nombre { get; set; }
-        private string autor;
+        public string autor { get; set; }
+        public double precio { get; set; }
+
 
         public Lista(string nombre,string autor, ObservableCollection<Producto> productos) 
         { 
             this.nombre = nombre;
             this.autor = autor;
             this.productos = productos;
+            this.precio = calculaPrecio();
         }
         public string getNombre() { return nombre; }
         public string getAutor() { return autor; }
-        //public ArrayList getProductos() {  return productos; }
+
+        private double calculaPrecio()
+        {
+            double resp = 0;
+            foreach (Producto p in productos)
+            {
+                resp += p.precio;
+            }
+            return resp;
+        }
+       
     }
 }

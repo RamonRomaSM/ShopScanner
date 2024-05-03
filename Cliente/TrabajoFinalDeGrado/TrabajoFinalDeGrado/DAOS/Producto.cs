@@ -11,7 +11,7 @@ namespace TrabajoFinalDeGrado.DAOS
     {
         public string idproductos { get; set; }
         public string nombre { get; set; }
-        public int precio { get; set; }
+        public double precio { get; set; }
         public string supermercado { get; set; }
         public string oferta { get; set; }
         public string url { get; set; }
