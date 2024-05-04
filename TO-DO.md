@@ -69,15 +69,30 @@ Mandar los datos encript y esperar ok + clave de sesion (para encriptar los mens
 
 -------------------------------------------------
 
-nombre + total precio + total productos +  descripcion?
+Que queda:
+UI:
 
-boton de ver (icono de engranaje de ajustes fondo gris claro)(saca ventana con los prods y detalles (hay se puede añadir / quitar productos)) 
+listas: nombre /n prods /precio
 
-boton de descargar pdf (icono de flechita hacia abajo fondo azul)
+	ver(y editar) / eliminar
 
-boton de mandar por correo (opc) (icono de carta fondo gris claro?)
+Cesta:	imagen papelera
 
-boton de eliminar (papelera con fondo rojo)
-						
+mucho texto en productos
+
+API:
+	api
+
+Python:
+	parametrizar la conexion
+
+Extra:
+	diseño de los scrollbars
+	Popups en vez de messageboxes
+	lo del pdf con python y desde la api (asi puedo llamarlo desde el pc o el movil)
+	app movil
+	
+
+
 
 
