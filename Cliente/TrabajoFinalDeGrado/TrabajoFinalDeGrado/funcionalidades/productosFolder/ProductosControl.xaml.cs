@@ -126,7 +126,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
            
             ObservableCollection<Producto> b =  sesionAct.getCarrito();
             sesionAct.setCarrito(reOrdenaCarrito(b, p));
-            MessageBox.Show(sesionAct.getCarrito().Count()+"");
+            MessageBox.Show("Añadido al carrito");
         }
       
 

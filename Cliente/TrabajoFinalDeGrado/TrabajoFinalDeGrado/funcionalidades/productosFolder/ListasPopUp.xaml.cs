@@ -43,6 +43,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             Button a = (Button)sender;
             Lista l = ((Button)sender).Tag as Lista;  
             l.productos = reOrdenaCarrito(l.productos, act);
+            l.calculaPrecio();
             MessageBox.Show("Añadido a " + l.nombre);//To do, que el mensaje sea mas bonito y menos invasivo
             this.Close();
         }
@@ -58,10 +59,10 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
         {
 
-            ObservableCollection<Producto> resp = new ObservableCollection<Producto>();
+            ObservableCollection<Producto> resp = l;
             if (!resp.Contains(p))
             {
-                p.cantidad = 1;
+                p.cantidad ++;
                 resp.Add(p);
             }
             else { p.cantidad++; }

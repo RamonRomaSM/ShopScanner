@@ -62,7 +62,7 @@ namespace TrabajoFinalDeGrado
         }
         private void perfil(object sender, RoutedEventArgs e) 
         {
-            contenedorFragments.Content = perfilControl;
+            contenedorFragments.Content = new PerfilControl(sesionAct);
         }
     }
 }

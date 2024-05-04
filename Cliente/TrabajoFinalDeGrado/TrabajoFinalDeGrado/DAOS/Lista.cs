@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace TrabajoFinalDeGrado.DAOS
 {
@@ -14,27 +15,29 @@ namespace TrabajoFinalDeGrado.DAOS
         public string nombre { get; set; }
         public string autor { get; set; }
         public double precio { get; set; }
-
+        public int numeroProductos { get; set; }
 
         public Lista(string nombre,string autor, ObservableCollection<Producto> productos) 
         { 
             this.nombre = nombre;
             this.autor = autor;
             this.productos = productos;
-            this.precio = calculaPrecio();
+            calculaPrecio();
         }
         public string getNombre() { return nombre; }
         public string getAutor() { return autor; }
 
-        private double calculaPrecio()
+        public void calculaPrecio()
         {
-            double resp = 0;
+            numeroProductos = 0;
+            precio = 0;
             foreach (Producto p in productos)
             {
-                resp += p.precio;
+                precio += p.precio*p.cantidad;
+                numeroProductos += p.cantidad;
             }
-            return resp;
         }
+       
        
     }
 }

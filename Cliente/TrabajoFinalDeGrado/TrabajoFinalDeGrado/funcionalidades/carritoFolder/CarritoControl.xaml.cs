@@ -117,5 +117,15 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
             return resp;
         }
 
+      
+        private void txtNombreLista_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
+        }
+
+        private void txtNombreLista_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            txtNombreLista.Text = "";
+        }
     }
 }

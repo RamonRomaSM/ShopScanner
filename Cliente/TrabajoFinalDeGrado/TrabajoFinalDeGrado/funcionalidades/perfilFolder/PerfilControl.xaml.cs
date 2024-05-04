@@ -25,13 +25,15 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
     {
         private Usuario sesionAct;
         private ObservableCollection<Lista> listas;
+       
         public PerfilControl(Usuario u)
         {
 
             InitializeComponent();
             this.sesionAct = u;
             this.listas = new ObservableCollection<Lista>();
-
+            nombrelbl.Content= sesionAct.nombre;
+           
             this.listas = sesionAct.getListas();
             
             ListViewListas.ItemsSource = listas;
