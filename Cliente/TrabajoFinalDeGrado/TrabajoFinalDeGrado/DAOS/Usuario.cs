@@ -37,7 +37,11 @@ namespace TrabajoFinalDeGrado.DAOS
         {
             carrito = b;
         }
-
+        public void addLista(Lista lista)
+        {
+            //TODO: acc a la bdd
+            listas.Add(lista);
+        }
 
     }
 }

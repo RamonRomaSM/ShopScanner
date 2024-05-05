@@ -27,6 +27,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
     {
         private Usuario sesionAct;
         ObservableCollection<Producto> Carrito;
+        bool textoCambiado = false;
         public CarritoControl(Usuario u)
         {
             InitializeComponent();
@@ -120,12 +121,31 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
       
         private void txtNombreLista_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
+            if (txtNombreLista.Text.Equals(""))
+            {
+                txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
+                textoCambiado = false;
+            }
+            else { textoCambiado = true; }
         }
 
         private void txtNombreLista_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             txtNombreLista.Text = "";
+        }
+
+        private void addListaBtn_Click(object sender, RoutedEventArgs e)
+        {
+           if(!txtNombreLista.Equals("")&&Carrito.Count>0&&textoCambiado) { 
+                MessageBox.Show("guardado"+txtNombreLista.Text.Equals("") + Carrito.Count  + textoCambiado);
+                Lista nueva = new Lista(txtNombreLista.Text, sesionAct.nombre, Carrito);
+
+                sesionAct.addLista(nueva);
+
+                textoCambiado = false;
+                txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
+                Carrito.Clear();
+           }
         }
     }
 }

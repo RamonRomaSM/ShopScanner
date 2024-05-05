@@ -186,7 +186,7 @@
                             GotKeyboardFocus="txtNombreLista_GotKeyboardFocus"
                             LostKeyboardFocus="txtNombreLista_LostKeyboardFocus"
                            />
-                    <Button Name="addListaBtn" Grid.Column="1" VerticalAlignment="Center"
+                    <Button Name="addListaBtn" Grid.Column="1" VerticalAlignment="Center" Click="addListaBtn_Click"
                                                 FontSize="18" Cursor="Hand" BorderThickness="0" Foreground="White" Tag="{Binding}">
                         <Button.Style>
                             <Style TargetType="Button">
