@@ -137,7 +137,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {
            if(!txtNombreLista.Equals("")&&Carrito.Count>0&&textoCambiado) { 
-                MessageBox.Show("guardado"+txtNombreLista.Text.Equals("") + Carrito.Count  + textoCambiado);
+                MessageBox.Show("Guardado :"+txtNombreLista.Text.Equals(""));
                 Lista nueva = new Lista(txtNombreLista.Text, sesionAct.nombre, Carrito);
 
                 sesionAct.addLista(nueva);

@@ -38,5 +38,28 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             
             ListViewListas.ItemsSource = listas;
         }
+
+        private void eliminarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Lista l  = ((Button)sender).Tag as Lista;
+            sesionAct.removeLista(l);
+        }
+
+        private void verButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
+        {
+            if (!e.Handled)
+            {
+                e.Handled = true;
+                var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
+                eventArg.RoutedEvent = UIElement.MouseWheelEvent;
+                eventArg.Source = sender;
+                var parent = ((Control)sender).Parent as UIElement;
+                parent.RaiseEvent(eventArg);
+            }
+        }
     }
 }

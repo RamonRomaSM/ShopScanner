@@ -35,7 +35,7 @@
                 Background="Transparent"
             />
 
-           
+            
                 <ListView  Margin="50,0,0,0" Grid.Row="2"
                            x:Name="ListViewListas" ItemsSource="{Binding listas}" SelectedItem="{Binding SelectedProduct}" 
                            ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
@@ -45,11 +45,11 @@
                         <DataTemplate>
                             <Border HorizontalAlignment="Center"
                              CornerRadius="8"
-                             BorderThickness="1" BorderBrush="DarkOrange"
                              Width="900"
                              Height="150"
                              Padding="5"
-                             Background="#22202f"
+                             Background="#272B2F"
+                             Opacity=".9"
                              Margin="10">   
                                 <Grid>
                                     <!--CONTENIDO-->
@@ -72,7 +72,9 @@
                                     <TextBlock Text="{Binding numeroProductos}" Foreground="White" FontSize="19" Grid.Column="4" VerticalAlignment="Center"/>
 
                                     <Button Name="eliminarButton" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom" Tag="{Binding}"
-                                                           Cursor="Hand" BorderThickness="0" Foreground="White" FontSize="19">
+                                                           Cursor="Hand" BorderThickness="0" Foreground="White" FontSize="19" Click="eliminarButton_Click">
+                                        <Image Source="/imagenes/papelera-de-reciclaje.png" Height="30" Width="30" />
+
                                         <Button.Style>
                                             <Style TargetType="Button">
                                             <Setter Property="Background" Value="#FFA50505"/>
@@ -88,13 +90,15 @@
                                             <ControlTemplate TargetType="Button">
                                                 <Border Width="40" Height="40" VerticalAlignment="Center"  HorizontalAlignment="Center"
                                                                                         CornerRadius="20" Background="{TemplateBinding Background}">
-                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="+"/>
+                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                 </Border>
                                             </ControlTemplate>
                                         </Button.Template>
                                     </Button>
                                 <Button Name="verButton" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Tag="{Binding}" HorizontalAlignment="Left" Margin="20,0,0,0"
-                                                           Cursor="Hand" BorderThickness="0" Foreground="White" FontSize="19">
+                                                           Cursor="Hand" BorderThickness="0" Foreground="White" FontSize="19" Click="verButton_Click">
+                                    <Image Source="/imagenes/ojo.png" Height="30" Width="30"/>
+
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="DodgerBlue"/>
@@ -110,7 +114,7 @@
                                         <ControlTemplate TargetType="Button">
                                             <Border Width="40" Height="40" VerticalAlignment="Center"  HorizontalAlignment="Center"
                                                                                         CornerRadius="20" Background="{TemplateBinding Background}">
-                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="+"/>
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
@@ -118,6 +122,7 @@
                                     
 
                             </Grid>
+                            
                             </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>

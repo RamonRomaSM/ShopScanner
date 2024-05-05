@@ -42,6 +42,10 @@ namespace TrabajoFinalDeGrado.DAOS
             //TODO: acc a la bdd
             listas.Add(lista);
         }
-
+        public void removeLista(Lista lista)
+        {
+            //TODO: acc a la bdd
+            listas.Remove(lista);
+        }
     }
 }

@@ -17,7 +17,8 @@
                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
                         BorderThickness="0" Background="Transparent"  
-                        PreviewMouseWheel="ListViewProducts_PreviewMouseWheel">
+                        PreviewMouseWheel="ListViewProducts_PreviewMouseWheel"
+                        >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Border HorizontalAlignment="Center"
@@ -130,6 +131,8 @@
                                         <!-- papelera -->
                                         <Button Name="binButton" Grid.Column="2" VerticalAlignment="Bottom" Click="bin" Tag="{Binding}"
                                                 FontSize="19" Cursor="Hand" BorderThickness="0" Foreground="White">
+                                            <Image Source="/imagenes/papelera-de-reciclaje.png" Height="30" Width="30"/>
+
                                             <Button.Style>
                                                 <Style TargetType="Button">
                                                     <Setter Property="Background" Value="#FFA50505"/>
@@ -145,7 +148,7 @@
                                                 <ControlTemplate TargetType="Button">
                                                     <Border Width="40" Height="40" VerticalAlignment="Center"  HorizontalAlignment="Center"
                                                             CornerRadius="20" Background="{TemplateBinding Background}">
-                                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="-"/>
+                                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                     </Border>
                                                 </ControlTemplate>
                                             </Button.Template>

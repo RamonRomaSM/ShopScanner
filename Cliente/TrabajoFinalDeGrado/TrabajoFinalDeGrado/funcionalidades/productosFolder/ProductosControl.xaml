@@ -7,15 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        
         <ScrollViewer Name="MyScroller" Background="Transparent" ScrollChanged="OnScrollChanged" HorizontalContentAlignment="Center"  Margin="40,0,0,0">
+           
             <ListView x:Name="ListViewProducts" ItemsSource="{Binding Products}" 
                         ScrollViewer.CanContentScroll="False" 
                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
                         BorderThickness="0" Background="Transparent"  
-                        PreviewMouseWheel="ListViewProducts_PreviewMouseWheel">
+                        >
+                
+                
                 <ListView.ItemTemplate>
+                    
+                   
                     <DataTemplate>
+                       
                         <Border HorizontalAlignment="Center"
                                 CornerRadius="8"
                                 BorderThickness="0" 
@@ -26,7 +33,7 @@
                                 Margin="10"
                                 Opacity="0.9">
                             <StackPanel Orientation="Vertical">
-                               <!--CONTENIDO-->
+                                <!--CONTENIDO-->
                                 <Image Source="{Binding imagen}" Height="230" Width="280" Margin="0,10,0,0"/>
                                 
                                 <Grid Margin="0,20,0,0" Height="210">
@@ -71,6 +78,7 @@
                                         <!--Añadir al carrito-->
                                         <Button Name="addCarritobtn" Grid.Column="0" VerticalAlignment="Bottom" Click="addCarritobtn_Click"
                                                 FontSize="18" Cursor="Hand" BorderThickness="0" Foreground="White" Tag="{Binding}">
+                                            
                                             <Button.Style>
                                                 <Style TargetType="Button">
                                                     <Setter Property="Background" Value="DodgerBlue"/>
