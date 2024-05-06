@@ -15,6 +15,7 @@
                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                         ScrollViewer.VerticalScrollBarVisibility="Disabled"
                         BorderThickness="0" Background="Transparent"  
+                        PreviewMouseWheel="ListViewProducts_PreviewMouseWheel"
                         >
                 
                 
