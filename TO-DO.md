@@ -1,43 +1,26 @@
 # Falta:
 
 ## UI:
-+ fragents (Mi carrito, mi perfil) 
-+ las tarjetas (En las tarjetas  de productos, boton de añador al carrito y boton de añadir a lista ya esixtente (desplegable para seleciconar la lista?))
-+ animaciones 
++ Pop up de la lista
++ Notificaciones pero bien
 + Barra de busqueda (y desplegable de filtros) <-- cuando tenga acceso a la bdd (asi puedo ir testeando el filtro, ordenar por precio en a bdd) 
+
   
 ## Logica UI:
-+ Carrito:
-+ Cargar items en el carrito desde una lista de la compra
-+ añadir items al carro
-+ guardar carrito (o sobreescribir)
 + Barra de busqueda (y logica de filtros)
 + Ver tus listas de la compra en el perfil
 
 ## Script python
-+ Cargar desde un fichero la psw y el usuario de la bdd
++ Cargar parametros desde un fichero 
 
 ## API
 
-spring tiene forma de mandar correos
++ Hostear con railway
++ spring tiene forma de mandar correos
 
-https://spring.io/guides/tutorials/rest
+  (https://spring.io/guides/tutorials/rest)
 
-sesiones de spring?
-
-https://docs.spring.io/spring-session/reference/guides/java-rest.html
-
-seguridad en la api:
-
-https://www.baeldung.com/spring-boot-api-key-secret (como asegurar la conexion   cliente-server)
-
-ver lo de OW
-
-lombook para pasar a jsons 
-
-Mas contenido:
-
-https://www.jetbrains.com/help/idea/your-first-spring-application.html#what-next
+  (https://docs.spring.io/spring-session/reference/guides/java-rest.html)
 
 ## Seguridad:
 Creacion de claves:
@@ -52,31 +35,6 @@ Mandar los datos encript y esperar ok + clave de sesion (para encriptar los mens
 (Igual podria, cada vez que te conectas, que se te renueve el par de claves)
 
 -------------------------------------------------
-
-Que queda:
-UI:
-
-listas: nombre /n prods /precio
-
-	ver(y editar) / eliminar
-
-Cesta:	imagen papelera
-
-mucho texto en productos
-
-API:
-	api
-
-Python:
-	parametrizar la conexion
-
-Extra:
-	diseño de los scrollbars
-	Popups en vez de messageboxes
-	lo del pdf con python y desde la api (asi puedo llamarlo desde el pc o el movil)
-	app movil
-	
-
 
 
 
