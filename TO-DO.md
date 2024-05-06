@@ -1,5 +1,7 @@
 # Falta:
 
+Una vez terminada la ui, hacer prueba con laiway de deploy de api + database, con algun repo de prueba
+
 ## UI:
 + Pop up de la lista
 + Notificaciones pero bien
