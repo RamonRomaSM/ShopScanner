@@ -21,7 +21,13 @@ namespace TrabajoFinalDeGrado.DAOS
         { 
             this.nombre = nombre;
             this.autor = autor;
-            this.productos = productos;
+            this.productos = new ObservableCollection<Producto>();
+
+            foreach (Producto producto in productos)
+            {
+                this.productos.Add(producto);
+            }
+
             calculaPrecio();
         }
         public string getNombre() { return nombre; }

@@ -146,7 +146,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             double y = screenPosition.Y;
 
             popup.Show();
-            popup.Left = x; popup.Top = y-popup.Height;// - height para que se coloque en la esquina de abajo
+            popup.Left = x - popup.Width; popup.Top = y-popup.Height;// - height para que se coloque en la esquina de abajo
         }
     }
 }

@@ -136,7 +136,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
            if(!txtNombreLista.Equals("")&&Carrito.Count>0&&textoCambiado) { 
                 MessageBox.Show("Guardado");
                 Lista nueva = new Lista(txtNombreLista.Text, sesionAct.nombre, Carrito);
-
                 sesionAct.addLista(nueva);
 
                 textoCambiado = false;

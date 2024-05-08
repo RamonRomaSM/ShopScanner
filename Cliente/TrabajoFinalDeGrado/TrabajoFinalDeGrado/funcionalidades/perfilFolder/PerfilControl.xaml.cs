@@ -32,7 +32,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             InitializeComponent();
             this.sesionAct = u;
             this.listas = new ObservableCollection<Lista>();
-            nombrelbl.Content= sesionAct.nombre;
+            nombrelbl.Content= "Nombre de usuario: "+sesionAct.nombre;
            
             this.listas = sesionAct.getListas();
             
@@ -47,8 +47,9 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
 
         private void verButton_Click(object sender, RoutedEventArgs e)
         {
-            ListaWindow actual = new ListaWindow();
-            actual.Show();
+            Lista l = ((Button)sender).Tag as Lista;
+            ListaWindow actual = new ListaWindow(sesionAct,l);
+            actual.ShowDialog();
         }
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
         {

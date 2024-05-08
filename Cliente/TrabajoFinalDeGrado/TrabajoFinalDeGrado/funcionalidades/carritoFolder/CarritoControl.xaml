@@ -82,7 +82,7 @@
                                             <ColumnDefinition/>
                                         </Grid.ColumnDefinitions>
                                         <!-- + -->
-                                        <Button Name="addButton" Grid.Column="0" VerticalAlignment="Bottom" Click="add" Tag="{Binding}"
+                                        <Button x:Name="addButton" Grid.Column="0" VerticalAlignment="Bottom" Click="add" Tag="{Binding}"
                                                Cursor="Hand" BorderThickness="0" Foreground="White" FontSize="19">
                                             <Button.Style>
                                                 <Style TargetType="Button">

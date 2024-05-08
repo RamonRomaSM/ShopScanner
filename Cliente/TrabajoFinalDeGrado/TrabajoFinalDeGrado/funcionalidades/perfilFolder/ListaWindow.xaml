@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrabajoFinalDeGrado.funcionalidades.perfilFolder"
         mc:Ignorable="d"
-        Title="{Binding nombre}" Height="450" Width="800"
+        Title="{Binding nombre}" Height="750" Width="800"
         ResizeMode="CanMinimize"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
@@ -14,13 +14,6 @@
     <Grid>
         <Border Background="#212529" CornerRadius="8">
             <!--Aqui la lista--> 
-            <!-- en esta ventana puede sver lo que tienes, añadir/quitar(de uno en uno o todos), boton de guardar 
-                 que tiene acc a sessionAct, tambien puede cambiar el nombre de la lista.
-                 Esta ventana tiene prio, probar a poner animacion al mostrarse-->  
-            <!--Dia minimo: termino esto + python
-                Dia perfecto: termino esto + python + popups
-                Dia delusional: esto + python + popups + animaciones-->
-            <!--Reutilizar cesta + la idea del nombre de la cesta para el cambioo de nombre-->
             <Grid><!--Grid que contiene todo (hasta la barra superior)-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
@@ -57,42 +50,19 @@
 
                     </Button>
 
-                    <!--MINIMIZAR-->
-                    <Button  HorizontalAlignment="Right" Margin="0,0,70,0" Cursor="Hand" Height="23" Click="minimizar">
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}" >
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type Button}">
-                                            <Border Background="{TemplateBinding Background}" BorderBrush="Transparent">
-                                                <ContentPresenter  Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                        <Image Source="/imagenes/output-onlinepngtools (2).png" />
-
-                    </Button>
+                    
                 </Grid>
 
 
 
 
                 <!--Contenido de la ventana-->
-                <Grid Grid.Row="1"> 
+                <Grid Grid.Row="1" HorizontalAlignment="Center"> 
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="0.3*"/>
                         <RowDefinition/>
-                        <RowDefinition Height="0.2*"/>
                     </Grid.RowDefinitions>
-                    <ScrollViewer Grid.Row="1" Name="MyScroller" Background="Transparent"  HorizontalContentAlignment="Center"  Margin="40,0,0,0">
+                    <ScrollViewer Grid.Row="1" Name="MyScroller" Background="Transparent"   Margin="20" HorizontalContentAlignment="Center">
                         <ListView x:Name="ListViewCarrito" ItemsSource="{Binding lista}" 
                             ScrollViewer.CanContentScroll="False" 
                             ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
@@ -261,12 +231,11 @@
                     BorderBrush="#272B2F" CornerRadius="5" Background="#272B2F">
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="3*"/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
 
                                 <TextBox Opacity=".8" FontSize="19" Height="40" Margin="10,0,0,0" VerticalContentAlignment="Center" Name="txtNombreLista" 
-                                Text="Escribe el nombre de tu nueva lista"
                                 GotKeyboardFocus="txtNombreLista_GotKeyboardFocus"
                                 LostKeyboardFocus="txtNombreLista_LostKeyboardFocus"
                                />

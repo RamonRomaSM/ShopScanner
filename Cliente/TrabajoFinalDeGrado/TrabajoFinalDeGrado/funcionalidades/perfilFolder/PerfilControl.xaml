@@ -8,25 +8,26 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <Grid>
+        <Grid Margin="0,50,0,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="80"/>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="0.16*"/>
+                <RowDefinition Height="0.15*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             
-            <Label Grid.Row="0"
-                VerticalAlignment="Top"
+            <Label Grid.Row="1"
+                VerticalAlignment="Bottom"
                 Height="80"
-                FontSize="25"
+                FontSize="19"
                 Content=""
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 Background="Transparent"
                 Foreground="White"
                 Name="nombrelbl"
              />
             
-            <Label Grid.Row="1"
+            <Label Grid.Row="2"
                 VerticalAlignment="Top"
                 Height="55"
                 Content="Mis listas de la compra:"
@@ -36,7 +37,7 @@
             />
 
             
-                <ListView  Margin="50,0,0,0" Grid.Row="2"
+                <ListView  Margin="10,0,0,0" Grid.Row="3"
                            x:Name="ListViewListas" ItemsSource="{Binding listas}" SelectedItem="{Binding SelectedProduct}" 
                            ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                            ScrollViewer.VerticalScrollBarVisibility="Visible" BorderThickness="0" Background="Transparent"  
