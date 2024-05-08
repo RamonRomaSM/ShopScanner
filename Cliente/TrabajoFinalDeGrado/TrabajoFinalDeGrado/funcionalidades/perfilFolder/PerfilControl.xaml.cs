@@ -47,7 +47,8 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
 
         private void verButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ListaWindow actual = new ListaWindow();
+            actual.Show();
         }
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
         {

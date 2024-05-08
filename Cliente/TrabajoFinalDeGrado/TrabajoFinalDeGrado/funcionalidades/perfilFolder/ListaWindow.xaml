@@ -1,0 +1,307 @@
+﻿<Window x:Class="TrabajoFinalDeGrado.funcionalidades.perfilFolder.ListaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrabajoFinalDeGrado.funcionalidades.perfilFolder"
+        mc:Ignorable="d"
+        Title="{Binding nombre}" Height="450" Width="800"
+        ResizeMode="CanMinimize"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent">
+    <Grid>
+        <Border Background="#212529" CornerRadius="8">
+            <!--Aqui la lista--> 
+            <!-- en esta ventana puede sver lo que tienes, añadir/quitar(de uno en uno o todos), boton de guardar 
+                 que tiene acc a sessionAct, tambien puede cambiar el nombre de la lista.
+                 Esta ventana tiene prio, probar a poner animacion al mostrarse-->  
+            <!--Dia minimo: termino esto + python
+                Dia perfecto: termino esto + python + popups
+                Dia delusional: esto + python + popups + animaciones-->
+            <!--Reutilizar cesta + la idea del nombre de la cesta para el cambioo de nombre-->
+            <Grid><!--Grid que contiene todo (hasta la barra superior)-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--BARRA SUPERIOR-->
+                <Grid Grid.Row="0"  MouseDown="moverWindow" >
+                    <!--En este van los botones-->
+                    <Border Background="#1F2024"
+                            CornerRadius="8,8,0,0" />
+                    <!--CRUZ-->
+                    <Button  HorizontalAlignment="Right" Margin="0,0,30,0" Cursor="Hand" Height="20" Click="salir" Name="cruz">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}" >
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Transparent">
+                                                <ContentPresenter  Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Image Source="/imagenes/output-onlinepngtools (3).png"/>
+
+                    </Button>
+
+                    <!--MINIMIZAR-->
+                    <Button  HorizontalAlignment="Right" Margin="0,0,70,0" Cursor="Hand" Height="23" Click="minimizar">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}" >
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type Button}">
+                                            <Border Background="{TemplateBinding Background}" BorderBrush="Transparent">
+                                                <ContentPresenter  Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Image Source="/imagenes/output-onlinepngtools (2).png" />
+
+                    </Button>
+                </Grid>
+
+
+
+
+                <!--Contenido de la ventana-->
+                <Grid Grid.Row="1"> 
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="1" Name="MyScroller" Background="Transparent"  HorizontalContentAlignment="Center"  Margin="40,0,0,0">
+                        <ListView x:Name="ListViewCarrito" ItemsSource="{Binding lista}" 
+                            ScrollViewer.CanContentScroll="False" 
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                            BorderThickness="0" Background="Transparent"  
+                            PreviewMouseWheel="ListViewProducts_PreviewMouseWheel"
+                            >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border HorizontalAlignment="Center"
+                                    CornerRadius="8"
+                                    BorderThickness="0" 
+                                    Width="290"
+                                    Height="500"
+                                    Padding="5"
+                                    Background="#272B2F"
+                                    Margin="10"
+                                    Opacity="0.9">
+                                        <StackPanel Orientation="Vertical">
+                                            <!--CONTENIDO-->
+                                            <Image Source="{Binding imagen}" Height="230" Width="280" Margin="0,10,0,0"/>
+
+                                            <Grid Margin="0,20,0,0" Height="210">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition/>
+                                                    <RowDefinition Height="0.75*"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Text="{Binding nombre}" HorizontalAlignment="Right"  
+                                               Foreground="White"
+                                               FontSize="18" TextWrapping="Wrap" Width="280" MaxHeight="80" Padding="20,0,20,0"/>
+                                                <TextBlock Text="{Binding url}"  PreviewMouseDown="abrir_url" 
+                                                   Foreground="Transparent" Cursor="Hand" MaxHeight="60" />
+                                                <Grid Grid.Row="1" Margin="0,15,0,0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition/>
+                                                        <RowDefinition/>
+                                                        <RowDefinition/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBlock  Text="Precio: " HorizontalAlignment="Left"  Grid.Row="0" Grid.Column="0"
+                                                        Foreground="White" Padding="20,0,0,0"
+                                                        FontSize="18"/>
+                                                    <TextBlock  Text="Supermercado: " HorizontalAlignment="Left"  Grid.Row="1" Grid.Column="0"
+                                                        Foreground="White" Padding="20,0,0,0"
+                                                        FontSize="18" />
+                                                    <TextBlock  Text="Cantidad: " HorizontalAlignment="Left"  Grid.Row="2" Grid.Column="0"
+                                                        Foreground="White" Padding="20,0,0,0"
+                                                        FontSize="18" />
+                                                    <TextBlock  Text="{Binding precio}" HorizontalAlignment="Center"  Grid.Row="0" Grid.Column="1"
+                                                        Foreground="White" Padding="0,0,20,0"
+                                                        FontSize="18" />
+                                                    <TextBlock  Text="{Binding supermercado}" HorizontalAlignment="Center"  Grid.Row="1" Grid.Column="1"
+                                                        Foreground="White" Padding="0,0,20,0"
+                                                        FontSize="18" />
+                                                    <TextBlock  Text="{Binding cantidad}" HorizontalAlignment="Center"  Grid.Row="2" Grid.Column="1"
+                                                        Foreground="White" Padding="0,0,20,0"
+                                                        FontSize="18" />
+                                                </Grid>
+                                                <!--Aqui el grid con los botones (+ - y papelera)-->
+                                                <Grid Grid.Row="2">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition/>
+                                                        <ColumnDefinition/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <!-- + -->
+                                                    <Button Name="addButton" Grid.Column="0" VerticalAlignment="Bottom" Click="add" Tag="{Binding}"
+                                                   Cursor="Hand" BorderThickness="0" Foreground="White" FontSize="19">
+                                                        <Button.Style>
+                                                            <Style TargetType="Button">
+                                                                <Setter Property="Background" Value="#FFF3BF09"/>
+                                                                <Style.Triggers>
+                                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                                        <Setter Property="Background" Value="#FFAF9904"/>
+                                                                    </Trigger>
+                                                                </Style.Triggers>
+
+                                                            </Style>
+                                                        </Button.Style>
+                                                        <Button.Template>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border Width="40" Height="40" VerticalAlignment="Center"  HorizontalAlignment="Center"
+                                                                CornerRadius="20" Background="{TemplateBinding Background}">
+                                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="+"/>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Button.Template>
+                                                    </Button>
+                                                    <!-- - -->
+                                                    <Button Name="substractButton" Grid.Column="1" VerticalAlignment="Bottom" Click="substract" Tag="{Binding}"
+                                                    FontSize="19" Cursor="Hand" BorderThickness="0" Foreground="White">
+                                                        <Button.Style>
+                                                            <Style TargetType="Button">
+                                                                <Setter Property="Background" Value="#FFF3BF09"/>
+                                                                <Style.Triggers>
+                                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                                        <Setter Property="Background" Value="#FFAF9904"/>
+                                                                    </Trigger>
+                                                                </Style.Triggers>
+
+                                                            </Style>
+                                                        </Button.Style>
+                                                        <Button.Template>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border Width="40" Height="40" VerticalAlignment="Center"  HorizontalAlignment="Center"
+                                                                CornerRadius="20" Background="{TemplateBinding Background}">
+                                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="-"/>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Button.Template>
+                                                    </Button>
+
+                                                    <!-- papelera -->
+                                                    <Button Name="binButton" Grid.Column="2" VerticalAlignment="Bottom" Click="bin" Tag="{Binding}"
+                                                    FontSize="19" Cursor="Hand" BorderThickness="0" Foreground="White">
+                                                        <Image Source="/imagenes/papelera-de-reciclaje.png" Height="30" Width="30"/>
+
+                                                        <Button.Style>
+                                                            <Style TargetType="Button">
+                                                                <Setter Property="Background" Value="#FFA50505"/>
+                                                                <Style.Triggers>
+                                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                                        <Setter Property="Background" Value="#FF940101"/>
+                                                                    </Trigger>
+                                                                </Style.Triggers>
+
+                                                            </Style>
+                                                        </Button.Style>
+                                                        <Button.Template>
+                                                            <ControlTemplate TargetType="Button">
+                                                                <Border Width="40" Height="40" VerticalAlignment="Center"  HorizontalAlignment="Center"
+                                                                CornerRadius="20" Background="{TemplateBinding Background}">
+                                                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Button.Template>
+                                                    </Button>
+
+
+                                                </Grid>
+                                            </Grid>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+
+
+                        </ListView>
+                    </ScrollViewer>
+
+                    <!-- Para guardar -->
+
+                    <Grid Background="Transparent" Grid.Row="0" Margin="40,20,40,20">
+                        <Border BorderThickness="10"
+                    BorderBrush="#272B2F" CornerRadius="5" Background="#272B2F">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBox Opacity=".8" FontSize="19" Height="40" Margin="10,0,0,0" VerticalContentAlignment="Center" Name="txtNombreLista" 
+                                Text="Escribe el nombre de tu nueva lista"
+                                GotKeyboardFocus="txtNombreLista_GotKeyboardFocus"
+                                LostKeyboardFocus="txtNombreLista_LostKeyboardFocus"
+                               />
+                                <Button Name="addListaBtn" Grid.Column="1" VerticalAlignment="Center" Click="addListaBtn_Click"
+                                                    FontSize="18" Cursor="Hand" BorderThickness="0" Foreground="White" Tag="{Binding}">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Background" Value="DodgerBlue"/>
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="#0F4A82"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+
+                                        </Style>
+                                    </Button.Style>
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Width="130" Height="40"
+                                                                CornerRadius="5" Background="{TemplateBinding Background}">
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="Guardar"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+
+
+                            </Grid>
+
+                        </Border>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+
+    </Border>
+    </Grid>
+</Window>

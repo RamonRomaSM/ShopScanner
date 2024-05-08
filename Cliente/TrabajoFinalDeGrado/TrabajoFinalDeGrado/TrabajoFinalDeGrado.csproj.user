@@ -21,6 +21,9 @@
     <Compile Update="funcionalidades\carritoFolder\CarritoControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="funcionalidades\perfilFolder\ListaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="funcionalidades\perfilFolder\PerfilControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +48,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="funcionalidades\carritoFolder\CarritoControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="funcionalidades\perfilFolder\ListaWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="funcionalidades\perfilFolder\PerfilControl.xaml">

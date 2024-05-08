@@ -36,9 +36,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
             ListViewCarrito.ItemsSource =Carrito;
         }
 
-
-       
-
         private void abrir_url(object sender, MouseButtonEventArgs e)
         {
 
@@ -137,7 +134,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {
            if(!txtNombreLista.Equals("")&&Carrito.Count>0&&textoCambiado) { 
-                MessageBox.Show("Guardado :"+txtNombreLista.Text.Equals(""));
+                MessageBox.Show("Guardado");
                 Lista nueva = new Lista(txtNombreLista.Text, sesionAct.nombre, Carrito);
 
                 sesionAct.addLista(nueva);
