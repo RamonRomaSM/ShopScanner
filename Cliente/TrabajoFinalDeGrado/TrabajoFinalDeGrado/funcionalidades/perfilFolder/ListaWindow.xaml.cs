@@ -29,7 +29,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         string nombre;//lo sacas de la lista
         
 
-        //Falta hacer un boton de guardar en plan bientxtNombreLista.
+        //Hay que hacer una lista nueva que sea copia de y luego compararla
         public ListaWindow(Usuario u, Lista l)
         {
             InitializeComponent();
@@ -68,44 +68,44 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         }
         private void add(object sender, RoutedEventArgs e)
         {
-            /*
+            
             Producto p = ((Button)sender).Tag as Producto;
             p.cantidad++;
             ObservableCollection<Producto> products = new ObservableCollection<Producto>();
 
-            foreach (Producto item in Carrito)
+            foreach (Producto item in lista)
             {
                 products.Add(item);
             }
 
             foreach (Producto item in products)
             {
-                Carrito.RemoveAt(0);
-                Carrito.Add(item);
+               lista.RemoveAt(0);
+                lista.Add(item);
 
             }
-            */
+            
         }
 
         private void substract(object sender, RoutedEventArgs e)
         {
-            /*
+            
             Producto p = ((Button)sender).Tag as Producto;
             p.cantidad--;
-            if (p.cantidad == 0) { Carrito.Remove(p); }
+            if (p.cantidad == 0) { lista.Remove(p); }
             ObservableCollection<Producto> products = new ObservableCollection<Producto>();
 
-            foreach (Producto item in Carrito)
+            foreach (Producto item in lista)
             {
                 products.Add(item);
             }
 
             foreach (Producto item in products)
             {
-                Carrito.RemoveAt(0);
-                Carrito.Add(item);
+                lista.RemoveAt(0);
+                lista.Add(item);
             }
-            */
+            
         }
         private void abrir_url(object sender, MouseButtonEventArgs e)
         {
@@ -119,27 +119,27 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         }
         private void bin(object sender, RoutedEventArgs e)
         {
-            /*
+            
             Producto p = ((Button)sender).Tag as Producto;
-            Carrito.Remove(p);
-            */
+            lista.Remove(p);
+            
         }
 
 
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
-        {/*
-            if (!txtNombreLista.Equals("") && Carrito.Count > 0 && textoCambiado)
+        {
+            if (!txtNombreLista.Equals("") && lista.Count > 0 && textoCambiado)
             {
                 MessageBox.Show("Guardado");
-                Lista nueva = new Lista(txtNombreLista.Text, sesionAct.nombre, Carrito);
+                Lista nueva = new Lista(txtNombreLista.Text, sesionact.nombre, lista);
 
-                sesionAct.addLista(nueva);
+                sesionact.addLista(nueva);
 
                 textoCambiado = false;
                 txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
-                Carrito.Clear();
+                lista.Clear();
                 
-            }*/
+            }
         }
         private void txtNombreLista_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
