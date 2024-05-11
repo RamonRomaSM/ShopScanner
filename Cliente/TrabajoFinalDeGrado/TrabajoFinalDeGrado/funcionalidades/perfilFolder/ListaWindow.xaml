@@ -12,18 +12,18 @@
         WindowStyle="None"
         Background="Transparent">
     <Grid>
-        <Border Background="#212529" CornerRadius="8">
+        <Border Background="#2B2827" CornerRadius="8">
             <!--Aqui la lista--> 
             <Grid><!--Grid que contiene todo (hasta la barra superior)-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
-                    <RowDefinition/>
+                    <RowDefinition />
                 </Grid.RowDefinitions>
 
                 <!--BARRA SUPERIOR-->
                 <Grid Grid.Row="0"  MouseDown="moverWindow" >
                     <!--En este van los botones-->
-                    <Border Background="#1F2024"
+                    <Border Background="#2B2827"
                             CornerRadius="8,8,0,0" />
                     <!--CRUZ-->
                     <Button  HorizontalAlignment="Right" Margin="0,0,30,0" Cursor="Hand" Height="20" Click="salir" Name="cruz">
@@ -57,19 +57,19 @@
 
 
                 <!--Contenido de la ventana-->
-                <Grid Grid.Row="1" HorizontalAlignment="Center"> 
+                <Grid Grid.Row="1" HorizontalAlignment="Center"  Background="#363230"  Margin="20" Width="780"> 
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.3*"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <ScrollViewer Grid.Row="1" Name="MyScroller" Background="Transparent"   Margin="20" HorizontalContentAlignment="Center">
+                    <ScrollViewer Grid.Row="1" Name="MyScroller" Background="Transparent" HorizontalContentAlignment="Center"  Margin="20">
                         <ListView x:Name="ListViewCarrito" ItemsSource="{Binding lista}" 
                             ScrollViewer.CanContentScroll="False" 
                             ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                             ScrollViewer.VerticalScrollBarVisibility="Disabled"
                             BorderThickness="0" Background="Transparent"  
                             PreviewMouseWheel="ListViewProducts_PreviewMouseWheel"
-                            >
+                            HorizontalContentAlignment="Center">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Border HorizontalAlignment="Center"
@@ -79,7 +79,7 @@
                                     Height="500"
                                     Padding="5"
                                     Background="#272B2F"
-                                    Margin="10"
+                                    Margin="15"
                                     Opacity="0.9">
                                         <StackPanel Orientation="Vertical">
                                             <!--CONTENIDO-->

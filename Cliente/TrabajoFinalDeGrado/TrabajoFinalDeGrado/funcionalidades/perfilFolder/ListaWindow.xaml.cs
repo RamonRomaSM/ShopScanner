@@ -1,39 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using TrabajoFinalDeGrado.DAOS;
 
 namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
 {
-    /// <summary>
-    /// Lógica de interacción para ListaWindow.xaml
-    /// </summary>
     public partial class ListaWindow : Window
     {
         bool textoCambiado = false;
         Usuario sesionact;
         
         ObservableCollection<Producto> lista; 
-        string nombre;//lo sacas de la lista
+        string nombre;//mismo nombre de la lista 
         
+        /*
+         llego, como, dexter, interfaz, python
+         */
+        //Hay que poder guardar los cambios
+        /*
+         Hay que:   Colores de la ventana de la lista (Mas claros que los de la ventana principal?)
+                    Botones
+                    Push notifications
+         
 
-        //Hay que hacer una lista nueva que sea copia de y luego compararla
+         Este finde:    Vercel basico (porque ya tendre cosa de la interfaz)
+                        Lo de python (parametrizarlo) 
+                        Plantear mejor lo del obketo que accede a los datos
+                        Si puedo poner la pestaña de productos en funcion de la bdd me la shaco
+
+
+       
+         */
         public ListaWindow(Usuario u, Lista l)
         {
             InitializeComponent();
-            this.sesionact = u;
+            this.sesionact = u; 
             this.lista = l.productos;
             txtNombreLista.Text = l.nombre;
             this.nombre = l.nombre;
@@ -54,7 +57,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         }
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
         {
-            
             if (!e.Handled)
             {
                 e.Handled = true;
@@ -63,12 +65,12 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
                 eventArg.Source = sender;
                 var parent = ((Control)sender).Parent as UIElement;
                 parent.RaiseEvent(eventArg);
-            }
-            
+            }            
         }
+        
         private void add(object sender, RoutedEventArgs e)
         {
-            
+            /*
             Producto p = ((Button)sender).Tag as Producto;
             p.cantidad++;
             ObservableCollection<Producto> products = new ObservableCollection<Producto>();
@@ -84,11 +86,12 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
                 lista.Add(item);
 
             }
-            
+            */
         }
 
         private void substract(object sender, RoutedEventArgs e)
         {
+            /*
             
             Producto p = ((Button)sender).Tag as Producto;
             p.cantidad--;
@@ -105,7 +108,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
                 lista.RemoveAt(0);
                 lista.Add(item);
             }
-            
+            */
         }
         private void abrir_url(object sender, MouseButtonEventArgs e)
         {
@@ -118,16 +121,14 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             });
         }
         private void bin(object sender, RoutedEventArgs e)
-        {
+        {/*
             
             Producto p = ((Button)sender).Tag as Producto;
             lista.Remove(p);
-            
+            */
         }
-
-
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
-        {
+        {/*
             if (!txtNombreLista.Equals("") && lista.Count > 0 && textoCambiado)
             {
                 MessageBox.Show("Guardado");
@@ -140,6 +141,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
                 lista.Clear();
                 
             }
+            */
         }
         private void txtNombreLista_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
