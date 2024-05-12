@@ -14,32 +14,17 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         
         ObservableCollection<Producto> lista; 
         string nombre;//mismo nombre de la lista 
-        
-        /*
-         llego, como, dexter, interfaz, python
-         */
-        //Hay que poder guardar los cambios
-        /*
-         Hay que:   Colores de la ventana de la lista (Mas claros que los de la ventana principal?)
-                    Botones
-                    Push notifications
-         
-
-         Este finde:    Vercel basico (porque ya tendre cosa de la interfaz)
-                        Lo de python (parametrizarlo) 
-                        Plantear mejor lo del obketo que accede a los datos
-                        Si puedo poner la pestaña de productos en funcion de la bdd me la shaco
-
-
-       
-         */
+     
         public ListaWindow(Usuario u, Lista l)
         {
             InitializeComponent();
             this.sesionact = u; 
             this.lista = l.productos;
+
             txtNombreLista.Text = l.nombre;
             this.nombre = l.nombre;
+
+
             ListViewCarrito.ItemsSource = lista;
         }
 
@@ -70,7 +55,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         
         private void add(object sender, RoutedEventArgs e)
         {
-            /*
             Producto p = ((Button)sender).Tag as Producto;
             p.cantidad++;
             ObservableCollection<Producto> products = new ObservableCollection<Producto>();
@@ -82,17 +66,15 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
 
             foreach (Producto item in products)
             {
-               lista.RemoveAt(0);
+                lista.RemoveAt(0);
                 lista.Add(item);
 
             }
-            */
+
         }
 
         private void substract(object sender, RoutedEventArgs e)
         {
-            /*
-            
             Producto p = ((Button)sender).Tag as Producto;
             p.cantidad--;
             if (p.cantidad == 0) { lista.Remove(p); }
@@ -108,7 +90,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
                 lista.RemoveAt(0);
                 lista.Add(item);
             }
-            */
         }
         private void abrir_url(object sender, MouseButtonEventArgs e)
         {
@@ -121,11 +102,11 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             });
         }
         private void bin(object sender, RoutedEventArgs e)
-        {/*
-            
+        {
+
             Producto p = ((Button)sender).Tag as Producto;
             lista.Remove(p);
-            */
+
         }
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {/*

@@ -238,9 +238,9 @@
                                 <TextBox Opacity=".8" FontSize="19" Height="40" Margin="10,0,0,0" VerticalContentAlignment="Center" Name="txtNombreLista" 
                                 GotKeyboardFocus="txtNombreLista_GotKeyboardFocus"
                                 LostKeyboardFocus="txtNombreLista_LostKeyboardFocus"
-                               />
+                                />
                                 <Button Name="addListaBtn" Grid.Column="1" VerticalAlignment="Center" Click="addListaBtn_Click"
-                                                    FontSize="18" Cursor="Hand" BorderThickness="0" Foreground="White" Tag="{Binding}">
+                                                    FontSize="15" Cursor="Hand" BorderThickness="0" Foreground="White" Tag="{Binding}">
                                     <Button.Style>
                                         <Style TargetType="Button">
                                             <Setter Property="Background" Value="DodgerBlue"/>
@@ -256,7 +256,7 @@
                                         <ControlTemplate TargetType="Button">
                                             <Border Width="130" Height="40"
                                                                 CornerRadius="5" Background="{TemplateBinding Background}">
-                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="Guardar"/>
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="Guardar nombre"/>
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
