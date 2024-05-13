@@ -11,19 +11,17 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
     {
         bool textoCambiado = false;
         Usuario sesionact;
-        
-        ObservableCollection<Producto> lista; 
-        string nombre;//mismo nombre de la lista 
-     
+        ObservableCollection<Producto> lista;
+        string nombre;//es el nombre de la lista que me pasan 
         public ListaWindow(Usuario u, Lista l)
         {
+            System.Console.WriteLine("aaa");
             InitializeComponent();
-            this.sesionact = u; 
+            this.sesionact = u;
             this.lista = l.productos;
 
             txtNombreLista.Text = l.nombre;
             this.nombre = l.nombre;
-
 
             ListViewCarrito.ItemsSource = lista;
         }
@@ -31,6 +29,15 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         private void moverWindow(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+            /*
+                por ahora tfg y buscar trabajo (Hasta el 26) 
+                
+            caso 1: encuentro trabajo antes del 26, asi que nada 
+            caso 2: no encuentro trabajo antes del 26, me inscribo en DAW + ciberseguridad (HACK4u)
+                    ademas si me contratan aqui me quedo hasta septiempbre (2 meses mas o menos de sueldo)
+                    puedo pillar turno de tarde o una version telematica de daw?
+                
+             */
         }
         private void salir(object sender, RoutedEventArgs e)
         {
@@ -40,7 +47,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         {
             WindowState = WindowState.Minimized;
         }
-        private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
+        private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView 
         {
             if (!e.Handled)
             {
@@ -50,9 +57,9 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
                 eventArg.Source = sender;
                 var parent = ((Control)sender).Parent as UIElement;
                 parent.RaiseEvent(eventArg);
-            }            
+            }
         }
-        
+
         private void add(object sender, RoutedEventArgs e)
         {
             Producto p = ((Button)sender).Tag as Producto;
@@ -103,13 +110,13 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         }
         private void bin(object sender, RoutedEventArgs e)
         {
-
             Producto p = ((Button)sender).Tag as Producto;
             lista.Remove(p);
-
         }
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
-        {/*
+        {
+            //TODO: el toast/popup
+            /*
             if (!txtNombreLista.Equals("") && lista.Count > 0 && textoCambiado)
             {
                 MessageBox.Show("Guardado");
@@ -119,8 +126,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
 
                 textoCambiado = false;
                 txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
-                lista.Clear();
-                
+                lista.Clear();       
             }
             */
         }
@@ -133,7 +139,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             }
             else { textoCambiado = true; }
         }
-
         private void txtNombreLista_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             txtNombreLista.Text = "";

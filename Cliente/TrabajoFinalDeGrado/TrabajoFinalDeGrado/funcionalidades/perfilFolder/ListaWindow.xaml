@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrabajoFinalDeGrado.funcionalidades.perfilFolder"
         mc:Ignorable="d"
-        Title="{Binding nombre}" Height="750" Width="800"
+        Title="{Binding nombre}" Height="800" Width="780"
         ResizeMode="CanMinimize"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
@@ -13,8 +13,9 @@
         Background="Transparent">
     <Grid>
         <Border Background="#2B2827" CornerRadius="8">
-            <!--Aqui la lista--> 
-            <Grid><!--Grid que contiene todo (hasta la barra superior)-->
+            <!--Aqui la lista-->
+            <Grid>
+                <!--Grid que contiene todo (hasta la barra superior)-->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition />
@@ -50,14 +51,11 @@
 
                     </Button>
 
-                    
+
                 </Grid>
 
-
-
-
                 <!--Contenido de la ventana-->
-                <Grid Grid.Row="1" HorizontalAlignment="Center"  Background="#363230"  Margin="20" Width="780"> 
+                <Grid Grid.Row="1" HorizontalAlignment="Center"  Background="#363230"  Margin="20" Width="780">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.3*"/>
                         <RowDefinition/>
@@ -213,14 +211,11 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
 
-
                             <ListView.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <WrapPanel/>
                                 </ItemsPanelTemplate>
                             </ListView.ItemsPanel>
-
-
                         </ListView>
                     </ScrollViewer>
 
@@ -270,7 +265,6 @@
                     </Grid>
                 </Grid>
             </Grid>
-
-    </Border>
+        </Border>
     </Grid>
 </Window>
