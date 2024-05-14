@@ -9,35 +9,76 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
 {
     public partial class ListaWindow : Window
     {
+
+        /*
+         *  
+         *  Cada vez que salgo de la lista (guardandola) tengo que crear un nuevo
+         *  perfilFragment
+         *  
+         *  cuando guardo igualo la lista y el nombre, si salgo con la 'x' no gualdo nada
+         *  
+         *  
+         *  
+         *  ------------------------------------------------------------------------------
+         *                                      TFG                                      
+         *  ------------------------------------------------------------------------------
+         *  
+         *  Empieza la memoria
+         *  En la presentacion llevar un video, si me veo confiado les dejo la app
+         *  (la prioridad es tener una api, la seguridad ya se verá)
+         *  
+         *  
+         *  ------------------------------------------------------------------------------
+         *                                     VERANO
+         *  ------------------------------------------------------------------------------
+         *  
+         *  caminos en verano:
+         *      Ciberseguridad (el curso)
+         *      Web (pillar un framework(angular, react, vue), despliegue, sistemas de monetizacion, diseño de ui)
+         *      Embeded systems?: (raspi,breadboards,arduino)
+         *      Kotlin (desarrollo movil puro, mejorar la de booking, usar alguna api para alguna app diferente(real state, weather app))
+         *      
+         *      Proyectos personales:
+         *          App de facturas con javaFX
+         *          JARVIS
+         *          Lo de new pipe con juan
+         *          ...
+         *          
+         *      Mantenimientos:
+         *          Rehacer el supercole (y documentacion)
+         *          Discord bot (documentacion y revision del codigo)
+         *          Documentacion de booking y del tfg
+         *          
+         *          
+         *      
+         */
         bool textoCambiado = false;
         Usuario sesionact;
-        ObservableCollection<Producto> lista;
+        ObservableCollection<Producto> listaOriginal;//referencia de la lista que me pasan
+        ObservableCollection<Producto> listaNueva; // copia de la lista que me copian
         string nombre;//es el nombre de la lista que me pasan 
         public ListaWindow(Usuario u, Lista l)
         {
             System.Console.WriteLine("aaa");
             InitializeComponent();
             this.sesionact = u;
-            this.lista = l.productos;
+            this.listaOriginal = l.productos;
 
             txtNombreLista.Text = l.nombre;
             this.nombre = l.nombre;
 
-            ListViewCarrito.ItemsSource = lista;
+            listaNueva = new ObservableCollection<Producto>();
+            foreach (Producto p in l.productos) 
+            { 
+                listaNueva.Add(p);
+            }
+
+            ListViewCarrito.ItemsSource = listaNueva;// esta tiene que ser la listaNueva (copiar original antes de ponerla como source)
         }
 
         private void moverWindow(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
-            /*
-                por ahora tfg y buscar trabajo (Hasta el 26) 
-                
-            caso 1: encuentro trabajo antes del 26, asi que nada 
-            caso 2: no encuentro trabajo antes del 26, me inscribo en DAW + ciberseguridad (HACK4u)
-                    ademas si me contratan aqui me quedo hasta septiempbre (2 meses mas o menos de sueldo)
-                    puedo pillar turno de tarde o una version telematica de daw?
-                
-             */
         }
         private void salir(object sender, RoutedEventArgs e)
         {
@@ -66,15 +107,15 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             p.cantidad++;
             ObservableCollection<Producto> products = new ObservableCollection<Producto>();
 
-            foreach (Producto item in lista)
+            foreach (Producto item in listaNueva)
             {
                 products.Add(item);
             }
 
             foreach (Producto item in products)
             {
-                lista.RemoveAt(0);
-                lista.Add(item);
+                listaNueva.RemoveAt(0);
+                listaNueva.Add(item);
 
             }
 
@@ -84,18 +125,18 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         {
             Producto p = ((Button)sender).Tag as Producto;
             p.cantidad--;
-            if (p.cantidad == 0) { lista.Remove(p); }
+            if (p.cantidad == 0) { listaNueva.Remove(p); }
             ObservableCollection<Producto> products = new ObservableCollection<Producto>();
 
-            foreach (Producto item in lista)
+            foreach (Producto item in listaNueva)
             {
                 products.Add(item);
             }
 
             foreach (Producto item in products)
             {
-                lista.RemoveAt(0);
-                lista.Add(item);
+                listaNueva.RemoveAt(0);
+                listaNueva.Add(item);
             }
         }
         private void abrir_url(object sender, MouseButtonEventArgs e)
@@ -111,11 +152,11 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         private void bin(object sender, RoutedEventArgs e)
         {
             Producto p = ((Button)sender).Tag as Producto;
-            lista.Remove(p);
+            listaNueva.Remove(p);
         }
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: el toast/popup
+            //TODO: el toast de que se han guardado los cambios
             /*
             if (!txtNombreLista.Equals("") && lista.Count > 0 && textoCambiado)
             {
@@ -130,6 +171,8 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             }
             */
         }
+
+
         private void txtNombreLista_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             if (txtNombreLista.Text.Equals(""))

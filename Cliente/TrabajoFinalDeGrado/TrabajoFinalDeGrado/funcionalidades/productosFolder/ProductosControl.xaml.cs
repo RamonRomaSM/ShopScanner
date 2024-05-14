@@ -83,19 +83,24 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
             }
         }
+        
         private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
         {
+            Producto copiap = new Producto();
+            copiap.copiar(p);
 
             ObservableCollection<Producto> resp = l;
-            if (!resp.Contains(p))
+
+            if (!resp.Contains(copiap))
             {
-                p.cantidad = 1;
-                resp.Add(p);
+                copiap.cantidad = 1;
+                resp.Add(copiap);
             }
-            else { p.cantidad++; }
+            else { copiap.cantidad++; }
 
             return resp;
         }
+        
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
         {
             if (!e.Handled)

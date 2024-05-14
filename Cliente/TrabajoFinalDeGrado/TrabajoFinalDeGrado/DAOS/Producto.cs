@@ -23,7 +23,17 @@ namespace TrabajoFinalDeGrado.DAOS
         
             cantidad = 0;
         }
-      
+        public void copiar(Producto producto)
+        {
+            this.nombre = producto.nombre;
+            this.idproductos = producto.idproductos;
+            this.precio = producto.precio;
+            this.supermercado = producto.supermercado;
+            this.oferta = producto.oferta;
+            this.url = producto.url;
+            this.imagen = producto.imagen;
+            this.cantidad = producto.cantidad;
+        }
         
 
       

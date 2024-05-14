@@ -251,7 +251,7 @@
                                         <ControlTemplate TargetType="Button">
                                             <Border Width="130" Height="40"
                                                                 CornerRadius="5" Background="{TemplateBinding Background}">
-                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="Guardar nombre"/>
+                                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="Guardar"/>
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
