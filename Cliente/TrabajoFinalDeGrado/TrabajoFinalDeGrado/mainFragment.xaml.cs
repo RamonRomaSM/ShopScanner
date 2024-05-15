@@ -38,7 +38,7 @@ namespace TrabajoFinalDeGrado
             this.sesionAct = u;
             this.padre = padre;
             this.productosControl = new ProductosControl(sesionAct);
-            this.perfilControl = new PerfilControl(sesionAct);
+            this.perfilControl = new PerfilControl(sesionAct,this);
             this.carritoControl = new CarritoControl(sesionAct);
             
             contenedorFragments.Content = productosControl;
@@ -62,7 +62,7 @@ namespace TrabajoFinalDeGrado
         }
         private void perfil(object sender, RoutedEventArgs e) 
         {
-            contenedorFragments.Content = new PerfilControl(sesionAct);
+            contenedorFragments.Content = new PerfilControl(sesionAct, this);
         }
     }
 }

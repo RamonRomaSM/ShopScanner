@@ -10,67 +10,27 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
     public partial class ListaWindow : Window
     {
 
-        /*
-         *  
-         *  Cada vez que salgo de la lista (guardandola) tengo que crear un nuevo
-         *  perfilFragment
-         *  
-         *  cuando guardo igualo la lista y el nombre, si salgo con la 'x' no gualdo nada
-         *  
-         *  
-         *  
-         *  ------------------------------------------------------------------------------
-         *                                      TFG                                      
-         *  ------------------------------------------------------------------------------
-         *  
-         *  Empieza la memoria
-         *  En la presentacion llevar un video, si me veo confiado les dejo la app
-         *  (la prioridad es tener una api, la seguridad ya se verá)
-         *  
-         *  
-         *  ------------------------------------------------------------------------------
-         *                                     VERANO
-         *  ------------------------------------------------------------------------------
-         *  
-         *  caminos en verano:
-         *      Ciberseguridad (el curso)
-         *      Web (pillar un framework(angular, react, vue), despliegue, sistemas de monetizacion, diseño de ui)
-         *      Embeded systems?: (raspi,breadboards,arduino)
-         *      Kotlin (desarrollo movil puro, mejorar la de booking, usar alguna api para alguna app diferente(real state, weather app))
-         *      
-         *      Proyectos personales:
-         *          App de facturas con javaFX
-         *          JARVIS
-         *          Lo de new pipe con juan
-         *          ...
-         *          
-         *      Mantenimientos:
-         *          Rehacer el supercole (y documentacion)
-         *          Discord bot (documentacion y revision del codigo)
-         *          Documentacion de booking y del tfg
-         *          
-         *          
-         *      
-         */
+       
         bool textoCambiado = false;
         Usuario sesionact;
-        ObservableCollection<Producto> listaOriginal;//referencia de la lista que me pasan
+        Lista listaOriginal;//referencia de la lista que me pasan
         ObservableCollection<Producto> listaNueva; // copia de la lista que me copian
         string nombre;//es el nombre de la lista que me pasan 
-        public ListaWindow(Usuario u, Lista l)
+        mainFragment padre;
+        public ListaWindow(Usuario u, Lista l,mainFragment p)
         {
             System.Console.WriteLine("aaa");
             InitializeComponent();
             this.sesionact = u;
-            this.listaOriginal = l.productos;
-
+            this.listaOriginal = l;
+            padre = p;
             txtNombreLista.Text = l.nombre;
             this.nombre = l.nombre;
 
             listaNueva = new ObservableCollection<Producto>();
-            foreach (Producto p in l.productos) 
+            foreach (Producto pr in l.productos) 
             { 
-                listaNueva.Add(p);
+                listaNueva.Add(pr);
             }
 
             ListViewCarrito.ItemsSource = listaNueva;// esta tiene que ser la listaNueva (copiar original antes de ponerla como source)
@@ -118,7 +78,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
                 listaNueva.Add(item);
 
             }
-
         }
 
         private void substract(object sender, RoutedEventArgs e)
@@ -156,20 +115,12 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         }
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: el toast de que se han guardado los cambios
-            /*
-            if (!txtNombreLista.Equals("") && lista.Count > 0 && textoCambiado)
-            {
-                MessageBox.Show("Guardado");
-                Lista nueva = new Lista(txtNombreLista.Text, sesionact.nombre, lista);
-
-                sesionact.addLista(nueva);
-
-                textoCambiado = false;
-                txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
-                lista.Clear();       
-            }
-            */
+            listaOriginal.productos = listaNueva;
+            if (textoCambiado) { listaOriginal.nombre = txtNombreLista.Text; }
+            listaOriginal.calculaPrecio();
+            padre.contenedorFragments.Content = new PerfilControl(sesionact, padre);
+            sesionact.mensaje("Cambios en "+nombre+" guardados");
+            this.Close();
         }
 
 

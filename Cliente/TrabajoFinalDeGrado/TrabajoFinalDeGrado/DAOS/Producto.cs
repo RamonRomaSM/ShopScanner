@@ -21,7 +21,7 @@ namespace TrabajoFinalDeGrado.DAOS
 
         public Producto() { 
         
-            cantidad = 0;
+            cantidad = 1;
         }
         public void copiar(Producto producto)
         {
@@ -34,8 +34,28 @@ namespace TrabajoFinalDeGrado.DAOS
             this.imagen = producto.imagen;
             this.cantidad = producto.cantidad;
         }
-        
+        // override object.Equals
+        public override bool Equals(object obj)
+        { 
 
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            try 
+            { 
+                Producto producto = (Producto) obj;
+                if(producto.idproductos == this.idproductos) { return true; }
+                else { return false; }
+            } 
+            catch 
+            {
+                return false;
+            }
+        }
+
+      
       
     }
 }

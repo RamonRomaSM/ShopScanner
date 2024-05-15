@@ -35,6 +35,8 @@ C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGr
 C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\PerfilControl.baml
 C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ListasPopUp.g.cs
 C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ListasPopUp.baml
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.g.cs
+C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Debug\net6.0-windows\TrabajoFinalDeGrado.exe
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Debug\net6.0-windows\TrabajoFinalDeGrado.deps.json
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\bin\Debug\net6.0-windows\TrabajoFinalDeGrado.runtimeconfig.json
@@ -45,11 +47,13 @@ C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGr
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\loginFragment.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\registerForm.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\carritoFolder\CarritoControl.g.cs
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\PerfilControl.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ListasPopUp.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ProductosControl.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\mainFragment.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\Toasts\Toast.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado_MarkupCompile.cache
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado_MarkupCompile.lref
@@ -57,11 +61,13 @@ C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGr
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\loginFragment.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\autenth\registerForm.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\carritoFolder\CarritoControl.baml
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\PerfilControl.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ListasPopUp.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\productosFolder\ProductosControl.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\mainFragment.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\Toasts\Toast.baml
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado.g.resources
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado.AssemblyInfoInputs.cache
@@ -72,7 +78,3 @@ C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGr
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado.pdb
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\TrabajoFinalDeGrado.genruntimeconfig.cache
 C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\ref\TrabajoFinalDeGrado.dll
-C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.g.cs
-C:\Users\ramon\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.baml
-C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.g.cs
-C:\Users\win10\Documents\GitHub\TFG\Cliente\TrabajoFinalDeGrado\TrabajoFinalDeGrado\obj\Debug\net6.0-windows\funcionalidades\perfilFolder\ListaWindow.baml

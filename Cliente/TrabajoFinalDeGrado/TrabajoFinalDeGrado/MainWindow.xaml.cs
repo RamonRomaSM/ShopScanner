@@ -26,7 +26,7 @@ namespace TrabajoFinalDeGrado
 
         public MainWindow()
         {
-
+            
             InitializeComponent();
             mainContenedor.Content = new loginFragmentxaml(this);
         }

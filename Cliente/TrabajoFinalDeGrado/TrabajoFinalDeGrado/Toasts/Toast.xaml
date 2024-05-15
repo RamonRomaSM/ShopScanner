@@ -1,0 +1,20 @@
+﻿<Window x:Class="TrabajoFinalDeGrado.Toasts.Toast"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrabajoFinalDeGrado.Toasts"
+        mc:Ignorable="d"
+        Title="Toast" Height="90" Width="320" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True">
+    <Grid Background="Transparent">
+        <Border  Background="DodgerBlue" CornerRadius="4,0,0,4" BorderThickness="0,0,30,0"/>
+        <Border  Background="#212529" CornerRadius="0,4,4,0" BorderThickness="10,0,0,0">
+            <StackPanel Orientation="Horizontal">
+                <Image Grid.Row="0" HorizontalAlignment="Left" Margin="5,0,0,0" Source="/imagenes/logoCarrito.png" Stretch="Fill"  Width="40" Height="100"/>
+                <TextBlock Name="msg" Text="Texto de ejemplo" VerticalAlignment="Center" Margin="0,0,0,0" Foreground="White" FontSize="19"/>
+            </StackPanel>
+            
+        </Border>
+        
+    </Grid>
+</Window>

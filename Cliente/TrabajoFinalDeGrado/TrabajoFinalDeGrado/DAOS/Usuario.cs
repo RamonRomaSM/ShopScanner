@@ -6,6 +6,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
+using TrabajoFinalDeGrado.Toasts;
 
 namespace TrabajoFinalDeGrado.DAOS
 {
@@ -46,6 +49,18 @@ namespace TrabajoFinalDeGrado.DAOS
         {
             //TODO: acc a la bdd
             listas.Remove(lista);
+        }
+        public void mensaje(string msg) {
+            Toast men = new Toast(msg);
+
+            var desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
+            double x = desktopWorkingArea.Right;
+            double y = desktopWorkingArea.Bottom ;
+
+            men.Show();
+            men.Left = x - men.Width; men.Top = y - men.Height;// - height para que se coloque en la esquina de abajo
+
+           
         }
     }
 }

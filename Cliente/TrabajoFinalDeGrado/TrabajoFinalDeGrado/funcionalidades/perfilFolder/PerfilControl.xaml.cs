@@ -25,15 +25,15 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
     {
         private Usuario sesionAct;
         private ObservableCollection<Lista> listas;
-       
-        public PerfilControl(Usuario u)
+        private mainFragment contenedor;
+        public PerfilControl(Usuario u, mainFragment contenedor)
         {
 
             InitializeComponent();
             this.sesionAct = u;
             this.listas = new ObservableCollection<Lista>();
             nombrelbl.Content= "Nombre de usuario: "+sesionAct.nombre;
-           
+            this.contenedor = contenedor;
             this.listas = sesionAct.getListas();
             
             ListViewListas.ItemsSource = listas;
@@ -42,13 +42,15 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         private void eliminarButton_Click(object sender, RoutedEventArgs e)
         {
             Lista l  = ((Button)sender).Tag as Lista;
+            sesionAct.mensaje("Lista "+l.nombre+" eliminada");
             sesionAct.removeLista(l);
+           
         }
 
         private void verButton_Click(object sender, RoutedEventArgs e)
         {
             Lista l = ((Button)sender).Tag as Lista;
-            ListaWindow actual = new ListaWindow(sesionAct,l);
+            ListaWindow actual = new ListaWindow(sesionAct,l,contenedor);
             actual.ShowDialog();
         }
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView

@@ -90,17 +90,33 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             copiap.copiar(p);
 
             ObservableCollection<Producto> resp = l;
+            
+            copiap.cantidad = 1;
+            resp.Add(copiap);
 
-            if (!resp.Contains(copiap))
-            {
-                copiap.cantidad = 1;
-                resp.Add(copiap);
-            }
-            else { copiap.cantidad++; }
-
+            resp = refactoriza(resp,copiap);
             return resp;
         }
-        
+        public ObservableCollection<Producto> refactoriza(ObservableCollection<Producto> l,Producto p) { 
+            int c = 0;
+            Producto copiap = new Producto();   
+            copiap.copiar(p);
+            ObservableCollection<Producto> lcopy = new ObservableCollection<Producto>();
+
+            foreach (Producto item in l)
+            {
+                if (item.Equals(p)) { c+=item.cantidad; }
+
+            }
+            foreach (Producto item in l)
+            {
+                if (!item.Equals(p)) { lcopy.Add(item); }
+            }
+           
+            copiap.cantidad = c;
+            lcopy.Add(copiap);
+            return lcopy;
+        }
         private void ListViewProducts_PreviewMouseWheel(object sender, MouseWheelEventArgs e) //para desviar los eventos del mousewheel que captura el listView al ScrollerView
         {
             if (!e.Handled)
@@ -128,12 +144,11 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         private void addCarritobtn_Click(object sender, RoutedEventArgs e)
         {
             Producto p = ((Button)sender).Tag as Producto;
-           
-            ObservableCollection<Producto> b =  sesionAct.getCarrito();
+
+            ObservableCollection<Producto> b = sesionAct.getCarrito();
             sesionAct.setCarrito(reOrdenaCarrito(b, p));
-            MessageBox.Show("Añadido al carrito");
+            sesionAct.mensaje("Añadido al carrito");
         }
-      
 
 
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
@@ -141,7 +156,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             //TODO: que me saque un ventana emergente (con los colores de la app) con un stackpannel de las listas
             // https://www.youtube.com/watch?v=KSNjJ9Glky4
             Producto p = ((Button)sender).Tag as Producto;
-            ListasPopUp popup = new ListasPopUp(sesionAct.getListas(),p);
+            ListasPopUp popup = new ListasPopUp(sesionAct.getListas(),p,sesionAct);
            
             
             //para que se coloque en el cursor
@@ -153,5 +168,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             popup.Show();
             popup.Left = x - popup.Width; popup.Top = y-popup.Height;// - height para que se coloque en la esquina de abajo
         }
+
+
     }
 }

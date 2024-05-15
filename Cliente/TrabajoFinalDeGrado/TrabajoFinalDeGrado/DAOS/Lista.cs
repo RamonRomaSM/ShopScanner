@@ -43,7 +43,7 @@ namespace TrabajoFinalDeGrado.DAOS
                 numeroProductos += p.cantidad;
             }
         }
-       
+        
        
     }
 }

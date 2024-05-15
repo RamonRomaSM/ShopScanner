@@ -25,9 +25,10 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
     {
         ObservableCollection<Lista> Listas;
         Producto act;
-        public ListasPopUp(ObservableCollection<Lista> listas, Producto act)
+        Usuario sesionAct;
+        public ListasPopUp(ObservableCollection<Lista> listas, Producto act, Usuario sesionAct)
         {
-
+            this.sesionAct = sesionAct;
             this.Listas = listas;
             this.act = act;
             InitializeComponent();
@@ -35,16 +36,13 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
            
         }
 
-       
-        
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
+        { 
             Button a = (Button)sender;
             Lista l = ((Button)sender).Tag as Lista;  
             l.productos = reOrdenaCarrito(l.productos, act);
             l.calculaPrecio();
-            MessageBox.Show("Añadido a " + l.nombre);//To do, que el mensaje sea mas bonito y menos invasivo
+            sesionAct.mensaje("Añadido a " + l.nombre);//To do, que el mensaje sea mas bonito y menos invasivo
             this.Close();
         }
 
@@ -58,16 +56,37 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         }
         private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
         {
+            Producto copiap = new Producto();
+            copiap.copiar(p);
 
             ObservableCollection<Producto> resp = l;
-            if (!resp.Contains(p))
-            {
-                p.cantidad ++;
-                resp.Add(p);
-            }
-            else { p.cantidad++; }
 
+            copiap.cantidad = 1;
+            resp.Add(copiap);
+
+            resp = refactoriza(resp, copiap);
             return resp;
+        }
+        public ObservableCollection<Producto> refactoriza(ObservableCollection<Producto> l, Producto p)
+        {
+            int c = 0;
+            Producto copiap = new Producto();
+            copiap.copiar(p);
+            ObservableCollection<Producto> lcopy = new ObservableCollection<Producto>();
+
+            foreach (Producto item in l)
+            {
+                if (item.Equals(p)) { c += item.cantidad; }
+
+            }
+            foreach (Producto item in l)
+            {
+                if (!item.Equals(p)) { lcopy.Add(item); }
+            }
+
+            copiap.cantidad = c;
+            lcopy.Add(copiap);
+            return lcopy;
         }
 
 
