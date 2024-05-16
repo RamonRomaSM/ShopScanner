@@ -23,10 +23,17 @@ namespace TrabajoFinalDeGrado.Toasts
     {
         private string mensaje;
         private DispatcherTimer timer;
-        public Toast(string mensaje)
+        int inicio;
+        int final;
+        public Toast(string mensaje,int xin,int xfin)
         {
-            
+            final = xin;
+            inicio = xfin;
+
             InitializeComponent();
+          
+            animacion.To = final;
+            animacion.From = inicio;
             this.mensaje = mensaje;
             msg.Text = mensaje;
             Loaded += MainWindow_Loaded;
@@ -41,7 +48,7 @@ namespace TrabajoFinalDeGrado.Toasts
             // Crear un nuevo DispatcherTimer
             timer = new DispatcherTimer();
             // Establecer el intervalo del temporizador en 4 segundos
-            timer.Interval = TimeSpan.FromSeconds(3);
+            timer.Interval = TimeSpan.FromSeconds(4);
             // Suscribirse al evento Tick del temporizador
             timer.Tick += Timer_Tick;
             // Iniciar el temporizador

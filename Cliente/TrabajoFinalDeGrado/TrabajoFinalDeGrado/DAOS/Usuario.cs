@@ -22,6 +22,7 @@ namespace TrabajoFinalDeGrado.DAOS
                                                                     //si voy a hacerlo persistente, poner boton de vaciar carrito 
                                                                     //meterlo en un observable collection y que en la pestaña de carrito se vea en tajetas como en productos
 
+        Toast men;
         public Usuario(string nombre, ObservableCollection<Lista> listas)
         {
             this.nombre = nombre;
@@ -51,15 +52,17 @@ namespace TrabajoFinalDeGrado.DAOS
             listas.Remove(lista);
         }
         public void mensaje(string msg) {
-            Toast men = new Toast(msg);
+            if (men != null) { men.Close(); }
+            
 
             var desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
-            double x = desktopWorkingArea.Right;
-            double y = desktopWorkingArea.Bottom ;
-
+            double xin = desktopWorkingArea.Right - 270;
+            double y = desktopWorkingArea.Bottom - 90;
+            //men.Left = x - men.Width; men.Top = y - men.Height;// - height para que se coloque en la esquina de abajo
+            men = new Toast(msg,(int)xin, (int)(xin+270));
+            men.Top = y - men.Height;
             men.Show();
-            men.Left = x - men.Width; men.Top = y - men.Height;// - height para que se coloque en la esquina de abajo
-
+           
            
         }
     }

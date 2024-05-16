@@ -134,7 +134,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {
            if(!txtNombreLista.Equals("")&&Carrito.Count>0&&textoCambiado) { 
-                sesionAct.mensaje("lista "+txtNombreLista.Text+" creada");
+                sesionAct.mensaje("lista creada");
 
                 Lista nueva = new Lista(txtNombreLista.Text, sesionAct.nombre, Carrito);
                 sesionAct.addLista(nueva);

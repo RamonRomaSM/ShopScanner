@@ -4,8 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrabajoFinalDeGrado.Toasts"
-        mc:Ignorable="d"
-        Title="Toast" Height="90" Width="320" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True">
+        mc:Ignorable="d" Name="w1"
+        Title="Toast" Height="90" Width="270" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard BeginTime="0" Duration="4">
+                        <DoubleAnimation Storyboard.TargetName="w1" Storyboard.TargetProperty="(Window.Left)" From="0" To="0" AutoReverse="true" BeginTime="0:0:0" Duration="0:0:2" RepeatBehavior="Forever" Name="animacion"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+
     <Grid Background="Transparent">
         <Border  Background="DodgerBlue" CornerRadius="4,0,0,4" BorderThickness="0,0,30,0"/>
         <Border  Background="#212529" CornerRadius="0,4,4,0" BorderThickness="10,0,0,0">
