@@ -1,4 +1,5 @@
 CREATE TABLE tfg.productos (
+  num int auto_increment,
   idproductos VARCHAR(200) NOT NULL,
   nombre VARCHAR(200) NULL,
   precio DECIMAL NULL,
@@ -6,4 +7,17 @@ CREATE TABLE tfg.productos (
   oferta VARCHAR(70) NULL,
   url VARCHAR(200) NULL,
   imagen VARCHAR(200) NULL,
-  PRIMARY KEY (idproductos));
+  PRIMARY KEY (num));
+
+
+para postgres:
+CREATE TABLE productos (
+  num SERIAL PRIMARY KEY,
+  idproductos VARCHAR(200) NOT NULL,
+  nombre VARCHAR(200),
+  precio DECIMAL(10, 2),
+  supermercado VARCHAR(45),
+  oferta VARCHAR(70),
+  url VARCHAR(200),
+  imagen VARCHAR(200)
+);
