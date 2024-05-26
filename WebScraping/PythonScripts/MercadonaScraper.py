@@ -44,3 +44,4 @@ def startScraping():
     for x in paginas:
         peticion = 'https://tienda.mercadona.es/api/categories/'+str(x)+'/?lang=es&wh=mad1'
         hacerPeticion(peticion)
+        time.sleep(4)

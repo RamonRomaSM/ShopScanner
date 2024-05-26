@@ -1,16 +1,14 @@
 import mysql.connector
 import psycopg2
 
-POSTGRES_URL=""
-POSTGRES_PRISMA_URL=""
-POSTGRES_URL_NO_SSL=""
-POSTGRES_URL_NON_POOLING=""
+POSTGRES_URL="postgres://default:LgdV3Hc7UFKI@ep-quiet-feather-a2l8vl1h-pooler.eu-central-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_PRISMA_URL="postgres://default:LgdV3Hc7UFKI@ep-quiet-feather-a2l8vl1h-pooler.eu-central-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
+POSTGRES_URL_NO_SSL="postgres://default:LgdV3Hc7UFKI@ep-quiet-feather-a2l8vl1h-pooler.eu-central-1.aws.neon.tech:5432/verceldb"
+POSTGRES_URL_NON_POOLING="postgres://default:LgdV3Hc7UFKI@ep-quiet-feather-a2l8vl1h.eu-central-1.aws.neon.tech:5432/verceldb?sslmode=require"
 POSTGRES_USER="default"
-POSTGRES_HOST=""
-POSTGRES_PASSWORD=""
-POSTGRES_DATABASE=""
-
-
+POSTGRES_HOST="ep-quiet-feather-a2l8vl1h-pooler.eu-central-1.aws.neon.tech"
+POSTGRES_PASSWORD="LgdV3Hc7UFKI"
+POSTGRES_DATABASE="verceldb"
 
 mydb = psycopg2.connect(
     host=POSTGRES_HOST,
@@ -37,8 +35,8 @@ def borrarBdd():
 
 def guardarProducto(Producto):
     mycursor = mydb.cursor()
-    sql = "INSERT INTO tfg.productos (idproductos, nombre, precio, supermercado, oferta, url, imagen) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-    #para postgres en vercel: sql = "INSERT INTO productos (idproductos, nombre, precio, supermercado, oferta, url, imagen) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    #sql = "INSERT INTO tfg.productos (idproductos, nombre, precio, supermercado, oferta, url, imagen) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO productos (idproductos, nombre, precio, supermercado, oferta, url, imagen) VALUES (%s, %s, %s, %s, %s, %s, %s)"
     val = (Producto.id, Producto.nombre, Producto.precio, Producto.supermercado, Producto.oferta, Producto.URL, Producto.imagen)
     mycursor.execute(sql, val)
 
