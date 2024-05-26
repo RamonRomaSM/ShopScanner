@@ -10,12 +10,22 @@ POSTGRES_HOST=""
 POSTGRES_PASSWORD=""
 POSTGRES_DATABASE=""
 
+
+
 mydb = psycopg2.connect(
     host=POSTGRES_HOST,
     dbname=POSTGRES_DATABASE,
     user=POSTGRES_USER,
     password=POSTGRES_PASSWORD
 )
+
+"""
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="nosequeponer"
+)
+"""
 
 def borrarBdd():
 
@@ -27,8 +37,8 @@ def borrarBdd():
 
 def guardarProducto(Producto):
     mycursor = mydb.cursor()
-
-    sql = "INSERT INTO productos (idproductos, nombre, precio, supermercado, oferta, url, imagen) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO tfg.productos (idproductos, nombre, precio, supermercado, oferta, url, imagen) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    #para postgres en vercel: sql = "INSERT INTO productos (idproductos, nombre, precio, supermercado, oferta, url, imagen) VALUES (%s, %s, %s, %s, %s, %s, %s)"
     val = (Producto.id, Producto.nombre, Producto.precio, Producto.supermercado, Producto.oferta, Producto.URL, Producto.imagen)
     mycursor.execute(sql, val)
 
