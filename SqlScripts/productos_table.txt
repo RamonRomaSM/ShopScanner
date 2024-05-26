@@ -8,3 +8,16 @@ CREATE TABLE tfg.productos (
   url VARCHAR(200) NULL,
   imagen VARCHAR(200) NULL,
   PRIMARY KEY (num));
+
+
+para postgres:
+CREATE TABLE productos (
+  num SERIAL PRIMARY KEY,
+  idproductos VARCHAR(200) NOT NULL,
+  nombre VARCHAR(200),
+  precio DECIMAL(10, 2),
+  supermercado VARCHAR(45),
+  oferta VARCHAR(70),
+  url VARCHAR(200),
+  imagen VARCHAR(200)
+);
