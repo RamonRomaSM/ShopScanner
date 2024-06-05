@@ -1,10 +1,10 @@
 ## Falta:
 
-Una vez terminada la ui, hacer prueba con laiway de deploy de api + database, con algun repo de prueba
-
 ### UI:
 + Barra de busqueda (copiar lo que ya tengo en mi cesta)
 + boton de mail
++ puede que haya que hacer una pantalla de carga si los tiempos van a ser medianos (sobre todo si hagolo de la doble peticion)
+
 
 ### API
 + que solo te retorne el json con los datos que pediste
