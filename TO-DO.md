@@ -1,12 +1,12 @@
-# Falta:
+## Falta:
 
 Una vez terminada la ui, hacer prueba con laiway de deploy de api + database, con algun repo de prueba
 
-## UI:
+### UI:
 + Barra de busqueda (copiar lo que ya tengo en mi cesta)
 + boton de mail
 
-## API
+### API
 + que solo te retorne el json con los datos que pediste
 + la mejora de la busqueda? (la de dar por hecho que es un string y luego no)
 
