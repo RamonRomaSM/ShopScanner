@@ -42,7 +42,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             Lista l = ((Button)sender).Tag as Lista;  
             l.productos = reOrdenaCarrito(l.productos, act);
             l.calculaPrecio();
-            sesionAct.mensaje("Añadido a " + l.nombre);//To do, que el mensaje sea mas bonito y menos invasivo
+            Sesion.mensaje("Añadido a " + l.nombre);//To do, que el mensaje sea mas bonito y menos invasivo
             this.Close();
         }
 

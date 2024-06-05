@@ -1,33 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TrabajoFinalDeGrado.DAOS;
+using Yaapii.Http.Requests;
+using Yaapii.Http.Wires.AspNetCore;
+using Yaapii.Http.Wires;
+using Yaapii.Http.Parts.Bodies;
 
 namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 {
-    /// <summary>
-    /// Lógica de interacción para ProductosControl.xaml
-    /// </summary>
     public partial class ProductosControl : UserControl
     {
         private Usuario sesionAct;
         private ObservableCollection<Producto> Products;
-        private int i = 0;
-        
+        private int pagina = 0;
+        private bool textoCambiado = false;
         public ProductosControl(Usuario u)
         {
            
@@ -38,28 +27,26 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             OnScrollChanged(null, null);
         }
 
-
-        //Pide nuevos items
+        //Pide nuevos items a la api
         private void OnScrollChanged(object sender, ScrollChangedEventArgs e)
         { 
             
             var scrollViewer = MyScroller;
             if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
             {
-
                 Producto a = new Producto();
                 Producto b = new Producto();
                 Producto c = new Producto();
 
                 a.nombre = "12 Mini croissants de mantequilla";
                 b.nombre = "ALCAMPO CULTIVAMOS LO BUENO Champiñón laminado  Bandeja de 250 g.";
-                c.nombre = " c";
+                c.nombre = "c";
 
-                a.imagen = "https://prod-mercadona.imgix.net/images/55dfb0de5a832d479c76f2e25c653d4b.jpg?fit=crop&h=300&w=300";
-                b.imagen = "https://www.compraonline.alcampo.es/images-v3/37ea0506-72ec-4543-93c8-a77bb916ec12/1c889628-8a63-4af8-85bd-a0783a89fe5b/300x300.jpg";
+                a.imagen = "";
+                b.imagen = "";
 
-                a.url = "https://tienda.mercadona.es/product/84629/12-mini-croissants-mantequilla-bolsa";
-                b.url = "https://www.compraonline.alcampo.es/products/ALCAMPO-CULTIVAMOS-LO-BUENO-Champiñón-laminado--Bandeja-de-250-g./57687";
+                a.url = "";
+                b.url = "";
 
                 a.precio = 10;
                 b.precio = 20;
@@ -73,7 +60,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
                 b.idproductos = "prod b";
                 c.idproductos = "prod c";
 
-                i++;
+                pagina++;
                 Products.Add(a);
                 Products.Add(b);
                 Products.Add(c);
@@ -83,7 +70,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
             }
         }
-        
         private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
         {
             Producto copiap = new Producto();
@@ -102,7 +88,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             Producto copiap = new Producto();   
             copiap.copiar(p);
             ObservableCollection<Producto> lcopy = new ObservableCollection<Producto>();
-
             foreach (Producto item in l)
             {
                 if (item.Equals(p)) { c+=item.cantidad; }
@@ -132,7 +117,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 
         private void abrir_url(object sender, MouseButtonEventArgs e)
         {
-
             TextBlock a = (TextBlock)sender;
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
@@ -140,24 +124,18 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
                 UseShellExecute = true
             });
         }
-
         private void addCarritobtn_Click(object sender, RoutedEventArgs e)
         {
             Producto p = ((Button)sender).Tag as Producto;
 
             ObservableCollection<Producto> b = sesionAct.getCarrito();
             sesionAct.setCarrito(reOrdenaCarrito(b, p));
-            sesionAct.mensaje("Añadido al carrito");
+            Sesion.mensaje("Añadido al carrito");
         }
-
-
         private void addListaBtn_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: que me saque un ventana emergente (con los colores de la app) con un stackpannel de las listas
-            // https://www.youtube.com/watch?v=KSNjJ9Glky4
             Producto p = ((Button)sender).Tag as Producto;
             ListasPopUp popup = new ListasPopUp(sesionAct.getListas(),p,sesionAct);
-           
             
             //para que se coloque en el cursor
             System.Windows.Point position = Mouse.GetPosition(this);
@@ -168,7 +146,49 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             popup.Show();
             popup.Left = x - popup.Width; popup.Top = y-popup.Height;// - height para que se coloque en la esquina de abajo
         }
-
-
+        //---------------Relacionado con la barra de busqueda----------------------
+        private void txtNombreLista_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            if (txtNombreLista.Text.Equals(""))
+            {
+                txtNombreLista.Text = "Escribe lo que quieras buscar";
+                textoCambiado = false;
+            }
+            else { textoCambiado = true; }
+        }
+        private void txtNombreLista_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            txtNombreLista.Text = "";
+        }
+        private void buscar(object sender, RoutedEventArgs e) 
+        {
+            /*
+            settea pag a 0 
+            y llama con pag,hint
+            
+            (quitar lo que sobra de las respuestas desde la api, y parsear el json a objeto, gestionar los arrays vacios)
+            esto solo lo puede hacer el objeto de acc a datos
+            
+            drante el tiempo de carga colapsar el list de productos y mostrar a carga?
+            o cambiar el panel principal por la carga, que se encargue el acc a datos de cambiar los paneles 
+            (pero esto solo seria al buscar, no quiero que eso pase cuando solo estoy scrolleando)
+            */
+            var response =
+                new AspNetCoreWire(
+                    new AspNetCoreClients()
+                        ).Response(
+                            new Get("https://my-first-express-api.vercel.app/getPagina/0/cebolla")
+                        );
+            var body = new TextBody.Of(response);
+            /*
+            System.Collections.Generic.IList<string> a = body.Values("resp");
+            IEnumerator<string> b = a.GetEnumerator();
+            string total = "";
+            while (b.MoveNext()) { total = b.Current; }
+            */
+            MessageBox.Show(body.AsString());
+        }
     }
 }
+
+

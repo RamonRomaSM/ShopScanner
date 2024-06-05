@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Yaapii.Http" Version="8.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="imagenes\anadir-al-carrito.png" />
     <Resource Include="imagenes\fondoApp.png" />
     <Resource Include="imagenes\logoCarrito.png" />

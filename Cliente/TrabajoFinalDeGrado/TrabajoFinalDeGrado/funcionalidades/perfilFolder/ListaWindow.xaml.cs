@@ -119,7 +119,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
             if (textoCambiado) { listaOriginal.nombre = txtNombreLista.Text; }
             listaOriginal.calculaPrecio();
             padre.contenedorFragments.Content = new PerfilControl(sesionact, padre);
-            sesionact.mensaje("Cambios en "+nombre+" guardados");
+            Sesion.mensaje("Cambios en "+nombre+" guardados");
             this.Close();
         }
 

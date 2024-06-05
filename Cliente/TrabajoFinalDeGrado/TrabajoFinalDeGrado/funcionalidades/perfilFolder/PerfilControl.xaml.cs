@@ -42,8 +42,8 @@ namespace TrabajoFinalDeGrado.funcionalidades.perfilFolder
         private void eliminarButton_Click(object sender, RoutedEventArgs e)
         {
             Lista l  = ((Button)sender).Tag as Lista;
-            sesionAct.mensaje("Lista "+l.nombre+" eliminada");
-            sesionAct.removeLista(l);
+            Sesion.mensaje("Lista "+l.nombre+" eliminada");
+            Sesion.removeLista(l);
            
         }
 

@@ -7,9 +7,55 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        
-        <ScrollViewer Name="MyScroller" Background="Transparent" ScrollChanged="OnScrollChanged" HorizontalContentAlignment="Center"  Margin="40,0,0,0">
-           
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="Transparent" Grid.Row="0" Margin="55,20,40,20">
+            <Border BorderThickness="10"
+         BorderBrush="#272B2F" CornerRadius="5" Background="#272B2F">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox Opacity=".8" FontSize="19" Height="40" Margin="10,0,0,0" VerticalContentAlignment="Center" Name="txtNombreLista" 
+                     Text="Escribe lo que quieras buscar"
+                     GotKeyboardFocus="txtNombreLista_GotKeyboardFocus"
+                     LostKeyboardFocus="txtNombreLista_LostKeyboardFocus"
+                    />
+                    <Button Name="addListaBtn" Grid.Column="1" VerticalAlignment="Center" Click="buscar"
+                                         FontSize="18" Cursor="Hand" BorderThickness="0" Foreground="White" Tag="{Binding}">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="DodgerBlue"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#0F4A82"/>
+                                    </Trigger>
+                                </Style.Triggers>
+
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="130" Height="40"
+                                                     CornerRadius="5" Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="Buscar"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                </Grid>
+
+            </Border>
+
+        </Grid>
+        <ScrollViewer Name="MyScroller" Background="Transparent" ScrollChanged="OnScrollChanged" HorizontalContentAlignment="Center"  Margin="40,0,0,0" Grid.Row="1">
+
             <ListView x:Name="ListViewProducts" ItemsSource="{Binding Products}" 
                         ScrollViewer.CanContentScroll="False" 
                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
@@ -17,8 +63,6 @@
                         BorderThickness="0" Background="Transparent"  
                         PreviewMouseWheel="ListViewProducts_PreviewMouseWheel"
                         >
-                
-                
                 <ListView.ItemTemplate>
                     
                    
@@ -63,11 +107,22 @@
                                         <TextBlock  Text="Supermercado: " HorizontalAlignment="Left"  Grid.Row="1" Grid.Column="0"
                                                     Foreground="White" Padding="20,0,0,0"
                                                     FontSize="18" />
-                                        <TextBlock  Text="{Binding precio}" HorizontalAlignment="Center"  Grid.Row="0" Grid.Column="1"
-                                                    Foreground="White" Padding="0,0,20,0"
-                                                    FontSize="18" />
-                                        <TextBlock  Text="{Binding supermercado}" HorizontalAlignment="Center"  Grid.Row="1" Grid.Column="1"
-                                                    Foreground="White" Padding="0,0,20,0"
+                                        
+                                        <Grid Grid.Column="1">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock  Text="{Binding precio}" HorizontalAlignment="Right"  Grid.Row="0" Grid.Column="0"
+                                                        Foreground="White" Padding="10,0,20,0"
+                                                        FontSize="18" />
+                                            <TextBlock  Text="€" HorizontalAlignment="Left"  Grid.Row="0" Grid.Column="1"
+                                                        Foreground="White" Padding="0,0,20,0"
+                                                        FontSize="18" />
+
+                                        </Grid>
+                                        <TextBlock  Text="{Binding supermercado}" HorizontalAlignment="Left"  Grid.Row="1" Grid.Column="1"
+                                                    Foreground="White" Padding="20,0,0,0"
                                                     FontSize="18" />  
                                     </Grid>
                                     <!--Aqui el grid con los 2 botones (izq addCarrito dcha addToLista)-->
