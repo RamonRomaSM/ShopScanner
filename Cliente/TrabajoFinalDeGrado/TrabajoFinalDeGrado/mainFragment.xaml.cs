@@ -34,7 +34,7 @@ namespace TrabajoFinalDeGrado
         public mainFragment(MainWindow padre,Usuario u)
         {
             InitializeComponent();
-
+            Sesion.usuarioAct = u;
             this.sesionAct = u;
             this.padre = padre;
             this.productosControl = new ProductosControl(sesionAct);

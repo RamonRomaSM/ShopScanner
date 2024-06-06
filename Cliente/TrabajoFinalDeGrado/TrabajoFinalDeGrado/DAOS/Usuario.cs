@@ -16,9 +16,6 @@ namespace TrabajoFinalDeGrado.DAOS
             this.listas = listas;
             this.carrito = new ObservableCollection<Producto>();
         }
-        //Realmente lo de la api, la dejaria bien hecha con express y ya,
-        //me centraria en ver springboot, lo podria implementar con lo de papa,
-        //crear un sistema local 
         
 
         public ObservableCollection<Lista> getListas() { return listas; }

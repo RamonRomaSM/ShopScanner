@@ -11,8 +11,8 @@ namespace TrabajoFinalDeGrado.DAOS
     public class Sesion
     {
         //no ahce falta instanciar nada en principio
-        private static Usuario usarioAct {  get; set; }
-        private static ObservableCollection<Producto> carrito {  get; set; }
+        public static Usuario usuarioAct {  get; set; }
+        public static ObservableCollection<Producto> carrito {  get; set; }
         private static Toast men;
 
 
@@ -30,11 +30,11 @@ namespace TrabajoFinalDeGrado.DAOS
         }
         public static void addLista(Lista lista)
         {
-            usarioAct.addLista(lista);
+            usuarioAct.addLista(lista);
         }
         public static void removeLista(Lista lista)
         {
-            usarioAct.removeLista(lista);
+            usuarioAct.removeLista(lista);
         }
     }
 }
