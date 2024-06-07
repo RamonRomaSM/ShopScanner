@@ -59,7 +59,7 @@
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="2.8*"/>
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>
@@ -67,7 +67,7 @@
                                     </Grid.ColumnDefinitions>
 
                                     <TextBlock Text="{Binding nombre}" Foreground="White" FontSize="19" Margin="20,0,20,0" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Precio: " Foreground="White" FontSize="19" Grid.Column="1" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Precio total (€): " Foreground="White" FontSize="19" Grid.Column="1" VerticalAlignment="Center"/>
                                     <TextBlock Text="{Binding precio}" Foreground="White" FontSize="19" Grid.Column="2" VerticalAlignment="Center"/>
                                     <TextBlock Text="Productos:" Foreground="White" FontSize="19" Grid.Column="3" VerticalAlignment="Center"/>
                                     <TextBlock Text="{Binding numeroProductos}" Foreground="White" FontSize="19" Grid.Column="4" VerticalAlignment="Center"/>

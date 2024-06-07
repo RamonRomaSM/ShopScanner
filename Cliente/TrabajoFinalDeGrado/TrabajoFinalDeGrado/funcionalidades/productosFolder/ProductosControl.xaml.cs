@@ -8,6 +8,13 @@ using Yaapii.Http.Requests;
 using Yaapii.Http.Wires.AspNetCore;
 using Yaapii.Http.Wires;
 using Yaapii.Http.Parts.Bodies;
+using Antlr4.Runtime.Misc;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using Yaapii.JSON;
+using System.Collections.Generic;
+using System.Text.Json;
+using System;
 
 namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
 {
@@ -34,40 +41,9 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
             var scrollViewer = MyScroller;
             if (scrollViewer.VerticalOffset == scrollViewer.ScrollableHeight)
             {
-                Producto a = new Producto();
-                Producto b = new Producto();
-                Producto c = new Producto();
-
-                a.nombre = "12 Mini croissants de mantequilla";
-                b.nombre = "ALCAMPO CULTIVAMOS LO BUENO Champiñón laminado  Bandeja de 250 g.";
-                c.nombre = "c";
-
-                a.imagen = "";
-                b.imagen = "";
-
-                a.url = "";
-                b.url = "";
-
-                a.precio = 10;
-                b.precio = 20;
-                c.precio = 30;
-
-                a.supermercado = "Mercadona";
-                b.supermercado = "Alcampo";
-                c.supermercado = "Alcampo";
-
-                a.idproductos = "prod a";
-                b.idproductos = "prod b";
-                c.idproductos = "prod c";
-
+                pideNuevos();
+              
                 pagina++;
-                Products.Add(a);
-                Products.Add(b);
-                Products.Add(c);
-                Products.Add(a);
-                Products.Add(b);
-                Products.Add(c);
-
             }
         }
         private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
@@ -149,44 +125,38 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         //---------------Relacionado con la barra de busqueda----------------------
         private void txtNombreLista_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            if (txtNombreLista.Text.Equals(""))
+            if (txtHint.Text.Equals(""))
             {
-                txtNombreLista.Text = "Escribe lo que quieras buscar";
+                txtHint.Text = "Escribe lo que quieras buscar";
                 textoCambiado = false;
             }
             else { textoCambiado = true; }
         }
         private void txtNombreLista_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            txtNombreLista.Text = "";
+            txtHint.Text = "";
         }
-        private void buscar(object sender, RoutedEventArgs e) 
-        {
-            /*
-            settea pag a 0 
-            y llama con pag,hint
-            
-            (quitar lo que sobra de las respuestas desde la api, y parsear el json a objeto, gestionar los arrays vacios)
-            esto solo lo puede hacer el objeto de acc a datos
-            
-            drante el tiempo de carga colapsar el list de productos y mostrar a carga?
-            o cambiar el panel principal por la carga, que se encargue el acc a datos de cambiar los paneles 
-            (pero esto solo seria al buscar, no quiero que eso pase cuando solo estoy scrolleando)
-            */
+        private void pideNuevos() {
+           
             var response =
                 new AspNetCoreWire(
                     new AspNetCoreClients()
                         ).Response(
-                            new Get("https://my-first-express-api.vercel.app/getPagina/0/cebolla")
-                        );
-            var body = new TextBody.Of(response);
-            /*
-            System.Collections.Generic.IList<string> a = body.Values("resp");
-            IEnumerator<string> b = a.GetEnumerator();
-            string total = "";
-            while (b.MoveNext()) { total = b.Current; }
-            */
-            MessageBox.Show(body.AsString());
+                            new Get("https://my-first-express-api.vercel.app/getPagina/"+pagina+"/"+txtHint.Text+"")
+            );
+            string json = new TextBody.Of(response).AsString();
+
+            var arr=json.Split("{");    
+            for(int i = 2; i<arr.Length; i++) { 
+                Producto p = new Producto(arr[i]);
+                Products.Add(p);
+            }
+
+        }
+        private void buscar(object sender, RoutedEventArgs e) 
+        {
+            pagina = 0;
+            pideNuevos();
         }
     }
 }

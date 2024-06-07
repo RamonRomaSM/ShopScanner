@@ -12,7 +12,7 @@
         WindowStyle="None"
         Background="Transparent">
     <Grid>
-        <Border Background="#2B2827" CornerRadius="8">
+        <Border Background="#272B2F" CornerRadius="8">
             <!--Aqui la lista-->
             <Grid>
                 <!--Grid que contiene todo (hasta la barra superior)-->
@@ -24,7 +24,7 @@
                 <!--BARRA SUPERIOR-->
                 <Grid Grid.Row="0"  MouseDown="moverWindow" >
                     <!--En este van los botones-->
-                    <Border Background="#2B2827"
+                    <Border Background="#272B2F"
                             CornerRadius="8,8,0,0" />
                     <!--CRUZ-->
                     <Button  HorizontalAlignment="Right" Margin="0,0,30,0" Cursor="Hand" Height="20" Click="salir" Name="cruz">
@@ -55,7 +55,7 @@
                 </Grid>
 
                 <!--Contenido de la ventana-->
-                <Grid Grid.Row="1" HorizontalAlignment="Center"  Background="#363230"  Margin="20" Width="780">
+                <Grid Grid.Row="1" HorizontalAlignment="Center"  Background="#313338"  Margin="20" Width="780">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.3*"/>
                         <RowDefinition/>

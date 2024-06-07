@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace TrabajoFinalDeGrado.DAOS
 {
@@ -22,6 +23,18 @@ namespace TrabajoFinalDeGrado.DAOS
         public Producto() { 
         
             cantidad = 1;
+        }
+        public Producto(string json)
+        {
+            var arr = json.Split(":");
+            cantidad = 1;
+           
+            this.nombre = arr[3].Split('"')[1];
+            this.precio = Double.Parse(arr[4].Split('"')[1].Replace(".",","));
+            this.imagen = json.Split('"')[29];
+            this.url = json.Split('"')[25];
+            this.supermercado = arr[5].Split('"')[1];
+            this.idproductos = arr[2].Split('"')[1];
         }
         public void copiar(Producto producto)
         {

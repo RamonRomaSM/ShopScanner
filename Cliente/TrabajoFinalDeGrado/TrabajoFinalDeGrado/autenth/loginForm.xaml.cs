@@ -40,20 +40,9 @@ namespace TrabajoFinalDeGrado.autenth
         public Usuario verifica(string nombre, string pasw)
         {
             //TODO: preguntar a la bdd
-            Lista a= new Lista("lista1","Ramon",new ObservableCollection<Producto>());
-            Lista b = new Lista("lista2", "Ramon", new ObservableCollection<Producto>());
-            Lista c = new Lista("lista3", "Ramon", new ObservableCollection<Producto>());
-            Lista d = new Lista("lista4eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "Ramon", new ObservableCollection<Producto>());
-            Lista e = new Lista("lista5", "Ramon", new ObservableCollection<Producto>());
-            ObservableCollection<Lista> listas = new ObservableCollection<Lista>();
 
-            listas.Add(a);
-            listas.Add(b);
-            listas.Add(c);
-            listas.Add(d);
-            listas.Add(e);
+            Usuario u = new Usuario("Ramon",new ObservableCollection<Lista>());
 
-            Usuario u = new Usuario("Ramon",listas);
             return u;
         }
 

@@ -20,7 +20,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBox Opacity=".8" FontSize="19" Height="40" Margin="10,0,0,0" VerticalContentAlignment="Center" Name="txtNombreLista" 
+                    <TextBox Opacity=".8" FontSize="19" Height="40" Margin="10,0,0,0" VerticalContentAlignment="Center" Name="txtHint" 
                      Text="Escribe lo que quieras buscar"
                      GotKeyboardFocus="txtNombreLista_GotKeyboardFocus"
                      LostKeyboardFocus="txtNombreLista_LostKeyboardFocus"
