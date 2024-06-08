@@ -156,6 +156,8 @@ namespace TrabajoFinalDeGrado.funcionalidades.productosFolder
         private void buscar(object sender, RoutedEventArgs e) 
         {
             pagina = 0;
+            MyScroller.ScrollToTop();
+            Products.Clear();
             pideNuevos();
         }
     }

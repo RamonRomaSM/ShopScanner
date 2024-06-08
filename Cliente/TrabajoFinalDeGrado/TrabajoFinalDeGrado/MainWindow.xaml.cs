@@ -15,6 +15,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TrabajoFinalDeGrado.autenth;
 using TrabajoFinalDeGrado.DAOS;
+using Yaapii.Http.Parts.Bodies;
+using Yaapii.Http.Requests;
+using Yaapii.Http.Wires.AspNetCore;
+using Yaapii.Http.Wires;
 
 namespace TrabajoFinalDeGrado
 {
@@ -57,6 +61,15 @@ namespace TrabajoFinalDeGrado
         }
         public Boolean registrarse(string name, string passw) {
 
+            var response =
+               new AspNetCoreWire(
+                   new AspNetCoreClients()
+                       ).Response(
+                           new Get("https://my-first-express-api.vercel.app/register/nombre/"+name+"/passw/"+passw)
+           );
+            string json = new TextBody.Of(response).AsString().Split(":")[1];
+            if (json == "false") { return false; }
+            
             return true;
         }
         
