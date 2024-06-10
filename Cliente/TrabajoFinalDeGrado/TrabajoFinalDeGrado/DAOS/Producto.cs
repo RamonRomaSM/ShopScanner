@@ -68,7 +68,11 @@ namespace TrabajoFinalDeGrado.DAOS
             }
         }
 
-      
+        public string getJson() {
+            string resp= " { idProducto : " + idproductos+ " , nombre : " + nombre+ ", supermercado : " + supermercado+ ", precio : " + precio+ ", imagen : " + imagen+ ", url : " + url+ " , cantidad : "+cantidad+ "  }";
+            //string resp = idproductos+" ç "+nombre+" ç "+supermercado+" ç "+precio+" ç "+imagen+" ç "+url;
+            return resp;
+        }
       
     }
 }

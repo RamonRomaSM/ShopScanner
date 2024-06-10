@@ -46,10 +46,12 @@ namespace TrabajoFinalDeGrado
         private void salir2(object sender, RoutedEventArgs e)
         {
             var window = Window.GetWindow(this);
+            Sesion.guardaJsonListas();
             window.Close();
         }
         private void cerrar_sesion(object sender, RoutedEventArgs e)
         {
+            Sesion.guardaJsonListas();
             padre.deslogear();
         }
         private void productos(object sender, RoutedEventArgs e) 

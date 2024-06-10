@@ -30,6 +30,7 @@ namespace TrabajoFinalDeGrado.DAOS
 
             calculaPrecio();
         }
+        public Lista() { }
         public string getNombre() { return nombre; }
         public string getAutor() { return autor; }
 

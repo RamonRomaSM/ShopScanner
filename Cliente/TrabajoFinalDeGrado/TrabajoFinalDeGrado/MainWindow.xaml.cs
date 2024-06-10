@@ -41,7 +41,9 @@ namespace TrabajoFinalDeGrado
 
         private void salir(object sender, RoutedEventArgs e)
         {
-           this.Close();
+            try { Sesion.guardaJsonListas(); } catch(Exception) { }
+           
+            this.Close();
         }
         
         private void minimizar(object sender, RoutedEventArgs e)
@@ -52,6 +54,7 @@ namespace TrabajoFinalDeGrado
         public void logear(Usuario u){
             if (u != null)
             {
+
                 this.mainContenedor.Content = new mainFragment(this, u);
             }
         }
@@ -59,13 +62,13 @@ namespace TrabajoFinalDeGrado
         {
             this.mainContenedor.Content = new loginFragmentxaml(this);
         }
-        public Boolean registrarse(string name, string passw) {
+        public Boolean registrarse(string passw, string nombre) {
 
             var response =
                new AspNetCoreWire(
                    new AspNetCoreClients()
                        ).Response(
-                           new Get("https://my-first-express-api.vercel.app/register/nombre/"+name+"/passw/"+passw)
+                           new Get("https://my-first-express-api.vercel.app/register/nombre/"+nombre+"/passw/"+passw)
            );
             string json = new TextBody.Of(response).AsString().Split(":")[1];
             if (json == "false") { return false; }

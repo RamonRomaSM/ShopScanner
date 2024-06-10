@@ -4,6 +4,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using TrabajoFinalDeGrado.DAOS;
+using Yaapii.Http.Parts.Bodies;
+using Yaapii.Http.Requests;
+using Yaapii.Http.Wires.AspNetCore;
+using Yaapii.Http.Wires;
+using Yaapii.JSON;
+using System.Collections.Generic;
+using System;
+using Yaapii.Http.Responses;
 
 namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
 {
@@ -61,8 +69,7 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
             foreach (Producto item in products)
             {
                 Carrito.RemoveAt(0);
-                Carrito.Add(item);
-               
+                Carrito.Add(item);          
             }
         }
         
@@ -87,7 +94,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
 
         private ObservableCollection<Producto> reOrdenaCarrito(ObservableCollection<Producto> l, Producto p)
         {
-
             ObservableCollection<Producto> resp = l;
             if (!resp.Contains(p))
             {
@@ -95,7 +101,6 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
                 resp.Add(p);
             }
             else { p.cantidad++; }
-
             return resp;
         }
 
@@ -122,11 +127,10 @@ namespace TrabajoFinalDeGrado.funcionalidades.carritoFolder
 
                 Lista nueva = new Lista(txtNombreLista.Text, sesionAct.nombre, Carrito);
                 Sesion.addLista(nueva);
-
                 textoCambiado = false;
                 txtNombreLista.Text = "Escribe el nombre de tu nueva lista";
                 Carrito.Clear();
-           }
+            }
         }
     }
 }

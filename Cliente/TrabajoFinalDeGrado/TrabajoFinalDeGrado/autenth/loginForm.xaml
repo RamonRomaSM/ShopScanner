@@ -83,7 +83,15 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-
+            <TextBlock
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="20"
+            Name="feedbacklbl"
+            FontSize="18"
+            TextWrapping="Wrap"
+            />
         </StackPanel>
     </Grid>
 </UserControl>
