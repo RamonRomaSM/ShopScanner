@@ -40,3 +40,4 @@ Para obtener los datos de la base de datos.
 						(cuando la api ve que vas a guardar una lista con el msimo nombre, la sobre escribe)
 
 
+https://docs.google.com/presentation/d/16WNCc1NY5bUdY_c7OUVrVbQ7FaddS0-qP4-obNPXXxw/edit?usp=sharing
