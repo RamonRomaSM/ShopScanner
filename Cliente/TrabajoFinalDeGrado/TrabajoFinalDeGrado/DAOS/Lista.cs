@@ -41,6 +41,8 @@ namespace TrabajoFinalDeGrado.DAOS
             foreach (Producto p in productos)
             {
                 precio += p.precio*p.cantidad;
+ 
+                precio=Math.Round(precio, 2);
                 numeroProductos += p.cantidad;
             }
         }

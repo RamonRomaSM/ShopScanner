@@ -75,13 +75,7 @@ namespace TrabajoFinalDeGrado.DAOS
             );
 
         }
-        public static void guarda(ObservableCollection<Lista> listas) { 
         
-        }
-        public static ObservableCollection<Lista> recoje() { 
-        
-            return null;
-        }
 
     }
 }
