@@ -1,7 +1,7 @@
  # ShopScanner
 
-![Alt text](loginShopScanner.jpg)
+![Alt text](https://github.com/RamonRomaSM/ShopScanner/tree/main/images/loginShopScanner.jpg)
 
-![Alt text](productosShopScanner.jpg)
+![Alt text](https://github.com/RamonRomaSM/ShopScanner/tree/main/images/productosShopScanner.jpg)
 
-![Alt text](carritoShopScanner.jpg)
+![Alt text](https://github.com/RamonRomaSM/ShopScanner/tree/main/images/carritoShopScanner.jpg)
